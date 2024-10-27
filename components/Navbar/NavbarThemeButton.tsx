@@ -17,7 +17,7 @@ export function NavbarThemeButton() {
   } else {
     return (
       <>
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" onClick={toggleTheme}>
           {theme === "light" ? (
             <Sun className="h-5 w-5" aria-label="Switch to dark theme" />
           ) : (
