@@ -1,8 +1,13 @@
 import React from "react";
-
-const Body = () => {
-  return <div></div>;
+import ContactModal from "./ContactModal";
+const Hero = () => {
+  return (
+    <>
+      <div className="container mx-auto">
+        <ContactModal />
+      </div>
+    </>
+  );
 };
 
-export default Body;
-``;
+export default Hero;
