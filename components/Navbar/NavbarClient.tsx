@@ -13,13 +13,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { IconMenuDeep } from "@tabler/icons-react";
-
-const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Contact", href: "/contact" },
-];
+import { navItems } from "./NavbarItems";
 
 const Navbar = () => {
   return (
