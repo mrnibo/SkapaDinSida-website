@@ -12,19 +12,21 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { IconMenuDeep } from "@tabler/icons-react";
+import { IconLayoutFilled, IconMenuDeep } from "@tabler/icons-react";
 import { navItems } from "./NavbarItems";
+import { NavbarButtonPrimary } from "./NavbarButton";
+import { NavbarThemeButton } from "./NavbarThemeButton";
 
 const Navbar = () => {
   return (
-    <nav className="hidden md:flex justify-between items-center w-full p-4">
+    <nav className="hidden md:flex justify-between items-center w-full px-4">
       <div>
         <Link href="/" className="text-2xl font-bold">
           Logo
         </Link>
       </div>
-      <div>
-        <ul className="flex space-x-4">
+      <div className="flex gap-10 items-center">
+        <ul className="flex gap-8">
           {navItems.map((item) => (
             <li key={item.name}>
               <Link
@@ -36,6 +38,16 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <div>
+          <NavbarButtonPrimary
+            text="Get Started"
+            link="/contact"
+            icon={<IconLayoutFilled />}
+          />
+        </div>
+        <div>
+          <NavbarThemeButton />
+        </div>
       </div>
     </nav>
   );
@@ -64,6 +76,16 @@ const NavbarMobile = () => {
             </Link>
           </DrawerTitle>
         </DrawerHeader>
+        <div className="flex justify-center items-center w-full">
+          {" "}
+          <NavbarButtonPrimary
+            text="Get Started"
+            link="/contact"
+            icon={<IconLayoutFilled />}
+            className="text-lg px-16 py-4"
+          />
+        </div>
+
         <nav className="px-4">
           <ul className="space-y-4">
             {navItems.map((item) => (
@@ -91,7 +113,7 @@ const NavbarMobile = () => {
 
 export default function NavbarClient() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="py-6">
       <div className="container mx-auto flex h-16 items-center max-w-4xl">
         <Navbar />
         <div className="md:hidden mr-2 flex items-center space-x-2">
@@ -103,6 +125,6 @@ export default function NavbarClient() {
           <NavbarMobile />
         </div>
       </div>
-    </header>
+    </div>
   );
 }
