@@ -16,13 +16,14 @@ import { IconLayoutFilled, IconMenuDeep } from "@tabler/icons-react";
 import { navItems } from "./NavbarItems";
 import { NavbarButtonPrimary } from "./NavbarButton";
 import { NavbarThemeButton } from "./NavbarThemeButton";
+import NavbarLogo from "./NavbarLogo";
 
 const Navbar = () => {
   return (
     <nav className="hidden md:flex justify-between items-center w-full px-4">
       <div>
         <Link href="/" className="text-2xl font-bold">
-          Logo
+          <NavbarLogo />
         </Link>
       </div>
       <div className="flex gap-10 items-center">
@@ -72,7 +73,7 @@ const NavbarMobile = () => {
               className="text-2xl font-bold"
               onClick={() => setIsOpen(false)}
             >
-              Logo
+              <NavbarLogo />
             </Link>
           </DrawerTitle>
         </DrawerHeader>
@@ -118,7 +119,7 @@ export default function NavbarClient() {
         <Navbar />
         <div className="md:hidden mr-2 flex items-center space-x-2">
           <Link href="/" className="text-2xl font-bold mr-auto">
-            Logo
+            <NavbarLogo />
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
