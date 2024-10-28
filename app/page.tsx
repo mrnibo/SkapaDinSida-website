@@ -1,11 +1,11 @@
 import Footer from "@/components/Footer";
-import Hero from "../components/Hero/Hero";
 import Header from "@/components/Header";
+import HeroClient from "@/components/Hero/HeroClient";
 export default function Home() {
   return (
     <>
       <Header />
-      <Hero />
+      <HeroClient />
       <Footer />
     </>
   );

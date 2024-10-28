@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${sen.variable} font-sen antialiased `}>
+      <body className={`${sen.variable} font-sen antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light" // Set a fixed default theme
