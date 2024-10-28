@@ -1,21 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { navLogoItems } from "@/constants/Constants";
 
 const NavbarLogo = () => {
-  const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const logoSrc = navLogoItems.dark;
 
-  // Default logo (light theme)
-  const logoSrc = "/images/brand/logo-icon-dark.png";
-
-  // Update logo based on theme after mounting
-  const logoToDisplay =
-    mounted && theme === "dark" ? "/images/brand/logo-icon-light.png" : logoSrc;
+  const logoToDisplay = theme === "dark" ? navLogoItems.light : logoSrc;
 
   return <Image src={logoToDisplay} alt="logo" width={25} height={25} />;
 };

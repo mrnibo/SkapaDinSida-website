@@ -13,7 +13,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { IconLayoutFilled, IconMenuDeep } from "@tabler/icons-react";
-import { navItems } from "./NavbarItems";
+import { navItems } from "@/constants/Constants";
 import { NavbarButtonPrimary } from "./NavbarButton";
 import { NavbarThemeButton } from "./NavbarThemeButton";
 import NavbarLogo from "./NavbarLogo";

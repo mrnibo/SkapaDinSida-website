@@ -1,6 +1,7 @@
-export const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Contact", href: "/contact" },
-];
+import React from "react";
+
+const NavbarItems = () => {
+  return <div></div>;
+};
+
+export default NavbarItems;
