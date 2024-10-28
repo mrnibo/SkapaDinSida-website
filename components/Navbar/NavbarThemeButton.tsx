@@ -1,30 +1,33 @@
 "use client";
 
 import * as React from "react";
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
+import { IconMoon, IconSun } from "@tabler/icons-react";
 
 export function NavbarThemeButton() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
-  if (!theme) {
-    return null;
-  } else {
-    return (
-      <>
-        <Button variant="outline" size="icon">
-          {theme === "light" ? (
-            <Sun className="h-5 w-5" aria-label="Switch to dark theme" />
-          ) : (
-            <Moon className="h-5 w-5" aria-label="Switch to light theme" />
-          )}
-        </Button>
-      </>
-    );
+  if (!mounted) {
+    return null; // Ensure consistent rendering during SSR and CSR
   }
+
+  return (
+    <Button variant="outline" size="icon" onClick={toggleTheme}>
+      {theme === "light" ? (
+        <IconSun className="h-5 w-5" aria-label="Switch to dark theme" />
+      ) : (
+        <IconMoon className="h-5 w-5" aria-label="Switch to light theme" />
+      )}
+    </Button>
+  );
 }
