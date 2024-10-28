@@ -1,5 +1,4 @@
 "use client";
-import HyperText from "@/components/ui/hyper-text";
 import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
