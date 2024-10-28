@@ -17,6 +17,7 @@ import { navItems } from "@/constants/Constants";
 import { NavbarButtonPrimary } from "./NavbarButton";
 import { NavbarThemeButton } from "./NavbarThemeButton";
 import NavbarLogo from "./NavbarLogo";
+import NavbarItems from "./NavbarItems";
 
 const Navbar = () => {
   return (
@@ -30,12 +31,7 @@ const Navbar = () => {
         <ul className="flex gap-8">
           {navItems.map((item) => (
             <li key={item.name}>
-              <Link
-                href={item.href}
-                className="text-foreground hover:text-primary"
-              >
-                {item.name}
-              </Link>
+              <NavbarItems name={item.name} href={item.href} />
             </li>
           ))}
         </ul>
