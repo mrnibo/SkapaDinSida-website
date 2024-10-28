@@ -3,7 +3,6 @@ export const git = {
   seagate: "https://github.com/TechPreist",
 };
 
-
 export const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -13,8 +12,8 @@ export const navItems = [
 
 export const navLogoItems = {
   light: "/images/brand/logo-icon-light.png",
-  dark: "/images/brand/logo-icon-dark.png"
-}
+  dark: "/images/brand/logo-icon-dark.png",
+};
 
 export const heroItems = {
   title: "Your One-Stop Web Development Agency",
@@ -65,8 +64,17 @@ export const heroItems = {
   },
 };
 
-  
-
-
-
-
+export const reviews = [
+  {
+    name: "nibo",
+    username: "@nibo",
+    body: ".............................................",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  {
+    name: "seagate",
+    username: "@seagate",
+    body: "..............................................",
+    img: "https://avatar.vercel.sh/jill",
+  },
+];
