@@ -1,17 +1,13 @@
 "use client";
-
+import HyperText from "@/components/ui/hyper-text";
 import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Particles from "@/components/ui/particles";
 import Iphone15Pro from "../ui/iphone-15-pro";
-<<<<<<< Updated upstream
-import ContactModal from "./ContactModal";
-=======
 import { Badge } from "../ui/badge";
 import { heroItems } from "@/constants/Constants";
 import Link from "next/link";
->>>>>>> Stashed changes
 
 const HeroClient = () => {
   const { theme } = useTheme();
@@ -25,26 +21,13 @@ const HeroClient = () => {
       <div className="relative flex h-screen max-w-7xl w-full mx-auto flex-col items-center justify-center overflow-hidden bg-background">
         <div className="flex justify-between items-center gap-2 w-full">
           <div className="flex flex-col items-center gap-2 w-2/3">
-<<<<<<< Updated upstream
-            <div className="text-7xl uppercase font-semibold">Hero Title</div>
-            <div className="text-2xl font-bold text-black dark:text-white">
-              ino moshtari bayad hads bezane
-=======
             <div className="text-7xl uppercase font-semibold">
               {heroItems.title}
->>>>>>> Stashed changes
             </div>
 
             <div className="">{heroItems.description}</div>
 
             <div className="flex items-center gap-4">
-<<<<<<< Updated upstream
-              <ContactModal />
-
-              <Button
-                size="lg"
-                className="bg-gray-200 hover:bg-gray-300 dark:bg-neutral-900 text-black dark:text-white text-md "
-=======
               <Link
                 href={heroItems.buttonPrimaryLink}
                 aria-label={heroItems.buttonPrimaryText}
@@ -59,7 +42,6 @@ const HeroClient = () => {
               <Link
                 href={heroItems.buttonSecondaryLink}
                 aria-label={heroItems.buttonSecondaryText}
->>>>>>> Stashed changes
               >
                 <Button
                   size="lg"
