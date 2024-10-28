@@ -6,7 +6,7 @@ const NotHero = () => {
   return (
     <>
       <HeroClient />
-      <Meteors number={30} />
+
       <Orbiting />
     </>
   );
