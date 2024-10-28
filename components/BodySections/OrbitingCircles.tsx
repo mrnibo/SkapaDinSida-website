@@ -1,16 +1,15 @@
 import OrbitingCircles from "@/components/ui/orbiting-circles";
-import ContactModal from "./ContactModal";
 
 function Orbiting() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+    <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
       {/* Inner Circles */}
-      <ContactModal />
+
       <OrbitingCircles
         className="size-[30px] border-none bg-transparent"
         duration={20}
         delay={20}
-        radius={80}
+        radius={100}
       >
         <Icons.whatsapp />
       </OrbitingCircles>
@@ -18,7 +17,7 @@ function Orbiting() {
         className="size-[30px] border-none bg-transparent"
         duration={20}
         delay={10}
-        radius={80}
+        radius={100}
       >
         <Icons.notion />
       </OrbitingCircles>
@@ -26,7 +25,7 @@ function Orbiting() {
       {/* Outer Circles (reverse) */}
       <OrbitingCircles
         className="size-[50px] border-none bg-transparent"
-        radius={190}
+        radius={290}
         duration={20}
         reverse
       >
@@ -34,7 +33,7 @@ function Orbiting() {
       </OrbitingCircles>
       <OrbitingCircles
         className="size-[50px] border-none bg-transparent"
-        radius={190}
+        radius={290}
         duration={20}
         delay={20}
         reverse

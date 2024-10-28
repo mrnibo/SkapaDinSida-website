@@ -1,9 +1,11 @@
 import Footer from "@/components/Footer";
-import NotHero from "./../components/Hero/semiBody";
+import Hero from "../components/Hero/Hero";
+import Header from "@/components/Header";
 export default function Home() {
   return (
     <>
-      <NotHero />
+      <Header />
+      <Hero />
       <Footer />
     </>
   );

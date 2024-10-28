@@ -9,12 +9,12 @@ const config: Config = {
   ],
   theme: {
   	extend: {
-		fontFamily: {
-			inter: ['var(--font-inter)', 'sans-serif'],
-			'playfair-display': ['var(--font-playfair-display)', 'serif'],
-			'nycd': ['var(--font-nycd)', 'cursive'],
-			'sen': ['var(--font-sen)', 'sans-serif'],
-		  },
+  		fontFamily: {
+  			inter: ['var(--font-inter)', 'sans-serif'],
+  			'playfair-display': ['var(--font-playfair-display)', 'serif'],
+  			nycd: ['var(--font-nycd)', 'cursive'],
+  			sen: ['var(--font-sen)', 'sans-serif']
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -65,7 +65,9 @@ const config: Config = {
   		animation: {
   			pulse: 'pulse var(--duration) ease-out infinite',
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
-  			meteor: 'meteor 5s linear infinite'
+  			meteor: 'meteor 5s linear infinite',
+  			marquee: 'marquee var(--duration) infinite linear',
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
   		},
   		keyframes: {
   			pulse: {
@@ -95,6 +97,22 @@ const config: Config = {
   				'100%': {
   					transform: 'rotate(215deg) translateX(-500px)',
   					opacity: '0'
+  				}
+  			},
+  			marquee: {
+  				from: {
+  					transform: 'translateX(0)'
+  				},
+  				to: {
+  					transform: 'translateX(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'marquee-vertical': {
+  				from: {
+  					transform: 'translateY(0)'
+  				},
+  				to: {
+  					transform: 'translateY(calc(-100% - var(--gap)))'
   				}
   			}
   		}

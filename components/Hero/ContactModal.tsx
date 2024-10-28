@@ -16,7 +16,9 @@ function ContactModal() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Contact Us</Button>
+        <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-md ">
+          Contact Us
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -32,22 +34,22 @@ function ContactModal() {
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
-              LastName
+              Last Name
             </Label>
             <Input id="name" className="col-span-3" />
           </div>
 
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Emailaddress
+            <Label htmlFor="email" className="text-right">
+              EmailAddress
             </Label>
             <Input id="email" className="col-span-3" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Phonenumber
+            <Label htmlFor="number" className="text-right">
+              PhoneNumber
             </Label>
-            <Input id="username" className="col-span-3" />
+            <Input id="number" className="col-span-3" />
           </div>
         </div>
         <DialogFooter>
