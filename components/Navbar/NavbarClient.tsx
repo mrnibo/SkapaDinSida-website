@@ -119,7 +119,7 @@ export default function NavbarClient() {
             <NavbarLogo />
           </Link>
         </div>
-        <div className="flex flex-1 items-center justify-end md:justify-end gap-2">
+        <div className="flex flex-1 items-center justify-end gap-2 md:justify-end md:hidden">
           <NavbarThemeButton />
           <NavbarMobile />
         </div>
