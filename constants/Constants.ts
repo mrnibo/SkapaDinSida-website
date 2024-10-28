@@ -78,3 +78,23 @@ export const reviews = [
     img: "https://avatar.vercel.sh/jill",
   },
 ];
+{
+  /*map in about page in magic card  section*/
+}
+export const aboutitems = {
+  items: [
+    {
+      title: "Quality",
+      description:
+        "We focus on delivering the highest quality in everything we",
+    },
+    {
+      title: "Reliability",
+      description: "Our team is reliable and we always deliver on time.",
+    },
+    {
+      title: "Experience",
+      description: " We have many years of experience in the industry.",
+    },
+  ],
+};
