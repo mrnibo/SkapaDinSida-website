@@ -2,7 +2,9 @@ import BoxReveal from "@/components/ui/box-reveal";
 import { Meteors } from "@/components/ui/meteors";
 import { IconBrandGithubCopilot } from "@tabler/icons-react";
 import React from "react";
-
+{
+  /*sex*/
+}
 export default function PageAbout() {
   return (
     <>
