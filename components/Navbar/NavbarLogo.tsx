@@ -11,11 +11,11 @@ const NavbarLogo = () => {
   }, []);
 
   // Default logo (light theme)
-  const logoSrc = "/images/brand/logo-icon-light.png";
+  const logoSrc = "/images/brand/logo-icon-dark.png";
 
   // Update logo based on theme after mounting
   const logoToDisplay =
-    mounted && theme === "dark" ? "/images/brand/logo-icon-dark.png" : logoSrc;
+    mounted && theme === "dark" ? "/images/brand/logo-icon-light.png" : logoSrc;
 
   return <Image src={logoToDisplay} alt="logo" width={25} height={25} />;
 };
