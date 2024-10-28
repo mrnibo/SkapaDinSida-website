@@ -4,6 +4,7 @@ import "./globals.css";
 import NavbarClient from "@/components/Navbar/NavbarClient";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Sen } from "next/font/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,6 +15,13 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+const sen = Sen({
+  subsets: ["latin"],
+  variable: "--font-sen",
+  weight: "400",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,9 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${sen.variable} font-sen antialiased `}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light" // Set a fixed default theme

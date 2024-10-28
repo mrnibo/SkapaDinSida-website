@@ -18,15 +18,24 @@ export function NavbarThemeButton() {
   };
 
   if (!mounted) {
-    return null; // Ensure consistent rendering during SSR and CSR
+    return null;
   }
 
   return (
-    <Button variant="outline" size="icon" onClick={toggleTheme}>
+    <Button
+      variant="ghost"
+      size="icon"
+      className="bg-gray-100 focus:bg-gray-200"
+      onClick={toggleTheme}
+    >
       {theme === "light" ? (
-        <IconSun className="h-5 w-5" aria-label="Switch to dark theme" />
+        <IconSun className="h-10 w-10" aria-label="Switch to dark theme" />
       ) : (
-        <IconMoon className="h-5 w-5" aria-label="Switch to light theme" />
+        <IconMoon
+          className="h-10 w-10"
+          color="black"
+          aria-label="Switch to light theme"
+        />
       )}
     </Button>
   );

@@ -17,7 +17,7 @@ export const NavbarButtonPrimary: React.FC<NavbarButtonProps> = ({
 }) => {
   return (
     <PulsatingButton>
-      <Link href={link} aria-label="">
+      <Link href={link} aria-label={`${text} Button`}>
         <div className={`flex gap-2 items-center ${className}`}>
           {icon}
           {text}
@@ -29,7 +29,20 @@ export const NavbarButtonPrimary: React.FC<NavbarButtonProps> = ({
 
 export const NavbarButtonSecondary: React.FC<NavbarButtonProps> = ({
   text,
+  icon,
+  link,
   className,
 }) => {
-  return <div></div>;
+  return (
+    <Button variant="default" size="default" className={className}>
+      <Link
+        href={link}
+        aria-label={`${text} Button`}
+        className="flex gap-2 items-center"
+      >
+        {icon}
+        {text}
+      </Link>
+    </Button>
+  );
 };
