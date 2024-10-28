@@ -1,15 +1,15 @@
 "use client";
-import { Button } from "../ui/button";
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
-import Particles from "@/components/ui/particles";
-import Iphone15Pro from "../ui/iphone-15-pro";
-import { Badge } from "../ui/badge";
-import { heroItems } from "@/constants/Constants";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import Particles from "@/components/ui/particles";
+import Iphone15Pro from "@/components/ui/iphone-15-pro";
+import { heroItems } from "@/constants/Constants";
+import { useThemeSafe } from "@/hooks/useThemeSafe";
+import { IconInfoCircle, IconPresentation } from "@tabler/icons-react";
 
 const HeroClient = () => {
-  const { theme } = useTheme();
+  const { theme } = useThemeSafe();
   const [color, setColor] = useState("#ffffff");
 
   useEffect(() => {
@@ -17,25 +17,29 @@ const HeroClient = () => {
   }, [theme]);
   return (
     <>
-      <div className="relative flex h-screen max-w-7xl w-full mx-auto flex-col items-center justify-center overflow-hidden bg-background">
-        <div className="flex justify-between items-center gap-2 w-full">
-          <div className="flex flex-col items-center gap-2 w-2/3">
-            <div className="text-7xl uppercase font-semibold">
+      <div className="relative flex h-screen max-w-7xl w-full mx-auto flex-col gap-10 md:gap-20 lg:gap-40 items-center justify-center overflow-hidden bg-background">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-2 w-full">
+          {/* Left Side  */}
+          <div className="flex flex-col items-center md:items-start gap-2 w-full md:w-2/5">
+            <div className="w-full text-4xl md:text-6xl lg:text-7xl uppercase font-semibold text-center md:text-left leading-tight break-words">
               {heroItems.title}
             </div>
-
-            <div className="">{heroItems.description}</div>
-
-            <div className="flex items-center gap-4">
+            <div className="text-center md:text-left">
+              {heroItems.description}
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-4 mt-5">
               <Link
                 href={heroItems.buttonPrimaryLink}
                 aria-label={heroItems.buttonPrimaryText}
               >
                 <Button
                   size="lg"
-                  className="bg-blue-500 hover:bg-blue-600 text-md "
+                  className="group bg-blue-500 hover:bg-blue-600 text-md w-full sm:w-auto text-white py-6 flex gap-2 items-center"
                 >
                   {heroItems.buttonPrimaryText}
+                  <div className="transition-transform duration-300 group-hover:translate-x-1">
+                    <IconPresentation size={20} />
+                  </div>{" "}
                 </Button>
               </Link>
               <Link
@@ -44,27 +48,22 @@ const HeroClient = () => {
               >
                 <Button
                   size="lg"
-                  className="bg-gray-200 hover:bg-gray-300 dark:bg-neutral-900 text-black dark:text-white text-md "
+                  className="bg-gray-200 hover:bg-gray-300 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-black dark:text-white text-md w-full sm:w-auto py-6 dark:border border-neutral-800 flex gap-2 items-center"
                 >
+                  <IconInfoCircle size={20} />
                   {heroItems.buttonSecondaryText}
                 </Button>
               </Link>
             </div>
           </div>
-          <div className="w-1/3">
+          {/* Right Side */}
+          <div className="w-full md:w-3/5 mt-8 md:mt-0 flex justify-center md:justify-end">
             <div className="relative">
-              <Iphone15Pro className="size-full h-96" src={heroItems.image} />
+              <Iphone15Pro
+                className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+                src={heroItems.image}
+              />
             </div>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center gap-4 w-full mt-5">
-          <h3 className="border-b-2 border-blue-500 text-4xl font-bold upercase">
-            We Offer
-          </h3>
-          <div className="flex items-center gap-3">
-            {heroItems.offers.offerItems.map((badge, index) => (
-              <Badge key={index}>{badge.title}</Badge>
-            ))}
           </div>
         </div>
         <Particles
