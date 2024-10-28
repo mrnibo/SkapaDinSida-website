@@ -18,7 +18,7 @@ export function NavbarThemeButton() {
   };
 
   if (!mounted) {
-    return null; // Ensure consistent rendering during SSR and CSR
+    return null;
   }
 
   return (

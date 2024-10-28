@@ -7,14 +7,12 @@ interface NavbarItemsProps {
 }
 const NavbarItems: React.FC<NavbarItemsProps> = ({ name, href }) => {
   return (
-    <div>
-      <Link
-        href={href}
-        className="text-foreground hover:text-primary text-lg font-medium block py-2"
-      >
-        {name}
-      </Link>
-    </div>
+    <Link
+      href={href}
+      className="text-foreground hover:text-primary text-lg font-medium block py-2"
+    >
+      {name}
+    </Link>
   );
 };
 
