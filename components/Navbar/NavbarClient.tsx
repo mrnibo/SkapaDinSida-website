@@ -13,11 +13,11 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { IconLayoutFilled, IconMenuDeep } from "@tabler/icons-react";
-import { navItems } from "@/constants/Constants";
 import { NavbarButtonPrimary, NavbarButtonSecondary } from "./NavbarButton";
 import { NavbarThemeButton } from "./NavbarThemeButton";
 import NavbarLogo from "./NavbarLogo";
 import NavbarItems from "./NavbarItems";
+import { navItems } from "@/constants/Constants";
 
 const Navbar = () => {
   return (
