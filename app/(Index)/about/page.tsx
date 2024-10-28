@@ -3,9 +3,6 @@ import { MagicCard } from "@/components/ui/magic-card";
 import { Meteors } from "@/components/ui/meteors";
 import { IconBrandGithubCopilot, IconCup } from "@tabler/icons-react";
 import React from "react";
-{
-  /*sex*/
-}
 export default function PageAbout() {
   return (
     <>
