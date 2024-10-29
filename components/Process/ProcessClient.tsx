@@ -80,7 +80,7 @@ export default function ProcessClient() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <div className="relative">
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                <div className="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
                   {step.number}
                 </div>
                 {index < steps.length - 1 && (
