@@ -139,19 +139,13 @@ export const stats = [
 
 export const teamdateils = [
   {
-    image: "/choose-us-1.webp",
-    title: "Quality",
-    description:
-      "We focus on delivering the highest quality in everything we do.",
+    image: "/photo_2024-10-29_16-30-41.jpg",
+    name: "Mr.nibo",
+    description: "an saz.",
   },
   {
-    image: "/choose-us-2.webp",
-    title: "Reliability",
-    description: "Our team is reliable and we always deliver on time.",
-  },
-  {
-    image: "/choose-us-3.webp",
-    title: "Experience",
-    description: "We have many years of experience in the industry.",
+    image: "/photo_2024-10-29_16-30-41.jpg",
+    name: "SeaGate",
+    description: "goh saz",
   },
 ];
