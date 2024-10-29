@@ -5,7 +5,7 @@ import Image from "next/image";
 const AboutClient = () => {
   return (
     <>
-      <div className="relative flex h-screen max-w-7xl w-full mx-auto flex-col gap-2 md:gap-10 lg:gap-30 items-center justify-center overflow-hidden bg-background px-4">
+      <div className="relative flex max-w-7xl w-full mx-auto flex-col gap-2 md:gap-10 lg:gap-30 items-center justify-center overflow-hidden bg-background px-4 py-40">
         <Meteors number={30} />
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 w-full">
           {/* Left Side */}

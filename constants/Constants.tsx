@@ -118,7 +118,7 @@ export const aboutitems = {
 export const stats = [
   {
     number: 100,
-    title: "state1",
+    title: "Years of Experience",
   },
   {
     number: 50,
