@@ -111,7 +111,7 @@ const NavbarMobile = () => {
 
 export default function NavbarClient() {
   return (
-    <div className="py-6 px-5">
+    <div className="py-6 px-12">
       <div className="container mx-auto flex h-16 items-center">
         <Navbar />
         <div className="md:hidden mr-2 flex jus items-center">

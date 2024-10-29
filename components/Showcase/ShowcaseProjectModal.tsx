@@ -10,7 +10,7 @@ export interface ShowcaseProjectModalProps {
   project: {
     title: string;
     image: string;
-    description: string;
+    description: React.ReactNode; // Update this to accept JSX
     category: string;
   };
   isOpen: boolean;
@@ -29,7 +29,9 @@ export function ShowcaseProjectModal({
 }: ShowcaseProjectModalProps): JSX.Element {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] md:max-w-2xl">
+        {" "}
+        {/* Adjust width for larger screens */}
         <DialogHeader>
           <DialogTitle>{project.title}</DialogTitle>
         </DialogHeader>
@@ -41,7 +43,8 @@ export function ShowcaseProjectModal({
             height={300}
             className="w-full h-auto rounded-lg"
           />
-          <p className="mt-4 text-gray-700">{project.description}</p>
+          <div className="mt-4 text-gray-700">{project.description}</div>{" "}
+          {/* Render description as JSX */}
           <p className="mt-2 text-sm text-gray-500">
             Category: {project.category}
           </p>

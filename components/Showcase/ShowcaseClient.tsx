@@ -7,6 +7,7 @@ import { ShowcaseProjectModal } from "./ShowcaseProjectModal";
 import { useModal } from "./use-modal";
 import { Title } from "@radix-ui/react-toast";
 import { TitleSection } from "../ui/titles";
+import { ShowcaseSlider } from "./ShowcaseSlider";
 
 // Sample project data
 const projects = [
@@ -80,18 +81,8 @@ export default function ShowcaseClient() {
       : projects.filter((project) => project.category === filter);
 
   return (
-    <section className="container mx-auto px-4 py-12">
-      <TitleSection text="Showcase" className="py-6 px-4" />
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredProjects.map((project) => (
-          <ShowcaseProjectCard
-            key={project.id}
-            project={project}
-            onClick={() => openModal(project)}
-          />
-        ))}
-      </div>
+    <section className="container mx-auto px-4 py-24">
+      <ShowcaseSlider />
 
       {isOpen && selectedProject && (
         <ShowcaseProjectModal
