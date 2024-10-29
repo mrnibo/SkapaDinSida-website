@@ -113,3 +113,35 @@ export const aboutitems = {
     },
   ],
 };
+
+export const magicCardData = [
+  {
+    src: "https://github.com/shadcn.png",
+    title: "Mr.Nibo",
+    description: "Web Developer",
+  },
+  {
+    src: "https://github.com/shadcn.png",
+    title: "SeaGate",
+    description: "Web Developer",
+  },
+];
+
+export const magicCardWithoutAvatarData = [
+  {
+    image: "/choose-us-1.webp",
+    title: "Quality",
+    description:
+      "We focus on delivering the highest quality in everything we do.",
+  },
+  {
+    image: "/choose-us-2.webp",
+    title: "Reliability",
+    description: "Our team is reliable and we always deliver on time.",
+  },
+  {
+    image: "/choose-us-3.webp",
+    title: "Experience",
+    description: "We have many years of experience in the industry.",
+  },
+];
