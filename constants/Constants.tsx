@@ -142,11 +142,11 @@ export const teamdateils = [
   {
     image: "/photo_2024-10-29_16-30-41.jpg",
     name: "Mr.nibo",
-    description: "an saz.",
+    description: "an saz.fdgssdfgsdfgsdgdfgdfssgdfdfg",
   },
   {
     image: "/photo_2024-10-29_16-30-41.jpg",
     name: "SeaGate",
-    description: "goh saz",
+    description: "goh sazfgsdfgsdfgsdfgsdfg",
   },
 ];
