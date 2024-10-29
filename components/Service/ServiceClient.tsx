@@ -43,30 +43,15 @@ const services: Service[] = [
     title: "UI/UX Design",
     description: "Intuitive and visually appealing user interfaces.",
   },
-  {
-    icon: <ShoppingCart className="h-20 w-20" />,
-    title: "E-commerce Solutions",
-    description: "Robust online stores and payment integrations.",
-  },
-  {
-    icon: <BarChart className="h-20 w-20" />,
-    title: "Data Analytics",
-    description: "Insights and visualizations from your data.",
-  },
-  {
-    icon: <HeadphonesIcon className="h-20 w-20" />,
-    title: "24/7 Support",
-    description: "Round-the-clock technical assistance and maintenance.",
-  },
 ];
 
 export default function ServiceShowcase() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-12 bg-gray-50 dark:bg-neutral-900 relative">
+    <section className="py-24 bg-gray-50 dark:bg-neutral-900 relative">
       <div className="container mx-auto px-4">
-        <TitleSection text="Our Services" className="py-6 px-4" />
+        <TitleSection text="Our Services" className="py-8 px-4" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
