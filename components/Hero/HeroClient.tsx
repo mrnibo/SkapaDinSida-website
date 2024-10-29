@@ -17,7 +17,7 @@ const HeroClient = () => {
   }, [theme]);
   return (
     <>
-      <div className="relative flex h-screen max-w-7xl w-full mx-auto flex-col gap-10 md:gap-20 lg:gap-40 items-center justify-center overflow-hidden bg-background">
+      <div className="relative flex h-screen max-w-7xl w-full mx-auto flex-col gap-10 md:gap-20 lg:gap-40 items-center justify-center overflow-hidden bg-background px-4">
         <div className="flex flex-col md:flex-row justify-between items-start gap-2 w-full">
           {/* Left Side  */}
           <div className="flex flex-col items-center md:items-start gap-2 w-full md:w-2/5">
