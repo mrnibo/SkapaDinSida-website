@@ -6,14 +6,8 @@ import {
   IconBoltFilled,
   IconMessageChatbotFilled,
 } from "@tabler/icons-react";
-import { describe } from "node:test";
-import { title } from "process";
-import React from "react";
 
-export const git = {
-  nibo: "https://github.com/mrnibo",
-  seagate: "https://github.com/TechPreist",
-};
+import React from "react";
 
 export const navItems = [
   { name: "Home", href: "/" },
@@ -148,12 +142,14 @@ export const teamdateils = [
     name: "Mr.nibo",
     description: "an saz.fdgssdfgsdfgsdgdfgdfssgdfdfg",
     socilamedia: "",
+    github: "https://github.com/mrnibo",
   },
   {
     image: "/photo_2024-10-29_16-30-41.jpg",
     name: "SeaGate",
     description: "goh sazfgsdfgsdfgsdfgsdfg",
     socilamedia: "",
+    github: "https://github.com/TechPreist",
   },
 ];
 export const quality = [

@@ -1,7 +1,7 @@
 import React from "react";
 import AboutHero from "./hero/AboutHero";
 import QualityClient from "./Quality/QualityClient";
-import TeamCards from "./TeamCard/TeamCards";
+import TeamClient from "./TeamCard/TeamClient";
 
 const AboutClient = () => {
   return (
@@ -14,7 +14,7 @@ const AboutClient = () => {
           <QualityClient />
         </div>
         <div>
-          <TeamCards />
+          <TeamClient />
         </div>
       </div>
     </>
