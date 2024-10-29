@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ShowcaseProjectCard } from "./ShowcaseProjectCard";
 import { ShowcaseProjectModal } from "./ShowcaseProjectModal";
 import { useModal } from "./use-modal";
+import { Title } from "@radix-ui/react-toast";
+import { TitleSection } from "../ui/titles";
 
 // Sample project data
 const projects = [
@@ -79,19 +81,7 @@ export default function ShowcaseClient() {
 
   return (
     <section className="container mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold text-center mb-8">My Portfolio</h2>
-
-      <div className="flex flex-wrap justify-center gap-2 mb-8">
-        {categories.map((category) => (
-          <Button
-            key={category}
-            onClick={() => setFilter(category)}
-            variant={filter === category ? "default" : "outline"}
-          >
-            {category}
-          </Button>
-        ))}
-      </div>
+      <TitleSection text="Showcase" className="py-6 px-4" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredProjects.map((project) => (
