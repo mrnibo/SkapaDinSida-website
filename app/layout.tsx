@@ -5,6 +5,7 @@ import NavbarClient from "@/components/Navbar/NavbarClient";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Sen } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -43,7 +44,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavbarClient />
-          {children}
+          <div>{children}</div>
         </ThemeProvider>
         <Script id="clarity-script" strategy="afterInteractive">
           {`
