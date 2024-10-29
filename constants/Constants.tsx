@@ -114,20 +114,30 @@ export const aboutitems = {
   ],
 };
 
-export const magicCardData = [
+export const stats = [
   {
-    src: "https://github.com/shadcn.png",
-    title: "Mr.Nibo",
-    description: "Web Developer",
+    number: 100,
+    title: "state1",
   },
   {
-    src: "https://github.com/shadcn.png",
-    title: "SeaGate",
-    description: "Web Developer",
+    number: 50,
+    title: "state2",
+  },
+  {
+    number: 25,
+    title: "state3",
+  },
+  {
+    number: 32,
+    title: "state4",
+  },
+  {
+    number: 67,
+    title: "state5",
   },
 ];
 
-export const magicCardWithoutAvatarData = [
+export const teamdateils = [
   {
     image: "/choose-us-1.webp",
     title: "Quality",
