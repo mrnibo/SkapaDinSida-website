@@ -8,7 +8,7 @@ const QualityLines = () => {
       {quality.map((item, index) => (
         <div
           key={index}
-          className="mb-4 flex flex-row cursor-pointer hover:bg-purple-700 hover:text-white transition-colors duration-300 p-4 rounded-lg relative overflow-hidden"
+          className="mb-4 flex flex-row items-center cursor-pointer hover:bg-purple-700 hover:text-white transition-colors duration-300 p-4 rounded-lg relative overflow-hidden"
         >
           {/* Shining border effect */}
           <div className="absolute inset-0 border-2 border-purple-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
