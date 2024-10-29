@@ -1,7 +1,7 @@
 import { teamdateils } from "@/constants/Constants";
 import React from "react";
 import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
+import { IconBrandGithub } from "@tabler/icons-react";
 
 const TeamCards = () => {
   return (
@@ -35,7 +35,7 @@ const TeamCards = () => {
                 className="mt-2 text-purple-600 hover:text-purple-800 transition-colors duration-300 cursor-pointer"
               >
                 {" "}
-                <FaGithub size={24} />
+                <IconBrandGithub size={24} />
               </a>
             </div>
           </div>
