@@ -34,12 +34,10 @@ const HeroClient = () => {
               >
                 <Button
                   size="lg"
-                  className="group bg-blue-500 hover:bg-blue-600 text-md w-full sm:w-auto text-white py-6 flex gap-2 items-center"
+                  className="bg-blue-500 hover:bg-blue-600 text-md w-full sm:w-auto text-white py-6 flex gap-2 items-center"
                 >
+                  <IconPresentation size={20} />
                   {heroItems.buttonPrimaryText}
-                  <div className="transition-transform duration-300 group-hover:translate-x-1">
-                    <IconPresentation size={20} />
-                  </div>{" "}
                 </Button>
               </Link>
               <Link
