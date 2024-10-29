@@ -2,43 +2,57 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { TitleSection } from "../ui/titles";
+import { BorderBeam } from "../ui/border-beam";
+import { Button } from "../ui/button";
+import { IconInfoCircle } from "@tabler/icons-react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import DotPattern from "../ui/dot-pattern";
+import { BackgroundLines } from "../ui/background-lines";
 
 const steps = [
   {
     number: 1,
     title: "Discovery",
-    description: "We learn about your business, goals, and challenges.",
+    description:
+      "We learn about your business, goals, and challenges in detail, taking time to understand your brand, industry, and audience. Through in-depth research and discussions, we identify opportunities and areas where we can add value, setting a solid foundation for our collaboration.",
   },
   {
     number: 2,
     title: "Strategy",
-    description: "We develop a tailored plan to meet your objectives.",
+    description:
+      "We develop a tailored plan to meet your objectives, combining insights from our discovery phase with our expertise in the field. This strategy serves as a roadmap, outlining each step and milestone, ensuring we stay aligned with your vision and reach your goals efficiently and effectively.",
   },
   {
     number: 3,
     title: "Design",
-    description: "We create intuitive and engaging user experiences.",
+    description:
+      "We create intuitive and engaging user experiences, focusing on aesthetics and functionality. Our design process emphasizes creating an interface that resonates with users and enhances your brand, making every interaction seamless, enjoyable, and memorable.",
   },
   {
     number: 4,
     title: "Development",
-    description: "We build robust and scalable solutions.",
+    description:
+      "We build robust and scalable solutions, employing best practices and cutting-edge technologies. Our development process ensures the final product is reliable, fast, and secure, enabling you to grow and adapt to future needs without compromising performance or user experience.",
   },
   {
     number: 5,
     title: "Testing",
-    description: "We ensure quality and performance across all devices.",
+    description:
+      "We ensure quality and performance across all devices through rigorous testing processes. From functionality to compatibility, our team examines every aspect to identify potential issues, ensuring your solution delivers a flawless experience to every user, regardless of device or platform.",
   },
   {
     number: 6,
     title: "Launch",
-    description: "We deploy your project and provide ongoing support.",
+    description:
+      "We deploy your project and provide ongoing support, ensuring a smooth transition from development to live. Our team monitors the launch and is on hand to address any immediate needs or adjustments, setting the stage for long-term success and continuous improvement.",
   },
 ];
 
 export default function ProcessClient() {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,66 +62,63 @@ export default function ProcessClient() {
           observer.unobserve(entry.target);
         }
       },
-      {
-        threshold: 0.1,
-      }
+      { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
+    if (ref.current) observer.observe(ref.current);
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      if (ref.current) observer.unobserve(ref.current);
     };
   }, []);
 
   return (
-    <section ref={ref} className="py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">How We Work</h2>
-        <div className="flex flex-col md:flex-row md:flex-wrap justify-between items-start">
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.number}
-              className={`flex flex-col items-center mb-8 md:mb-0 md:w-1/3 ${
-                index % 2 === 0 ? "md:mt-0" : "md:mt-16"
-              }`}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <div className="relative">
-                <div className="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
-                  {step.number}
+    <section ref={ref} className="relative">
+      <BackgroundLines className="items-center justify-center w-full flex-col px-4 py-16 bg-gray-50 dark:bg-neutral-900 top-0 h-full hidden md:flex">
+        <div className="container mx-auto px-4">
+          <TitleSection text="Our Process" className="py-8 px-4 text-center" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 mx-8">
+            {steps.map((step, index) => (
+              <div
+                key={step.number}
+                className="relative group flex flex-col justify-center items-center md:items-start bg-white dark:bg-neutral-800 rounded-xl p-6 w-full h-[20rem]"
+              >
+                <div className="flex flex-col items-center md:items-start">
+                  <div className="flex flex-col justify-start items-start mb-5">
+                    <div className="text-blue-500 upercase text-sm font-bold mb-1 group-hover:translate-x-1 transition-transform duration-300">
+                      STEP {step.number}
+                    </div>
+                    <div className="bg-blue-500 w-4 h-1 rounded-full group-hover:translate-x-1 transition-transform duration-500"></div>
+                  </div>
+                  <h3 className="text-3xl font-semibold text-neutral-700 mb-4 dark:text-neutral-200 group-hover:translate-y-1 transition-transform duration-300">
+                    {step.title}
+                  </h3>
+                  <p className="text-center text-[1rem] md:text-left translate-x-0.5 text-gray-600 dark:text-gray-300 max-w-sm group-hover:translate-y-1 transition-transform duration-500">
+                    {step.description}
+                  </p>
                 </div>
-                {index < steps.length - 1 && (
-                  <svg
-                    className="hidden md:block absolute top-1/2 left-full transform -translate-y-1/2 translate-x-1/4"
-                    width="100"
-                    height="20"
-                    viewBox="0 0 100 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 10H90M90 10L80 0M90 10L80 20"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    />
-                  </svg>
-                )}
+                <BorderBeam
+                  size={20}
+                  duration={32}
+                  delay={9}
+                  colorFrom="#3b82f6"
+                  colorTo="#3730a3"
+                />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-              <p className="text-center text-gray-600 max-w-xs">
-                {step.description}
-              </p>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+        <div className="justify-center flex py-8">
+          <Link href="#" aria-label="Learn more">
+            <Button
+              size="lg"
+              className="bg-gray-200 hover:bg-gray-300 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-black dark:text-white text-md w-full sm:w-auto py-6 dark:border border-neutral-800 flex gap-2 items-center"
+            >
+              <IconInfoCircle size={20} />
+              Learn more
+            </Button>
+          </Link>
+        </div>
+      </BackgroundLines>
     </section>
   );
 }
