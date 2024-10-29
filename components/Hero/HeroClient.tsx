@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Particles from "@/components/ui/particles";
-import Iphone15Pro from "@/components/ui/iphone-15-pro";
 import { heroItems } from "@/constants/Constants";
 import { useThemeSafe } from "@/hooks/useThemeSafe";
 import { IconInfoCircle, IconPresentation } from "@tabler/icons-react";
@@ -17,8 +17,18 @@ const HeroClient = () => {
   }, [theme]);
   return (
     <>
-      <div className="relative flex h-screen max-w-7xl w-full mx-auto flex-col gap-10 md:gap-20 lg:gap-40 items-center justify-center overflow-hidden bg-background px-4">
+      <div className="relative flex h-screen max-w-7xl w-full mx-auto flex-col gap-10 md:gap-20 lg:gap-40 items-center justify-center overflow-hidden bg-background px-8">
         <div className="flex flex-col md:flex-row justify-between items-start gap-2 w-full">
+          <div className="w-full md:w-3/5 mt-8 md:mt-0 flex justify-center md:justify-end relative md:hidden">
+            <div className="">
+              <Image
+                src={heroItems.imageMobile}
+                alt="hero"
+                width={450}
+                height={450}
+              />
+            </div>
+          </div>
           {/* Left Side  */}
           <div className="flex flex-col items-center md:items-start gap-2 w-full md:w-2/5">
             <div className="w-full text-4xl md:text-6xl lg:text-7xl uppercase font-semibold text-center md:text-left leading-tight break-words">
@@ -55,11 +65,13 @@ const HeroClient = () => {
             </div>
           </div>
           {/* Right Side */}
-          <div className="w-full md:w-3/5 mt-8 md:mt-0 flex justify-center md:justify-end">
-            <div className="relative">
-              <Iphone15Pro
-                className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+          <div className="w-full md:w-3/5 mt-8 md:mt-0 hidden justify-center md:justify-end relative md:flex">
+            <div className="">
+              <Image
                 src={heroItems.image}
+                alt="hero"
+                width={450}
+                height={450}
               />
             </div>
           </div>

@@ -65,7 +65,7 @@ export default function ProcessClient() {
   }, []);
 
   return (
-    <section ref={ref} className="py-16 bg-gray-50">
+    <section ref={ref} className="py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">How We Work</h2>
         <div className="flex flex-col md:flex-row md:flex-wrap justify-between items-start">
