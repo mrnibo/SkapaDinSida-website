@@ -6,12 +6,8 @@ import {
   IconBoltFilled,
   IconMessageChatbotFilled,
 } from "@tabler/icons-react";
-import React from "react";
 
-export const git = {
-  nibo: "https://github.com/mrnibo",
-  seagate: "https://github.com/TechPreist",
-};
+import React from "react";
 
 export const navItems = [
   { name: "Home", href: "/" },
@@ -137,16 +133,42 @@ export const stats = [
     title: "state5",
   },
 ];
-
+{
+  /*socialmedia are icon and must be string */
+}
 export const teamdateils = [
   {
     image: "/photo_2024-10-29_16-30-41.jpg",
     name: "Mr.nibo",
     description: "an saz.fdgssdfgsdfgsdgdfgdfssgdfdfg",
+    socilamedia: "",
+    github: "https://github.com/mrnibo",
   },
   {
     image: "/photo_2024-10-29_16-30-41.jpg",
     name: "SeaGate",
     description: "goh sazfgsdfgsdfgsdfgsdfg",
+    socilamedia: "",
+    github: "https://github.com/TechPreist",
+  },
+];
+export const quality = [
+  {
+    icon: "",
+    title: "UI",
+    description: "We will proive best UI for your Website.",
+    link: "More",
+  },
+  {
+    icon: "",
+    title: "Back-end/Front-end",
+    description:
+      "We will provide you website a most optimise back-end and front-end",
+    link: "More",
+  },
+  {
+    icon: "",
+    title: "App Designer",
+    description: "We also made you app UI/UX",
   },
 ];
