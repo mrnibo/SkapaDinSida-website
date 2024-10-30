@@ -25,6 +25,7 @@ import {
   IconBrandLinkedin,
 } from "@tabler/icons-react";
 import { toast } from "@/hooks/use-toast";
+import { TitleSection } from "../ui/titles";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -65,7 +66,7 @@ export default function ContactUsClient() {
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
+        <TitleSection text="Get in Touch" className="py-8 px-4" />
         <div className="grid md:grid-cols-2 gap-8">
           <div className="p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-4">Send us a message</h3>

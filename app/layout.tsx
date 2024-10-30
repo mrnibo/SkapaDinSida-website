@@ -40,8 +40,12 @@ export default function RootLayout({
       <body className={`${sen.variable} font-sen antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light" // Set a fixed default theme
+          defaultTheme="light"
           disableTransitionOnChange
+          enableSystem
+          storageKey="theme"
+          themes={["light", "dark"]}
+          enableColorScheme
         >
           <NavbarClient />
           <div>{children}</div>

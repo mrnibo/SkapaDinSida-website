@@ -1,3 +1,4 @@
+import ContactUsBookCallClient from "@/components/ContactUs/ContactUsBookCallClient";
 import ContactUsClient from "@/components/ContactUs/ContactUsClient";
 import Footer from "@/components/Footer";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <ServiceShowcase />
       <ShowcaseClient />
       <ProcessClient />
+      <ContactUsBookCallClient />
       <ContactUsClient />
       <Footer />
     </>

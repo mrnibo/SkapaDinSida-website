@@ -6,6 +6,7 @@ import {
   IconBoltFilled,
   IconMessageChatbotFilled,
 } from "@tabler/icons-react";
+import { link } from "fs";
 
 import React from "react";
 
@@ -133,23 +134,31 @@ export const stats = [
     title: "state5",
   },
 ];
-{
-  /*socialmedia are icon and must be string */
-}
+
+// socialmedia are icon and must be string
+
 export const teamdateils = [
   {
-    image: "/photo_2024-10-29_16-30-41.jpg",
-    name: "Mr.nibo",
-    description: "an saz.fdgssdfgsdfgsdgdfgdfssgdfdfg",
+    image: "/nibo.jpg",
+    name: "Leo Khani",
+    title: "React Developer",
+    description: "",
     socilamedia: "",
     github: "https://github.com/mrnibo",
+    linkedin: "https://www.linkedin.com/in/mrnibo/",
+    twitter: "https://twitter.com/mrnibo",
+    contact: "Email: johndoe@example.com | Phone: (123) 456-7890",
   },
   {
     image: "/photo_2024-10-29_16-30-41.jpg",
-    name: "SeaGate",
-    description: "goh sazfgsdfgsdfgsdfgsdfg",
+    name: "Sadeq Familit",
+    title: "UI/UX Designer",
+    description: "",
     socilamedia: "",
     github: "https://github.com/TechPreist",
+    linkedin: "https://www.linkedin.com/in/mrnibo/",
+    twitter: "https://twitter.com/mrnibo",
+    contact: "Email: johndoe@example.com | Phone: (123) 456-7890",
   },
 ];
 export const quality = [
