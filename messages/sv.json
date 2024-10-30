@@ -1,0 +1,68 @@
+{
+    "navbar": {
+      "navbarLinks": {
+      "home": "Hem",
+      "about": "Om oss",
+      "services": "Tjänster",
+      "contact": "Kontakt"
+    },
+      "buttonPrimaryText": "Starta ett projekt"
+    },
+    "heroItems": {
+      "title": "Bygg din digitala närvaro",
+      "subtitle": "Innovativa webblösningar för ditt företag",
+      "description": "Vi skapar högkvalitativa, responsiva webbplatser som lyfter ditt varumärke och engagerar din publik. Låt oss hantera de tekniska detaljerna medan du fokuserar på att växa din verksamhet.",
+      "buttonPrimaryText": "Starta ett projekt",
+      "buttonSecondaryText": "Våra tjänster"
+    },
+    "aboutItems": [
+      {
+        "title": "Kvalitet",
+        "description": "Vi fokuserar på att leverera högsta kvalitet i allt vi gör."
+      },
+      {
+        "title": "Pålidlighet",
+        "description": "Vårt team är pålitligt och vi levererar alltid i tid."
+      },
+      {
+        "title": "Erfarenhet",
+        "description": "Vi har många års erfarenhet inom branschen."
+      }
+    ],
+    "stats": [
+      { "number": 100, "title": "Års erfarenhet" },
+      { "number": 50, "title": "Stat 2" },
+      { "number": 25, "title": "Stat 3" },
+      { "number": 32, "title": "Stat 4" },
+      { "number": 67, "title": "Stat 5" }
+    ],
+    "quality": [
+      {
+        "title": "UI",
+        "description": "Vi erbjuder bästa UI för din webbplats.",
+        "link": "Mer"
+      },
+      {
+        "title": "Back-end/Front-end",
+        "description": "Vi optimerar både back-end och front-end för din webbplats.",
+        "link": "Mer"
+      },
+      {
+        "title": "Appdesigner",
+        "description": "Vi skapar också UI/UX-design för din app."
+      }
+    ],
+    "teamDetails": [
+      {
+        "name": "Leo Khani",
+        "title": "React-utvecklare",
+        "contact": "Email: johndoe@example.com | Telefon: (123) 456-7890"
+      },
+      {
+        "name": "Sadeq Familit",
+        "title": "UI/UX Designer",
+        "contact": "Email: johndoe@example.com | Telefon: (123) 456-7890"
+      }
+    ]
+  }
+  

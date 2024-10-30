@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import {
   IconCode,
   IconDeviceLaptop,
@@ -6,9 +7,6 @@ import {
   IconBoltFilled,
   IconMessageChatbotFilled,
 } from "@tabler/icons-react";
-import { link } from "fs";
-
-import React from "react";
 
 export const navItems = [
   { name: "Home", href: "/" },
