@@ -1,12 +1,11 @@
 import React from "react";
 import QualityLines from "./QualityLines";
+import { TitleSection } from "@/components/ui/titles";
 
 const QualityClient = () => {
   return (
     <>
-      <div className="flex justify-center items-center text-6xl">
-        Our Quality Services
-      </div>
+      <TitleSection text="Quality" />
       <QualityLines />
     </>
   );

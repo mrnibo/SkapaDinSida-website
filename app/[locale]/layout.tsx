@@ -9,6 +9,7 @@ import NavbarClient from "@/components/Navbar/NavbarClient";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Sen } from "next/font/google";
 import CookieBanner from "@/components/CookieConsent/CookieBanner";
+import Footer from "@/components/Footer";
 
 const sen = Sen({
   subsets: ["latin"],
@@ -24,18 +25,19 @@ export const metadata: Metadata = {
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  const { locale } = await params;
+
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
+  // Providing all messages to the client side
   const messages = await getMessages();
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -50,6 +52,7 @@ export default async function LocaleLayout({
           >
             <NavbarClient />
             <div>{children}</div>
+            <Footer />
           </ThemeProvider>
           <CookieBanner />
         </NextIntlClientProvider>

@@ -9,7 +9,7 @@ import Link from "next/link";
 const ContactUsBookCallClient = () => {
   return (
     <div className="bg-gray-200 dark:bg-neutral-900">
-      <div className="container mx-auto p-24">
+      <div className="container mx-auto">
         <div className="flex flex-col justify-center items-center gap-5 ">
           <Badge variant="default" className="flex gap-1">
             <IconCircleDot className="text-green-400" size={20} />

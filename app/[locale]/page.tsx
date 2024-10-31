@@ -15,9 +15,10 @@ export default function Home() {
         <ServiceShowcase />
         <ShowcaseClient />
         <ProcessClient />
-        <ContactUsBookCallClient />
+        <div className="py-24">
+          <ContactUsBookCallClient />
+        </div>
       </main>
-      <Footer />
     </>
   );
 }

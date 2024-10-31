@@ -4,7 +4,7 @@ import Link from "next/link"; // Make sure to import Link from next/link for nav
 
 const QualityLines = () => {
   return (
-    <div className="flex flex-col py-16">
+    <div className="flex flex-col">
       {quality.map((item, index) => (
         <div
           key={index}
