@@ -3,12 +3,13 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import "./globals.css";
 import NavbarClient from "@/components/Navbar/NavbarClient";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Sen } from "next/font/google";
 import CookieBanner from "@/components/CookieConsent/CookieBanner";
 import Footer from "@/components/Footer";
+
+import "./globals.css";
 
 const sen = Sen({
   subsets: ["latin"],

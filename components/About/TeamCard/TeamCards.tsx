@@ -7,6 +7,7 @@ import {
   IconBrandX,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import { Spacer } from "@/components/ui/spacer";
 
 const TeamCards = () => {
   return (
@@ -19,7 +20,7 @@ const TeamCards = () => {
           ) => (
             <div
               key={index}
-              className="group flex flex-col md:flex-row justify-between items-center gap-4 w-full p-4 transition-transform transform hover:scale-105 duration-300 bg-gray-100 dark:bg-neutral-800 rounded-2xl shadow-md"
+              className="group flex flex-row justify-between items-center gap-4 w-96 p-4 transition-transform transform hover:scale-105 duration-300 bg-gray-100 dark:bg-neutral-800 rounded-2xl shadow-md"
             >
               <div className="">
                 <Image
@@ -30,7 +31,8 @@ const TeamCards = () => {
                   className="rounded-2xl w-28 h-28 object-center object-cover"
                 />
               </div>
-              <div className="flex justify-center items-center h-8 w-1 rounded-full bg-gray-500"></div>
+              <div className="hidden justify-center items-center h-8 w-1 rounded-full bg-blue-500 md:flex"></div>
+              <Spacer className="block md:hidden pt-4" />
               <div className="flex flex-col items-start justify-between text-left">
                 <h2 className="text-xl font-semibold mt-2">{name}</h2>
                 <h3 className="text-[0.9rem] text-gray-500 dark:text-neutral-400">
@@ -45,7 +47,6 @@ const TeamCards = () => {
                     rel="noopener noreferrer"
                     className="text-blue-500 group-hover:text-black group-hover:dark:text-white transition-colors duration-300"
                   >
-                    {" "}
                     <IconBrandGithub size={20} />
                   </Link>
                   |{/* linkdin link */}
@@ -55,7 +56,6 @@ const TeamCards = () => {
                     rel="noopener noreferrer"
                     className="text-blue-500 group-hover:text-black group-hover:dark:text-white transition-colors duration-300"
                   >
-                    {" "}
                     <IconBrandLinkedin size={20} />
                   </Link>
                   |{/* twitter link */}
@@ -65,7 +65,6 @@ const TeamCards = () => {
                     rel="noopener noreferrer"
                     className="text-blue-500 group-hover:text-black group-hover:dark:text-white transition-colors duration-300"
                   >
-                    {" "}
                     <IconBrandX size={20} />
                   </Link>
                 </div>

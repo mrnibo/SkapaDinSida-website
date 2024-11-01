@@ -15,15 +15,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import {
-  IconMapPin2,
-  IconPhone,
-  IconMail,
-  IconBrandFacebook,
-  IconBrandTwitter,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-} from "@tabler/icons-react";
+import Image from "next/image";
 import { toast } from "@/hooks/use-toast";
 import { TitleSection } from "../ui/titles";
 
@@ -67,8 +59,8 @@ export default function ContactUsClient() {
     <section className="py-12">
       <div className="container mx-auto px-4">
         <TitleSection text="Get in Touch" className="py-8 px-4" />
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="p-6 rounded-lg shadow-md">
+        <div className="flex justify-between items-center gap-8">
+          <div className="p-6 w-1/2">
             <h3 className="text-xl font-semibold mb-4">Send us a message</h3>
             <Form {...form}>
               <form
@@ -145,57 +137,13 @@ export default function ContactUsClient() {
               </form>
             </Form>
           </div>
-          <div className=" p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <IconMapPin2 className="w-5 h-5 mr-2 text-gray-600" />
-                <span>123 Business Street, City, Country</span>
-              </div>
-              <div className="flex items-center">
-                <IconPhone className="w-5 h-5 mr-2 text-gray-600" />
-                <span>+1 (123) 456-7890</span>
-              </div>
-              <div className="flex items-center">
-                <IconMail className="w-5 h-5 mr-2 text-gray-600" />
-                <span>contact@example.com</span>
-              </div>
-            </div>
-            <div className="mt-6">
-              <h4 className="text-lg font-semibold mb-2">Follow Us</h4>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-600 hover:text-gray-800">
-                  <IconBrandFacebook className="w-6 h-6" />
-                  <span className="sr-only">Facebook</span>
-                </a>
-                <a href="#" className="text-gray-600 hover:text-gray-800">
-                  <IconBrandTwitter className="w-6 h-6" />
-                  <span className="sr-only">Twitter</span>
-                </a>
-                <a href="#" className="text-gray-600 hover:text-gray-800">
-                  <IconBrandInstagram className="w-6 h-6" />
-                  <span className="sr-only">Instagram</span>
-                </a>
-                <a href="#" className="text-gray-600 hover:text-gray-800">
-                  <IconBrandLinkedin className="w-6 h-6" />
-                  <span className="sr-only">LinkedIn</span>
-                </a>
-              </div>
-            </div>
-            <div className="mt-6">
-              <h4 className="text-lg font-semibold mb-2">Location</h4>
-              <div className="aspect-w-16 aspect-h-9">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1sen!2sus!4v1510579767785"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
+          <div className=" p-6 rounded-lg flex justify-center items-center">
+            <Image
+              src="/images/contact-us.svg"
+              alt="Contact Us"
+              width={500}
+              height={500}
+            />
           </div>
         </div>
       </div>

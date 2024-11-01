@@ -9,22 +9,14 @@ const AboutClient = () => {
   return (
     <>
       <div className="container mx-auto max-w-7xl">
-        <div className="flex flex-col justify-center">
-          <div className="py-24 flex flex-col gap-16">
-            <AboutHero />
-            <StatsClient />
-          </div>
-          <Spacer />
-
-          <div className="py-8">
-            <ValuesClient />
-          </div>
+        <div className="mx-8">
+          <AboutHero className="py-24" />
+          <StatsClient />
+          <Spacer className="py-8" />
+          <ValuesClient />
+          <Spacer className="py-8" />
+          <ContactUsBookCallClient />
         </div>
-      </div>
-
-      <Spacer />
-      <div className="bg-gray-200 dark:bg-neutral-900 py-16">
-        <ContactUsBookCallClient />
       </div>
     </>
   );

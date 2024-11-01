@@ -7,7 +7,7 @@ const StatsClient = () => {
   const stats = t.raw("stats");
 
   return (
-    <div className="flex flex-col md:flex-row lg:py-2 justify-between ">
+    <div className="flex flex-col justify-center md:flex-row lg:py-2 md:justify-between gap-16">
       {stats.map((item: any, index: any) => (
         <div key={index} className="flex items-center justify-center">
           <div className="flex flex-row items-center">
