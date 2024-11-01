@@ -1,0 +1,109 @@
+{
+    "navbar": {
+      "navbarLinks": {
+      "home": "Hem",
+      "about": "Om oss",
+      "services": "Tjänster",
+      "contact": "Kontakt"
+    },
+      "buttonPrimaryText": "Starta ett projekt"
+    },
+    "heroItems": {
+      "title": "Bygg din digitala närvaro",
+      "subtitle": "Innovativa webblösningar för ditt företag",
+      "description": "Vi skapar högkvalitativa, responsiva webbplatser som lyfter ditt varumärke och engagerar din publik. Låt oss hantera de tekniska detaljerna medan du fokuserar på att växa din verksamhet.",
+      "buttonPrimaryText": "Starta ett projekt",
+      "buttonSecondaryText": "Våra tjänster"
+    },
+    "aboutItems": [
+      {
+        "title": "Kvalitet",
+        "description": "Vi fokuserar på att leverera högsta kvalitet i allt vi gör."
+      },
+      {
+        "title": "Pålidlighet",
+        "description": "Vårt team är pålitligt och vi levererar alltid i tid."
+      },
+      {
+        "title": "Erfarenhet",
+        "description": "Vi har många års erfarenhet inom branschen."
+      }
+    ],
+    "stats": [
+      { "number": 100, "title": "Års erfarenhet" },
+      { "number": 50, "title": "Stat 2" },
+      { "number": 25, "title": "Stat 3" },
+      { "number": 32, "title": "Stat 4" },
+      { "number": 67, "title": "Stat 5" }
+    ],
+    "quality": [
+      {
+        "title": "UI",
+        "description": "Vi erbjuder bästa UI för din webbplats.",
+        "link": "Mer"
+      },
+      {
+        "title": "Back-end/Front-end",
+        "description": "Vi optimerar både back-end och front-end för din webbplats.",
+        "link": "Mer"
+      },
+      {
+        "title": "Appdesigner",
+        "description": "Vi skapar också UI/UX-design för din app."
+      }
+    ],
+    "teamDetails": [
+      {
+        "name": "Leo Khani",
+        "title": "React-utvecklare",
+        "contact": "Email: johndoe@example.com | Telefon: (123) 456-7890"
+      },
+      {
+        "name": "Sadeq Familit",
+        "title": "UI/UX Designer",
+        "contact": "Email: johndoe@example.com | Telefon: (123) 456-7890"
+      }
+    ],
+
+    "aboutUs": {
+    "title": "Om Oss",
+    "subtitle": "Förvandla dina idéer till digitala upplevelser",
+    "description": "På Skapadinsida är vi experter på att designa och utveckla anpassade webbplatser som lyfter ditt varumärke och engagerar din publik. Med en passion för kreativitet och ett engagemang för kvalitet förverkligar vi dina idéer genom innovativa webblösningar anpassade efter dina unika behov.",
+    "missionTitle": "Vårt Uppdrag",
+    "missionDescription": "Att stärka företag genom att erbjuda högkvalitativa, användarcentrerade webblösningar som skapar engagemang och framgång.",
+    "visionTitle": "Vår Vision",
+    "visionDescription": "Att vara en ledande webbyrå känd för att skapa kraftfulla digitala upplevelser som inspirerar och kopplar samman.",
+    "valuesTitle": "Våra Värderingar",
+    "values": {
+      "creativity": {
+        "title": "Kreativitet",
+        "description": "Vi tar med nya idéer och innovativa lösningar till varje projekt för att skapa en unik digital närvaro för varje kund."
+      },
+      "quality": {
+        "title": "Kvalitet",
+        "description": "Vårt team är engagerat i att leverera de högsta standarderna inom webbdesign och utveckling."
+      },
+      "reliability": {
+        "title": "Tillförlitlighet",
+        "description": "Vi värdesätter förtroende och transparens i våra kundrelationer och arbetar flitigt för att hålla tidsfrister och överträffa förväntningar."
+      }
+    },
+    "statsTitle": "Våra Prestationer",
+    "stats": [
+      {
+        "number": 150,
+        "title": "Projekter Avslutade"
+      },
+      {
+        "number": 10,
+        "title": "Års Erfarenhet"
+      },
+      {
+        "number": 100,
+        "title": "Nöjda Kunder"
+      }
+    ]
+    
+    }
+  }
+  

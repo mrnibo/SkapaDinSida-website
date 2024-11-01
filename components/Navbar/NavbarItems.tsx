@@ -10,8 +10,13 @@ interface NavbarItemsProps {
 }
 
 const NavbarItems: React.FC<NavbarItemsProps> = ({ name, href, className }) => {
-  const pathname = usePathname(); // get the current path
-  const isActive = pathname === href;
+  const pathname = usePathname();
+  // Remove locale prefix (e.g., "/en", "/sv") from pathname
+  const sanitizedPath = pathname.replace(/^\/(en|sv)/, "");
+
+  // Check if the sanitized path matches the href
+  const isActive =
+    sanitizedPath === href || (sanitizedPath === "" && href === "/");
 
   return (
     <div className="relative flex flex-col items-center">

@@ -81,16 +81,18 @@ export default function ShowcaseClient() {
       : projects.filter((project) => project.category === filter);
 
   return (
-    <section className="container mx-auto px-4 py-24">
-      <ShowcaseSlider />
+    <section className="px-4 py-24 bg-gray-200 dark:bg-neutral-800">
+      <div className="container mx-auto ">
+        <ShowcaseSlider />
 
-      {isOpen && selectedProject && (
-        <ShowcaseProjectModal
-          project={selectedProject}
-          isOpen={isOpen}
-          onClose={closeModal}
-        />
-      )}
+        {isOpen && selectedProject && (
+          <ShowcaseProjectModal
+            project={selectedProject}
+            isOpen={isOpen}
+            onClose={closeModal}
+          />
+        )}
+      </div>
     </section>
   );
 }

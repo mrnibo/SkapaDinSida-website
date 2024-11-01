@@ -17,9 +17,20 @@ import { NavbarButtonPrimary, NavbarButtonSecondary } from "./NavbarButton";
 import { NavbarThemeButton } from "./NavbarThemeButton";
 import NavbarLogo from "./NavbarLogo";
 import NavbarItems from "./NavbarItems";
-import { navItems } from "@/constants/Constants";
+import LanguageSwitcher from "./NavbarLanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 const Navbar = () => {
+  const t = useTranslations("navbar");
+
+  // Define the navigation items inside the Navbar component
+  const navItems = [
+    { name: t("navbarLinks.home"), href: "/" },
+    { name: t("navbarLinks.about"), href: "/about" },
+    { name: t("navbarLinks.services"), href: "/service" },
+    { name: t("navbarLinks.contact"), href: "/contact" },
+  ];
+
   return (
     <nav className="hidden md:flex justify-between items-center w-full px-4">
       <div>
@@ -37,13 +48,13 @@ const Navbar = () => {
         </ul>
         <div className="flex gap-4 items-center">
           <NavbarButtonPrimary
-            text="Get Started"
+            text={t("buttonPrimaryText")}
             link="/contact"
             icon={<IconLayoutFilled />}
           />
           <NavbarThemeButton />
+          <LanguageSwitcher />
         </div>
-        <div></div>
       </div>
     </nav>
   );
@@ -51,6 +62,14 @@ const Navbar = () => {
 
 const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("navbar");
+
+  const navItems = [
+    { name: t("navbarLinks.home"), href: "/" },
+    { name: t("navbarLinks.about"), href: "/about" },
+    { name: t("navbarLinks.services"), href: "/service" },
+    { name: t("navbarLinks.contact"), href: "/contact" },
+  ];
 
   return (
     <Drawer open={isOpen} onOpenChange={setIsOpen}>
@@ -74,15 +93,13 @@ const NavbarMobile = () => {
         </DrawerHeader>
         <div className="px-4">
           <div className="flex justify-center items-center w-full">
-            {" "}
             <NavbarButtonSecondary
-              text="Get Started"
+              text={t("buttonPrimaryText")}
               link="/contact"
               icon={<IconLayoutFilled />}
               className="text-lg w-full bg-blue-500 mb-5"
             />
           </div>
-
           <nav className="px-4">
             <ul className="space-y-4">
               {navItems.map((item) => (
@@ -114,7 +131,7 @@ export default function NavbarClient() {
     <div className="py-6 px-12">
       <div className="container mx-auto flex h-16 items-center">
         <Navbar />
-        <div className="md:hidden mr-2 flex jus items-center">
+        <div className="md:hidden mr-2 flex items-center">
           <Link href="/" className="text-2xl font-bold mr-auto">
             <NavbarLogo />
           </Link>

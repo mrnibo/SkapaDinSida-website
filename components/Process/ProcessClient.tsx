@@ -72,53 +72,44 @@ export default function ProcessClient() {
   }, []);
 
   return (
-    <section ref={ref} className="relative">
-      <BackgroundLines className="items-center justify-center w-full flex-col px-4 py-16 bg-gray-50 dark:bg-neutral-900 top-0 h-full hidden md:flex">
-        <div className="container mx-auto px-4">
-          <TitleSection text="Our Process" className="py-8 px-4 text-center" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 mx-8">
-            {steps.map((step, index) => (
-              <div
-                key={step.number}
-                className="relative group flex flex-col justify-center items-center md:items-start bg-white dark:bg-neutral-800 rounded-xl p-6 w-full h-[20rem]"
-              >
-                <div className="flex flex-col items-center md:items-start">
-                  <div className="flex flex-col justify-start items-start mb-5">
-                    <div className="text-blue-500 upercase text-sm font-bold mb-1 group-hover:translate-x-1 transition-transform duration-300">
-                      STEP {step.number}
+    <section ref={ref} className="">
+      <div className="container mx-auto px-4 py-16">
+        <TitleSection text="Our Process" className="px-4 text-center " />
+        <div className="relative bg-gray-100 dark:bg-neutral-900 ">
+          <BackgroundLines className="items-center justify-center w-full flex-col top-0 h-full hidden md:flex bg-gray-100 dark:bg-neutral-900">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 mx-8">
+              {steps.map((step, index) => (
+                <div
+                  key={step.number}
+                  className="relative group flex flex-col justify-center items-center md:items-start bg-gray-200 dark:bg-neutral-800 rounded-xl p-6 w-full h-[20rem]"
+                >
+                  <div className="flex flex-col items-center md:items-start">
+                    <div className="flex flex-col justify-start items-start mb-5">
+                      <div className="text-blue-500 upercase text-sm font-bold mb-1 group-hover:translate-x-1 transition-transform duration-300">
+                        STEP {step.number}
+                      </div>
+                      <div className="bg-blue-500 w-4 h-1 rounded-full group-hover:translate-x-1 transition-transform duration-500"></div>
                     </div>
-                    <div className="bg-blue-500 w-4 h-1 rounded-full group-hover:translate-x-1 transition-transform duration-500"></div>
+                    <h3 className="text-3xl font-semibold text-neutral-700 mb-4 dark:text-neutral-200 group-hover:translate-y-1 transition-transform duration-300">
+                      {step.title}
+                    </h3>
+                    <p className="text-center text-[1rem] md:text-left translate-x-0.5 text-gray-600 dark:text-gray-300 max-w-sm group-hover:translate-y-1 transition-transform duration-500">
+                      {step.description}
+                    </p>
                   </div>
-                  <h3 className="text-3xl font-semibold text-neutral-700 mb-4 dark:text-neutral-200 group-hover:translate-y-1 transition-transform duration-300">
-                    {step.title}
-                  </h3>
-                  <p className="text-center text-[1rem] md:text-left translate-x-0.5 text-gray-600 dark:text-gray-300 max-w-sm group-hover:translate-y-1 transition-transform duration-500">
-                    {step.description}
-                  </p>
+                  <BorderBeam
+                    size={20}
+                    duration={32}
+                    delay={9}
+                    colorFrom="#3b82f6"
+                    colorTo="#3730a3"
+                  />
                 </div>
-                <BorderBeam
-                  size={20}
-                  duration={32}
-                  delay={9}
-                  colorFrom="#3b82f6"
-                  colorTo="#3730a3"
-                />
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </BackgroundLines>
         </div>
-        <div className="justify-center flex py-8">
-          <Link href="#" aria-label="Learn more">
-            <Button
-              size="lg"
-              className="bg-gray-200 hover:bg-gray-300 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-black dark:text-white text-md w-full sm:w-auto py-6 dark:border border-neutral-800 flex gap-2 items-center"
-            >
-              <IconInfoCircle size={20} />
-              Learn more
-            </Button>
-          </Link>
-        </div>
-      </BackgroundLines>
+      </div>
     </section>
   );
 }

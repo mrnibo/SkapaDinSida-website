@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { navLogoItems } from "@/constants/Constants";
-import { useThemeSafe } from "@/hooks/useThemeSafe";
+import { useTheme } from "next-themes";
 
 const NavbarLogo = () => {
-  const { theme } = useThemeSafe();
+  const { theme } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
 
-  const logoSrc = navLogoItems.dark;
-  const logoToDisplay = theme === "dark" ? navLogoItems.light : logoSrc;
+  // Ensure the component only renders with theme after mounting on the client
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Fallback to light logo during SSR to prevent mismatches
+  const logoToDisplay =
+    isMounted && theme === "dark" ? navLogoItems.light : navLogoItems.dark;
 
   return (
     <div className="flex gap-2 items-center text-md font-normal">
-      <Image src={logoToDisplay} alt="logo" width={32} height={32} />{" "}
+      <Image src={logoToDisplay} alt="logo" width={32} height={32} />
       SkapaDinSida
     </div>
   );

@@ -1,0 +1,109 @@
+{
+    
+    "navbar": {
+      "navbarLinks": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact"
+      },
+      "buttonPrimaryText": "Get Started"
+    },
+    "heroItems": {
+      "title": "Build Your Digital Presence",
+      "subtitle": "Innovative Web Solutions for Your Business",
+      "description": "We create high-quality, responsive websites that elevate your brand and engage your audience. Let us handle the technical details while you focus on growing your business.",
+      "buttonPrimaryText": "Start a Project",
+      "buttonSecondaryText": "Our Services"
+    },
+    "aboutItems": [
+      {
+        "title": "Quality",
+        "description": "We focus on delivering the highest quality in everything we do."
+      },
+      {
+        "title": "Reliability",
+        "description": "Our team is reliable and we always deliver on time."
+      },
+      {
+        "title": "Experience",
+        "description": "We have many years of experience in the industry."
+      }
+    ],
+    "stats": [
+      { "number": 100, "title": "Years of Experience" },
+      { "number": 50, "title": "State 2" },
+      { "number": 25, "title": "State 3" },
+      { "number": 32, "title": "State 4" },
+      { "number": 67, "title": "State 5" }
+    ],
+    "quality": [
+      {
+        "title": "UI",
+        "description": "We provide the best UI for your Website.",
+        "link": "More"
+      },
+      {
+        "title": "Back-end/Front-end",
+        "description": "We will optimize both the back-end and front-end of your website.",
+        "link": "More"
+      },
+      {
+        "title": "App Designer",
+        "description": "We also create UI/UX designs for your app."
+      }
+    ],
+    "teamDetails": [
+      {
+        "name": "Leo Khani",
+        "title": "React Developer",
+        "contact": "Email: johndoe@example.com | Phone: (123) 456-7890"
+      },
+      {
+        "name": "Sadeq Familit",
+        "title": "UI/UX Designer",
+        "contact": "Email: johndoe@example.com | Phone: (123) 456-7890"
+      }
+    ],
+
+    "aboutUs": {
+      "title": "About Us",
+      "subtitle": "Transforming Your Ideas into Digital Experiences",
+      "description": "At Skapadinsida, we specialize in designing and developing custom websites that elevate your brand and engage your audience. With a passion for creativity and a commitment to quality, we bring your ideas to life through innovative web solutions tailored to your unique needs.",
+      "missionTitle": "Our Mission",
+      "missionDescription": "To empower businesses by providing high-quality, user-centered web solutions that drive engagement and success.",
+      "visionTitle": "Our Vision",
+      "visionDescription": "To be a leading web design agency known for creating impactful digital experiences that inspire and connect.",
+      "valuesTitle": "Our Values",
+      "values": {
+        "creativity": {
+          "title": "Creativity",
+          "description": "We bring fresh ideas and innovative solutions to every project, ensuring a unique digital presence for each client."
+        },
+        "quality": {
+          "title": "Quality",
+          "description": "Our team is committed to delivering the highest standards in web design and development."
+        },
+        "reliability": {
+          "title": "Reliability",
+          "description": "We value trust and transparency in our client relationships and work diligently to meet deadlines and exceed expectations."
+        }
+      },
+      "statsTitle": "Our Achievements",
+      "stats": [
+      {
+        "number": 150,
+        "title": "Projects Completed"
+      },
+      {
+        "number": 10,
+        "title": "Years of Experience"
+      },
+      {
+        "number": 100,
+        "title": "Satisfied Clients"
+      }
+    ]
+    }
+  }
+  

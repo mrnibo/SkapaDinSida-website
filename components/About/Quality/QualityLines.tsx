@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const QualityLines = () => {
   return (
-    <div className="flex flex-col py-16">
+    <div className="flex flex-col">
       {quality.map((item, index) => (
 
         <div
