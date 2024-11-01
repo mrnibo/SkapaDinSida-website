@@ -1,5 +1,4 @@
 import React from "react";
-import { Meteors } from "@/components/ui/meteors";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { TitleSection } from "@/components/ui/titles";
@@ -9,7 +8,6 @@ const AboutClient = () => {
   return (
     <>
       <div className="relative flex max-w-7xl w-full mx-auto flex-col gap-2 items-center justify-center bg-background px-4">
-        <Meteors number={30} />
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 w-full">
           {/* Left Side */}
           <div className="flex flex-col items-center md:items-start gap-2 w-full md:w-2/5">
