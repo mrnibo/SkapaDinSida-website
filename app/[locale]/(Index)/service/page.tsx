@@ -6,12 +6,14 @@ import React from "react";
 
 export default function PageService() {
   return (
-    <div>
+    <div className="container mx-auto max-w-7xl">
+      <div >
       <ServiceHero />
-      <Spacer />
+      <Spacer className="py-8"/>
       <ServiceClient />
-      <Spacer />
+      <Spacer className="py-8"/>
       <ServiceMain />
+      </div>
     </div>
   );
 }

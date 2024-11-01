@@ -1,7 +1,7 @@
 import { TitleSection } from "@/components/ui/titles";
 import { IconBrandDrops } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+
 
 interface ValueItem {
   title: string;
