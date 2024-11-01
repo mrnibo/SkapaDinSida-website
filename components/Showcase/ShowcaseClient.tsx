@@ -1,12 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { ShowcaseProjectCard } from "./ShowcaseProjectCard";
 import { ShowcaseProjectModal } from "./ShowcaseProjectModal";
 import { useModal } from "./use-modal";
-import { Title } from "@radix-ui/react-toast";
-import { TitleSection } from "../ui/titles";
 import { ShowcaseSlider } from "./ShowcaseSlider";
 
 // Sample project data

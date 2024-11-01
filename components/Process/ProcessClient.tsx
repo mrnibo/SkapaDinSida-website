@@ -1,14 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import { TitleSection } from "../ui/titles";
 import { BorderBeam } from "../ui/border-beam";
-import { Button } from "../ui/button";
-import { IconInfoCircle } from "@tabler/icons-react";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-import DotPattern from "../ui/dot-pattern";
 import { BackgroundLines } from "../ui/background-lines";
 
 const steps = [

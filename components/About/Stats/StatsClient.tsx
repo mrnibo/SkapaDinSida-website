@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 const StatsClient = () => {
   const t = useTranslations("aboutUs");
-  const stats = t.raw("stats"); // Access stats directly as an array
+  const stats = t.raw("stats");
 
   return (
     <div className="flex flex-col md:flex-row lg:py-2 justify-between ">

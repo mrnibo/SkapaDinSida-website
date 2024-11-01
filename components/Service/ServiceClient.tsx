@@ -1,25 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  Laptop,
-  Smartphone,
-  PenTool,
-  ShoppingCart,
-  BarChart,
-  HeadphonesIcon,
-} from "lucide-react";
+import { Laptop, Smartphone, PenTool } from "lucide-react";
 import ServiceCards from "./ServiceCards";
-import { TitleSection } from "../ui/titles";
 
 interface Service {
   icon: React.ReactNode;
