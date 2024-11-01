@@ -104,6 +104,41 @@
       }
     ]
     
+    },
+
+    "services": {
+      "title": "Våra Tjänster",
+      "subtitle": "Förverkligar Din Vision",
+      "description": "Vi erbjuder en rad tjänster för att hjälpa dig etablera en stark online-närvaro. Från varumärkesbyggande och skapande av webbplatser till SEO-optimering, vårt team är dedikerat till att leverera lösningar som driver framgång.",
+      "missionTitle": "Vårt Uppdrag",
+      "missionDescription": "Att stärka företag genom att erbjuda förstklassiga digitala tjänster som ökar synlighet och främjar tillväxt.",
+      "learnMore": "Läs Mer",
+      "servicesList": [
+        {
+          "title": "Varumärkesbyggande",
+          "description": "Vi hjälper dig att skapa en stark varumärkesidentitet som resonerar med din målgrupp.",
+          "link": "/services/varumarkesbyggande",
+          "image": "/images/services/branding.jpg"
+        },
+        {
+          "title": "Skapande av Webbplatser",
+          "description": "Professionell webbplatsutveckling anpassad efter ditt företags behov.",
+          "link": "/services/skapande-av-webbplatser",
+          "image": "/images/services/website-creation.jpg"
+        },
+        {
+          "title": "SEO Optimering",
+          "description": "Förbättra din webbplats synlighet på Google och locka fler besökare.",
+          "link": "/services/seo-optimering",
+          "image": "/images/services/seo-optimization.jpg"
+        },
+        {
+          "title": "Digital Marknadsföring",
+          "description": "Omfattande digitala marknadsföringsstrategier för att växa din online-närvaro.",
+          "link": "/services/digital-marknadsforing",
+          "image": "/images/services/digital-marketing.jpg"
+        }
+      ]
     }
   }
   
