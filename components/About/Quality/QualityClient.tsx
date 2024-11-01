@@ -7,7 +7,7 @@ const QualityClient = () => {
       <div className="flex justify-center items-center text-6xl">
         Our Quality Services
       </div>
-      <QualityLines />
+<QualityLines />
     </>
   );
 };
