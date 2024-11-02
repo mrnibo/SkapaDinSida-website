@@ -31,103 +31,102 @@ function ContactUsClient() {
                 Thanks for reaching out! We will get back to you soon.
               </p>
             ) : (
-              <Form>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* Name Field */}
-                  <FormField
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl>
-                          <Input id="name" placeholder="Your name" {...field} />
-                        </FormControl>
-                        <ValidationError
-                          prefix="Name"
-                          field="name"
-                          errors={state.errors}
-                        />
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  {/* Email Field */}
-                  <FormField
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input
-                            id="email"
-                            type="email"
-                            placeholder="Your email"
-                            {...field}
-                          />
-                        </FormControl>
-                        <ValidationError
-                          prefix="Email"
-                          field="email"
-                          errors={state.errors}
-                        />
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  {/* Phone Field */}
-                  <FormField
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Phone</FormLabel>
-                        <FormControl>
-                          <Input
-                            id="phone"
-                            type="tel"
-                            placeholder="Your phone number"
-                            {...field}
-                          />
-                        </FormControl>
-                        <ValidationError
-                          prefix="Phone"
-                          field="phone"
-                          errors={state.errors}
-                        />
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  {/* Message Field */}
-                  <FormField
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            id="message"
-                            placeholder="Your message"
-                            {...field}
-                          />
-                        </FormControl>
-                        <ValidationError
-                          prefix="Message"
-                          field="message"
-                          errors={state.errors}
-                        />
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Button
-                    type="submit"
-                    className="w-full bg-blue-500 hover:bg-blue-600 text-white text-md"
-                    disabled={state.submitting}
+              <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Name Field */}
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700"
                   >
-                    {state.submitting ? "Sending..." : "Send Message"}
-                  </Button>
-                </form>
-              </Form>
+                    Name
+                  </label>
+                  <Input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                  />
+                  <ValidationError
+                    prefix="Name"
+                    field="name"
+                    errors={state.errors}
+                  />
+                </div>
+
+                {/* Email Field */}
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Email
+                  </label>
+                  <Input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Your email"
+                    required
+                  />
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                  />
+                </div>
+
+                {/* Phone Field */}
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Phone
+                  </label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    placeholder="Your phone number"
+                    required
+                  />
+                  <ValidationError
+                    prefix="Phone"
+                    field="phone"
+                    errors={state.errors}
+                  />
+                </div>
+
+                {/* Message Field */}
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Message
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="Your message"
+                    required
+                  />
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  className="w-full bg-blue-500 hover:bg-blue-600 text-white text-md"
+                  disabled={state.submitting}
+                >
+                  {state.submitting ? "Sending..." : "Send Message"}
+                </Button>
+              </form>
             )}
           </div>
           <div className="p-6 rounded-lg justify-center items-center hidden md:flex">
