@@ -12,12 +12,20 @@ export default function Home() {
       <Header />
       <main>
         <HeroClient />
-        <div className="container mx-auto px-4">
-          <TitleSection text="Our Services" className="py-4 px-4" />
-          <ServiceShowcase />
+        <div className="bg-gray-200 dark:bg-neutral-800 py-20">
+          <div className="container mx-auto px-4 flex flex-col gap-8">
+            <TitleSection text="Our Services" className="py-4 px-4" />
+            <ServiceShowcase />
+          </div>
         </div>
+
         <ShowcaseClient />
-        <ProcessClient />
+        <div className="bg-gray-200 dark:bg-neutral-800 py-16">
+          <div className="container mx-auto px-4">
+            <ProcessClient />
+          </div>
+        </div>
+
         <div className="py-24">
           <ContactUsBookCallClient />
         </div>

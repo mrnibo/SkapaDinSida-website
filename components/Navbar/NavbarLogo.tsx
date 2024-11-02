@@ -3,7 +3,14 @@ import Image from "next/image";
 import { navLogoItems } from "@/constants/Constants";
 import { useTheme } from "next-themes";
 
-const NavbarLogo = () => {
+interface NavbarLogoProps {
+  isWithLogo?: boolean;
+  className?: string;
+}
+const NavbarLogo: React.FC<NavbarLogoProps> = ({
+  isWithLogo = true,
+  className,
+}) => {
   const { theme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
 
@@ -17,8 +24,10 @@ const NavbarLogo = () => {
     isMounted && theme === "dark" ? navLogoItems.light : navLogoItems.dark;
 
   return (
-    <div className="flex gap-2 items-center text-md font-normal">
-      <Image src={logoToDisplay} alt="logo" width={32} height={32} />
+    <div className={`flex gap-2 items-center text-md font-normal ${className}`}>
+      {isWithLogo && (
+        <Image src={logoToDisplay} alt="logo" width={32} height={32} />
+      )}
       SkapaDinSida
     </div>
   );

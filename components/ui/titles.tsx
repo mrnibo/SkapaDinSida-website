@@ -1,6 +1,4 @@
 import React from "react";
-import TextReveal from "./text-reveal";
-import { IconBrandAppleArcade } from "@tabler/icons-react";
 
 interface TitleSectionProps {
   text: string;

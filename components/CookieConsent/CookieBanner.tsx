@@ -43,8 +43,7 @@ const CookieBanner = () => {
           backgroundColor: "#4caf50",
         }}
       >
-        We use cookies to improve your experience and analyze site usage with
-        Microsoft Clarity.
+        We use cookies to improve your experience and analyze site usage.
       </CookieConsent>
     </>
   );

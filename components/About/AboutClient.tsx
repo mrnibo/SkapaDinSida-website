@@ -12,10 +12,13 @@ const AboutClient = () => {
         <div className="mx-8">
           <AboutHero className="py-24" />
           <StatsClient />
-          <Spacer className="py-8" />
+          <Spacer className="py-16" />
           <ValuesClient />
-          <Spacer className="py-8" />
+          <Spacer className="py-16" />
+
           <ContactUsBookCallClient />
+
+          <div className="py-16"></div>
         </div>
       </div>
     </>

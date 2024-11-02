@@ -50,8 +50,11 @@ export default function ContactUsClient() {
     setIsSubmitting(false);
     toast({
       title: "Message Sent",
-      description: "We've received your message and will get back to you soon.",
+      description:
+        values.message +
+        "We've received your message and will get back to you soon.",
     });
+
     form.reset();
   }
 
@@ -59,8 +62,8 @@ export default function ContactUsClient() {
     <section className="py-12">
       <div className="container mx-auto px-4">
         <TitleSection text="Get in Touch" className="py-8 px-4" />
-        <div className="flex justify-between items-center gap-8">
-          <div className="p-6 w-1/2">
+        <div className="flex md:justify-between justify-center items-center gap-8">
+          <div className="p-6 w-1/2 max-w-xl">
             <h3 className="text-xl font-semibold mb-4">Send us a message</h3>
             <Form {...form}>
               <form
@@ -129,7 +132,7 @@ export default function ContactUsClient() {
                 />
                 <Button
                   type="submit"
-                  className="w-full"
+                  className="w-full bg-blue-500 hover:bg-blue-600 text-white text-md"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
@@ -137,7 +140,7 @@ export default function ContactUsClient() {
               </form>
             </Form>
           </div>
-          <div className=" p-6 rounded-lg flex justify-center items-center">
+          <div className=" p-6 rounded-lg justify-center items-center hidden md:flex">
             <Image
               src="/images/contact-us.svg"
               alt="Contact Us"

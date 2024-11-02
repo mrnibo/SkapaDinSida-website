@@ -27,8 +27,9 @@ const HeroClient = () => {
               <Image
                 src={heroItems.imageMobile}
                 alt="hero"
-                width={450}
-                height={450}
+                width={600}
+                height={600}
+                className="w-full h-full"
               />
             </div>
           </div>

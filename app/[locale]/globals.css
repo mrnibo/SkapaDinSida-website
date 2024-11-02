@@ -4,11 +4,13 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 @layer base {
   :root {
-    --background: hsl(28, 0%, 21%);
+    --background: hsl(210, 16%, 93%);
     --foreground: hsl(0, 0%, 9%);
     --card: hsl(0, 0%, 100%);
     --card-foreground: hsl(0, 0%, 3.9%);
@@ -37,7 +39,7 @@ body {
 
   .dark {
     --background: hsl(0, 0%, 9%);
-    --foreground: hsl(28, 0%, 21%);
+    --foreground: hsl(210, 16%, 93%);
     --card: hsl(0, 0%, 3.9%);
     --card-foreground: hsl(0, 0%, 98%);
     --popover: hsl(0, 0%, 3.9%);
@@ -66,8 +68,5 @@ body {
 @layer base {
   * {
     @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }

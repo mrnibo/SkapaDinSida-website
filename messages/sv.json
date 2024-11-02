@@ -139,6 +139,27 @@
           "image": "/images/services/digital-marketing.jpg"
         }
       ]
+    },
+
+    "footer": {
+      "quickLinks": "Snabblänkar",
+      "home": "Hem",
+      "about": "Om Oss",
+      "services": "Tjänster",
+      "contact": "Kontakt",
+      "contactUs": "Kontakta Oss",
+      "email": "info@example.com",
+      "phone": "+1 (234) 567-890",
+      "address": "123 Huvudgata, Stad, Land",
+      "connect": "Följ Oss",
+      "newsletter": "Nyhetsbrev",
+      "newsletterPlaceholder": "Din e-post",
+      "subscribe": "Prenumerera",
+      "legal": "Juridisk",
+      "privacyPolicy": "Integritetspolicy",
+      "termsOfService": "Användarvillkor",
+      "copyright": "&copy; 2024 Skapadinsida. Alla rättigheter förbehållna.",
+      "scrollTop": "Till toppen"
     }
   }
   

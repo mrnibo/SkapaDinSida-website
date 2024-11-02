@@ -51,16 +51,6 @@ const projects = [
   },
 ];
 
-const categories = [
-  "All",
-  "Web Development",
-  "Mobile Development",
-  "Data Science",
-  "Artificial Intelligence",
-  "Blockchain",
-  "Internet of Things",
-];
-
 /**
  * Portfolio component renders a section with a title, a filterable list of project cards and a modal
  * to display project details.
@@ -77,8 +67,8 @@ export default function ShowcaseClient() {
       : projects.filter((project) => project.category === filter);
 
   return (
-    <section className="px-4 py-24 bg-gray-200 dark:bg-neutral-800">
-      <div className="container mx-auto ">
+    <section className="px-4 py-24">
+      <div className="container mx-auto">
         <ShowcaseSlider />
 
         {isOpen && selectedProject && (
