@@ -148,15 +148,15 @@ export const teamdateils = [
     contact: "Email: johndoe@example.com | Phone: (123) 456-7890",
   },
   {
-    image: "/photo_2024-10-29_16-30-41.jpg",
-    name: "Sadeq Familit",
+    image: "/Seagate.jpg",
+    name: "Seyed Mohammad Sadegh Mortazavi Moghadam",
     title: "UI/UX Designer",
     description: "",
     socilamedia: "",
     github: "https://github.com/TechPreist",
     linkedin: "https://www.linkedin.com/in/mrnibo/",
     twitter: "https://twitter.com/mrnibo",
-    contact: "Email: johndoe@example.com | Phone: (123) 456-7890",
+    contact: "Email: sadeghmor134@gmail.com | Phone: (123) 456-7890",
   },
 ];
 export const quality = [
