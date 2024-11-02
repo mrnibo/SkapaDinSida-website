@@ -149,7 +149,7 @@ export const teamdateils = [
   },
   {
     image: "/Seagate.jpg",
-    name: "Seyed Mohammad Sadegh Mortazavi Moghadam",
+    name: "Sadegh Mortazavi ",
     title: "UI/UX Designer",
     description: "",
     socilamedia: "",
