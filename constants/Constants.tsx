@@ -137,7 +137,7 @@ export const stats = [
 
 export const teamdateils = [
   {
-    image: "/nibo.jpg",
+    image: "/images/nibo.jpg",
     name: "Leo Khani",
     title: "React Developer",
     description: "",
@@ -148,8 +148,8 @@ export const teamdateils = [
     contact: "Email: johndoe@example.com | Phone: (123) 456-7890",
   },
   {
-    image: "/Seagate.jpg",
-    name: "Seyed Mohammad Sadegh Mortazavi Moghadam",
+    image: "/images/seagate.png",
+    name: "Sadegh Mortazavi",
     title: "UI/UX Designer",
     description: "",
     socilamedia: "",

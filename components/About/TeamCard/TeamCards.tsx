@@ -39,35 +39,6 @@ const TeamCards = () => {
                   {title}
                 </h3>
                 <p className="text-sm">{description}</p>
-                <div className="flex flex-row items-center gap-3 mt-2 bg-gray-200 dark:bg-neutral-800 rounded-2xl px-2 py-2">
-                  {/* github link */}
-                  <Link
-                    href={github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 group-hover:text-black group-hover:dark:text-white transition-colors duration-300"
-                  >
-                    <IconBrandGithub size={20} />
-                  </Link>
-                  |{/* linkdin link */}
-                  <Link
-                    href={linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 group-hover:text-black group-hover:dark:text-white transition-colors duration-300"
-                  >
-                    <IconBrandLinkedin size={20} />
-                  </Link>
-                  |{/* twitter link */}
-                  <Link
-                    href={twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 group-hover:text-black group-hover:dark:text-white transition-colors duration-300"
-                  >
-                    <IconBrandX size={20} />
-                  </Link>
-                </div>
               </div>
             </div>
           )
