@@ -2,6 +2,7 @@
 
 import { Laptop, Smartphone, PenTool } from "lucide-react";
 import ServiceCards from "./ServiceCards";
+import { useTranslations } from "next-intl";
 
 interface Service {
   icon: React.ReactNode;
@@ -9,25 +10,26 @@ interface Service {
   description: string;
 }
 
-const services: Service[] = [
-  {
-    icon: <Laptop className="h-20 w-20" />,
-    title: "Web Development",
-    description: "Custom websites tailored to your business needs.",
-  },
-  {
-    icon: <Smartphone className="h-20 w-20" />,
-    title: "Mobile App Development",
-    description: "Native and cross-platform mobile applications.",
-  },
-  {
-    icon: <PenTool className="h-20 w-20" />,
-    title: "UI/UX Design",
-    description: "Intuitive and visually appealing user interfaces.",
-  },
-];
-
 export default function ServiceShowcase() {
+  const t = useTranslations("service");
+
+  const services: Service[] = [
+    {
+      icon: <Laptop className="h-20 w-20" />,
+      title: t("webDevelopment.title"),
+      description: t("webDevelopment.description"),
+    },
+    {
+      icon: <Smartphone className="h-20 w-20" />,
+      title: t("mobileAppDevelopment.title"),
+      description: t("mobileAppDevelopment.description"),
+    },
+    {
+      icon: <PenTool className="h-20 w-20" />,
+      title: t("uiUxDesign.title"),
+      description: t("uiUxDesign.description"),
+    },
+  ];
   return (
     <section className="relative">
       <div className="container mx-auto px-4">

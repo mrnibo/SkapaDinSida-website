@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, Suspense } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -14,61 +14,75 @@ import {
 } from "@/components/ui/drawer";
 import { IconLayoutFilled, IconMenuDeep } from "@tabler/icons-react";
 import { NavbarButtonPrimary, NavbarButtonSecondary } from "./NavbarButton";
-import { NavbarThemeButton } from "./NavbarThemeButton";
-import NavbarLogo from "./NavbarLogo";
-import NavbarItems from "./NavbarItems";
-import LanguageSwitcher from "./NavbarLanguageSwitcher";
 import { useTranslations } from "next-intl";
+import { NavbarThemeButton } from "./NavbarThemeButton";
 
-const Navbar = () => {
+// Lazy import components
+const NavbarItems = React.lazy(() => import("./NavbarItems"));
+const LanguageSwitcher = React.lazy(() => import("./NavbarLanguageSwitcher"));
+const NavbarLogo = React.lazy(() => import("./NavbarLogo"));
+
+const Navbar: React.FC = React.memo(() => {
   const t = useTranslations("navbar");
 
-  // Define the navigation items inside the Navbar component
+  // Define nav items based on translations
   const navItems = [
-    { name: t("navbarLinks.home"), href: "/" },
-    { name: t("navbarLinks.about"), href: "/about" },
-    { name: t("navbarLinks.services"), href: "/service" },
-    { name: t("navbarLinks.contact"), href: "/contact" },
+    { title: t("navbarLinks.home.title"), href: t("navbarLinks.home.link") },
+    { title: t("navbarLinks.about.title"), href: t("navbarLinks.about.link") },
+    {
+      title: t("navbarLinks.services.title"),
+      href: t("navbarLinks.services.link"),
+    },
+    {
+      title: t("navbarLinks.contact.title"),
+      href: t("navbarLinks.contact.link"),
+    },
   ];
 
   return (
     <nav className="hidden md:flex justify-between items-center w-full px-4">
       <div>
         <Link href="/" className="text-2xl font-bold">
-          <NavbarLogo />
+          <Suspense fallback={<span>Loading...</span>}>
+            <NavbarLogo />
+          </Suspense>
         </Link>
       </div>
       <div className="flex gap-24 items-center">
         <ul className="flex gap-12">
           {navItems.map((item) => (
-            <li key={item.name}>
-              <NavbarItems name={item.name} href={item.href} className="" />
+            <li key={item.title}>
+              <Suspense fallback={<span>Loading...</span>}>
+                <NavbarItems name={item.title} href={item.href} />
+              </Suspense>
             </li>
           ))}
         </ul>
         <div className="flex gap-4 items-center">
           <NavbarButtonPrimary
             text={t("buttonPrimaryText")}
-            link="/contact"
+            link={t("buttonPrimaryLink")}
             icon={<IconLayoutFilled />}
           />
           <NavbarThemeButton />
-          <LanguageSwitcher />
+          <Suspense fallback={<span>Loading...</span>}>
+            <LanguageSwitcher />
+          </Suspense>
         </div>
       </div>
     </nav>
   );
-};
+});
 
-const NavbarMobile = () => {
+const NavbarMobile: React.FC = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations("navbar");
 
   const navItems = [
-    { name: t("navbarLinks.home"), href: "/" },
-    { name: t("navbarLinks.about"), href: "/about" },
-    { name: t("navbarLinks.services"), href: "/service" },
-    { name: t("navbarLinks.contact"), href: "/contact" },
+    { name: t("navbarLinks.home.title"), href: "/" },
+    { name: t("navbarLinks.about.title"), href: "/about" },
+    { name: t("navbarLinks.services.title"), href: "/service" },
+    { name: t("navbarLinks.contact.title"), href: "/contact" },
   ];
 
   return (
@@ -87,7 +101,9 @@ const NavbarMobile = () => {
               className="text-2xl font-bold"
               onClick={() => setIsOpen(false)}
             >
-              <NavbarLogo />
+              <Suspense fallback={<span>Loading...</span>}>
+                <NavbarLogo />
+              </Suspense>
             </Link>
           </DrawerTitle>
         </DrawerHeader>
@@ -124,7 +140,7 @@ const NavbarMobile = () => {
       </DrawerContent>
     </Drawer>
   );
-};
+});
 
 export default function NavbarClient() {
   return (
@@ -133,12 +149,16 @@ export default function NavbarClient() {
         <Navbar />
         <div className="md:hidden mr-2 flex items-center">
           <Link href="/" className="text-2xl font-bold mr-auto">
-            <NavbarLogo />
+            <Suspense fallback={<span>Loading...</span>}>
+              <NavbarLogo />
+            </Suspense>
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-end gap-2 md:justify-end md:hidden">
           <NavbarThemeButton />
-          <NavbarMobile />
+          <Suspense fallback={<span>Loading...</span>}>
+            <NavbarMobile />
+          </Suspense>
         </div>
       </div>
     </div>

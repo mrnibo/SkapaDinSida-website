@@ -1,0 +1,186 @@
+{
+    "about": {
+      "aboutItems": [
+        {
+          "title": "Kvalitet",
+          "description": "Vi fokuserar på att leverera högsta kvalitet i allt vi gör."
+        },
+        {
+          "title": "Pålidlighet",
+          "description": "Vårt team är pålitligt och vi levererar alltid i tid."
+        },
+        {
+          "title": "Erfarenhet",
+          "description": "Vi har många års erfarenhet inom branschen."
+        }
+      ],
+      "aboutUs": {
+        "description": "På Skapadinsida är vi experter på att designa och utveckla anpassade webbplatser som lyfter ditt varumärke och engagerar din publik...",
+        "missionDescription": "Att stärka företag genom att erbjuda högkvalitativa, användarcentrerade webblösningar...",
+        "missionTitle": "Vårt Uppdrag",
+        "stats": [
+          { "number": 150, "title": "Projekter Avslutade" },
+          { "number": 10, "title": "Års Erfarenhet" },
+          { "number": 100, "title": "Nöjda Kunder" }
+        ],
+        "statsTitle": "Våra Prestationer",
+        "subtitle": "Förvandla dina idéer till digitala upplevelser",
+        "title": "Om Oss",
+        "values": {
+          "creativity": {
+            "description": "Vi tar med nya idéer och innovativa lösningar till varje projekt...",
+            "title": "Kreativitet"
+          },
+          "quality": {
+            "description": "Vårt team är engagerat i att leverera de högsta standarderna...",
+            "title": "Kvalitet"
+          },
+          "reliability": {
+            "description": "Vi värdesätter förtroende och transparens i våra kundrelationer...",
+            "title": "Tillförlitlighet"
+          }
+        },
+        "valuesTitle": "Våra Värderingar",
+        "visionDescription": "Att vara en ledande webbyrå känd för att skapa kraftfulla digitala upplevelser...",
+        "visionTitle": "Vår Vision"
+      }
+    },
+    "footer": {
+      "about": "Om Oss",
+      "address": "123 Huvudgata, Stad, Land",
+      "connect": "Följ Oss",
+      "contact": "Kontakt",
+      "contactUs": "Kontakta Oss",
+      "copyright": "&copy; 2024 Skapadinsida. Alla rättigheter förbehållna.",
+      "email": "info@example.com",
+      "home": "Hem",
+      "legal": "Juridisk",
+      "newsletter": "Nyhetsbrev",
+      "newsletterPlaceholder": "Din e-post",
+      "phone": "+1 (234) 567-890",
+      "privacyPolicy": "Integritetspolicy",
+      "quickLinks": "Snabblänkar",
+      "scrollTop": "Till toppen",
+      "services": "Tjänster",
+      "subscribe": "Prenumerera",
+      "termsOfService": "Användarvillkor"
+    },
+    "heroItems": {
+      "buttonPrimaryText": "Starta ett projekt",
+      "buttonSecondaryText": "Våra tjänster",
+      "description": "Vi skapar högkvalitativa, responsiva webbplatser som lyfter ditt varumärke...",
+      "subtitle": "Innovativa webblösningar för ditt företag",
+      "title": "Bygg din digitala närvaro"
+    },
+    "navbar": {
+      "buttonPrimaryText": "Kom igång",
+      "navbarLinks": {
+        "about": "Om oss",
+        "contact": "Kontakt",
+        "home": "Hem",
+        "services": "Tjänster"
+      }
+    },
+    "quality": [
+      {
+        "title": "UI",
+        "description": "Vi erbjuder bästa UI för din webbplats.",
+        "link": "Mer"
+      },
+      {
+        "title": "Back-end/Front-end",
+        "description": "Vi optimerar både back-end och front-end för din webbplats.",
+        "link": "Mer"
+      },
+      {
+        "title": "Appdesigner",
+        "description": "Vi skapar också UI/UX-design för din app."
+      }
+    ],
+    "services": {
+      "description": "Vi erbjuder en rad tjänster för att hjälpa dig etablera en stark online-närvaro...",
+      "learnMore": "Läs Mer",
+      "missionDescription": "Att stärka företag genom att erbjuda förstklassiga digitala tjänster...",
+      "missionTitle": "Vårt Uppdrag",
+      "servicesList": [
+        {
+          "title": "Varumärkesbyggande",
+          "description": "Vi hjälper dig att skapa en stark varumärkesidentitet...",
+          "link": "/services/varumarkesbyggande",
+          "image": "/images/services/branding.jpg"
+        },
+        {
+          "title": "Skapande av Webbplatser",
+          "description": "Professionell webbplatsutveckling anpassad efter ditt företags behov...",
+          "link": "/services/skapande-av-webbplatser",
+          "image": "/images/services/website-creation.jpg"
+        },
+        {
+          "title": "SEO Optimering",
+          "description": "Förbättra din webbplats synlighet på Google...",
+          "link": "/services/seo-optimering",
+          "image": "/images/services/seo-optimization.jpg"
+        },
+        {
+          "title": "Digital Marknadsföring",
+          "description": "Omfattande digitala marknadsföringsstrategier...",
+          "link": "/services/digital-marknadsforing",
+          "image": "/images/services/digital-marketing.jpg"
+        }
+      ],
+      "subtitle": "Förverkligar Din Vision",
+      "title": "Våra Tjänster"
+    },
+    "stats": [
+      { "number": 100, "title": "Års erfarenhet" },
+      { "number": 50, "title": "Stat 2" },
+      { "number": 25, "title": "Stat 3" },
+      { "number": 32, "title": "Stat 4" },
+      { "number": 67, "title": "Stat 5" }
+    ],
+    "steps": [
+      {
+        "number": 1,
+        "title": "Upptäckt",
+        "description": "Vi lär oss om ditt företag, dina mål och utmaningar..."
+      },
+      {
+        "number": 2,
+        "title": "Strategi",
+        "description": "Vi utvecklar en skräddarsydd plan för att uppnå dina mål..."
+      },
+      {
+        "number": 3,
+        "title": "Design",
+        "description": "Vi skapar intuitiva och engagerande användarupplevelser..."
+      },
+      {
+        "number": 4,
+        "title": "Utveckling",
+        "description": "Vi bygger robusta och skalbara lösningar..."
+      },
+      {
+        "number": 5,
+        "title": "Testning",
+        "description": "Vi säkerställer kvalitet och prestanda på alla enheter..."
+      },
+      {
+        "number": 6,
+        "title": "Lansering",
+        "description": "Vi lanserar ditt projekt och tillhandahåller löpande support..."
+      }
+    ],
+    "teamDetails": [
+      {
+        "name": "Leo Khani",
+        "title": "React-utvecklare",
+        "contact": "Email: johndoe@example.com | Telefon: (123) 456-7890"
+      },
+      {
+        "name": "Sadeq Familit",
+        "title": "UI/UX Designer",
+        "contact": "Email: johndoe@example.com | Telefon: (123) 456-7890"
+      }
+    ]
+  }
+  

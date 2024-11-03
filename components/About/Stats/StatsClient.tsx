@@ -3,12 +3,19 @@ import NumberTicker from "@/components/ui/number-ticker";
 import { useTranslations } from "next-intl";
 
 const StatsClient = () => {
-  const t = useTranslations("aboutUs");
-  const stats = t.raw("stats");
+  const t = useTranslations("about.aboutUs");
+
+  // Retrieve stats items dynamically and parse numbers
+  const stats = Object.entries(
+    t.raw("stats") as Record<string, { number: string; title: string }>
+  ).map(([_, stat]) => ({
+    number: parseInt(stat.number, 10),
+    title: stat.title,
+  }));
 
   return (
     <div className="flex flex-col justify-center md:flex-row lg:py-2 md:justify-between gap-16">
-      {stats.map((item: any, index: any) => (
+      {stats.map((item, index) => (
         <div key={index} className="flex items-center justify-center">
           <div className="flex flex-row items-center">
             <h2 className="text-7xl font-semibold">

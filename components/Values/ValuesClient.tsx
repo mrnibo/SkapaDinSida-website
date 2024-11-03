@@ -2,7 +2,6 @@ import { TitleSection } from "@/components/ui/titles";
 import { IconBrandDrops } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 
-
 interface ValueItem {
   title: string;
   description: string;
@@ -22,7 +21,7 @@ export const ValuesClient = () => {
 };
 
 const ValuesItems = () => {
-  const t = useTranslations("aboutUs");
+  const t = useTranslations("about.aboutUs");
   const valuesObj = t.raw("values") as Values;
   const values = Object.values(valuesObj);
 

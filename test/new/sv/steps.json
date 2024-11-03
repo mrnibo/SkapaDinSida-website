@@ -1,0 +1,32 @@
+[
+    {
+        "number": 1,
+        "title": "Upptäckt",
+        "description": "Vi lär oss om ditt företag, dina mål och utmaningar..."
+    },
+    {
+        "number": 2,
+        "title": "Strategi",
+        "description": "Vi utvecklar en skräddarsydd plan för att uppnå dina mål..."
+    },
+    {
+        "number": 3,
+        "title": "Design",
+        "description": "Vi skapar intuitiva och engagerande användarupplevelser..."
+    },
+    {
+        "number": 4,
+        "title": "Utveckling",
+        "description": "Vi bygger robusta och skalbara lösningar..."
+    },
+    {
+        "number": 5,
+        "title": "Testning",
+        "description": "Vi säkerställer kvalitet och prestanda på alla enheter..."
+    },
+    {
+        "number": 6,
+        "title": "Lansering",
+        "description": "Vi lanserar ditt projekt och tillhandahåller löpande support..."
+    }
+]

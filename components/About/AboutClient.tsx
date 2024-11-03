@@ -10,7 +10,7 @@ const AboutClient = () => {
     <>
       <div className="container mx-auto max-w-7xl">
         <div className="mx-8">
-          <AboutHero className="py-24" />
+          <AboutHero />
           <StatsClient />
           <Spacer className="py-16" />
           <ValuesClient />

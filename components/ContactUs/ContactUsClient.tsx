@@ -5,27 +5,19 @@ import { useForm, ValidationError } from "@formspree/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { TitleSection } from "../ui/titles";
 import Image from "next/image";
+import { Spacer } from "../ui/spacer";
 
 function ContactUsClient() {
   const [state, handleSubmit] = useForm("xnnqpgje");
 
   return (
-    <section className="py-12">
+    <section className="py-20">
       <div className="container mx-auto px-4">
-        <TitleSection text="Get in Touch" className="py-8 px-4" />
-        <div className="flex md:justify-between justify-center items-center gap-8">
+        <div className="flex md:justify-between justify-center items-center gap-8 max-w-5xl mx-auto">
           <div className="p-6 w-1/2 max-w-xl">
-            <h3 className="text-xl font-semibold mb-4">Send us a message</h3>
+            <h3 className="text-xl font-semibold mb-4">Send us a message: </h3>
+            <Spacer className="py-4" />
             {state.succeeded ? (
               <p className="text-green-500">
                 Thanks for reaching out! We will get back to you soon.

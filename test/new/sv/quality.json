@@ -1,0 +1,16 @@
+[
+    {
+        "title": "UI",
+        "description": "Vi erbjuder bästa UI för din webbplats.",
+        "link": "Mer"
+    },
+    {
+        "title": "Back-end/Front-end",
+        "description": "Vi optimerar både back-end och front-end för din webbplats.",
+        "link": "Mer"
+    },
+    {
+        "title": "Appdesigner",
+        "description": "Vi skapar också UI/UX-design för din app."
+    }
+]

@@ -63,7 +63,6 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		animation: {
-  			pulse: 'pulse var(--duration) ease-out infinite',
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
   			meteor: 'meteor 5s linear infinite',
   			marquee: 'marquee var(--duration) infinite linear',
@@ -74,14 +73,7 @@ const config: Config = {
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear'
   		},
   		keyframes: {
-  			pulse: {
-  				'0%, 100%': {
-  					boxShadow: '0 0 0 0 var(--pulse-color)'
-  				},
-  				'50%': {
-  					boxShadow: '0 0 0 8px var(--pulse-color)'
-  				}
-  			},
+  			
   			orbit: {
   				'0%': {
   					transform: 'rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)'

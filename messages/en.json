@@ -1,165 +1,126 @@
 {
-    
-    "navbar": {
-      "navbarLinks": {
-      "home": "Home",
-      "about": "About",
-      "services": "Services",
-      "contact": "Contact"
-      },
-      "buttonPrimaryText": "Get Started"
-    },
-    "heroItems": {
-      "title": "Build Your Digital Presence",
-      "subtitle": "Innovative Web Solutions for Your Business",
-      "description": "We create high-quality, responsive websites that elevate your brand and engage your audience. Let us handle the technical details while you focus on growing your business.",
-      "buttonPrimaryText": "Start a Project",
-      "buttonSecondaryText": "Our Services"
-    },
-    "aboutItems": [
-      {
-        "title": "Quality",
-        "description": "We focus on delivering the highest quality in everything we do."
-      },
-      {
-        "title": "Reliability",
-        "description": "Our team is reliable and we always deliver on time."
-      },
-      {
-        "title": "Experience",
-        "description": "We have many years of experience in the industry."
-      }
-    ],
-    "stats": [
-      { "number": 100, "title": "Years of Experience" },
-      { "number": 50, "title": "State 2" },
-      { "number": 25, "title": "State 3" },
-      { "number": 32, "title": "State 4" },
-      { "number": 67, "title": "State 5" }
-    ],
-    "quality": [
-      {
-        "title": "UI",
-        "description": "We provide the best UI for your Website.",
-        "link": "More"
-      },
-      {
-        "title": "Back-end/Front-end",
-        "description": "We will optimize both the back-end and front-end of your website.",
-        "link": "More"
-      },
-      {
-        "title": "App Designer",
-        "description": "We also create UI/UX designs for your app."
-      }
-    ],
-    "teamDetails": [
-      {
-        "name": "Leo Khani",
-        "title": "React Developer",
-        "contact": "Email: johndoe@example.com | Phone: (123) 456-7890"
-      },
-      {
-        "name": "Sadeq Familit",
-        "title": "UI/UX Designer",
-        "contact": "Email: johndoe@example.com | Phone: (123) 456-7890"
-      }
-    ],
+  "meta": {
+    "title": "Skapadinsida - Your Trusted Partner in Digital Transformation",
+    "description": "We are dedicated to building innovative, user-centered digital solutions that bring your vision to life."
+  },
 
+  "navbar": {
+    "buttonPrimaryText": "Get Started",
+    "buttonPrimaryLink": "/contact",
+    "navbarLinks": {
+      "home": { "link": "/", "title": "Home" },
+      "about": { "link": "/about", "title": "About" },
+      "services": { "link": "/services", "title": "Services" },
+      "contact": { "link": "/contact", "title": "Contact" }
+    }
+  },
+
+  "service": {
+    "webDevelopment": {
+      "title": "Web Development",
+      "description": "Custom websites designed to elevate your business with modern, responsive design."
+    },
+    "mobileAppDevelopment": {
+      "title": "Mobile App Development",
+      "description": "Delivering seamless, cross-platform mobile applications for enhanced customer engagement."
+    },
+    "uiUxDesign": {
+      "title": "UI/UX Design",
+      "description": "Crafting user-centered designs that blend aesthetics with functionality."
+    }
+  },
+
+  "about": {
+    "aboutItems": [
+      { "title": "Quality", "description": "We are committed to excellence in every project." },
+      { "title": "Reliability", "description": "Our team is dependable, delivering on time, every time." },
+      { "title": "Experience", "description": "Years of expertise in transforming ideas into digital solutions." }
+    ],
     "aboutUs": {
-      "title": "About Us",
-      "subtitle": "Transforming Your Ideas into Digital Experiences",
-      "description": "At Skapadinsida, we specialize in designing and developing custom websites that elevate your brand and engage your audience. With a passion for creativity and a commitment to quality, we bring your ideas to life through innovative web solutions tailored to your unique needs.",
+      "description": "At Skapadinsida, we specialize in designing and developing custom digital solutions that enhance your brand’s impact.",
+      "missionDescription": "Empowering businesses through high-quality, user-centered digital experiences.",
       "missionTitle": "Our Mission",
-      "missionDescription": "To empower businesses by providing high-quality, user-centered web solutions that drive engagement and success.",
-      "visionTitle": "Our Vision",
-      "visionDescription": "To be a leading web design agency known for creating impactful digital experiences that inspire and connect.",
-      "valuesTitle": "Our Values",
-      "values": {
-        "creativity": {
-          "title": "Creativity",
-          "description": "We bring fresh ideas and innovative solutions to every project, ensuring a unique digital presence for each client."
-        },
-        "quality": {
-          "title": "Quality",
-          "description": "Our team is committed to delivering the highest standards in web design and development."
-        },
-        "reliability": {
-          "title": "Reliability",
-          "description": "We value trust and transparency in our client relationships and work diligently to meet deadlines and exceed expectations."
-        }
+      "stats": {
+        "item1": { "number": "100", "title": "Years of Experience" },
+        "item2": { "number": "50", "title": "Projects Delivered" },
+        "item3": { "number": "25", "title": "Satisfied Clients" }
       },
       "statsTitle": "Our Achievements",
-      "stats": [
-      {
-        "number": 150,
-        "title": "Projects Completed"
+      "subtitle": "Transforming Ideas into Digital Success",
+      "title": "About Us",
+      "values": {
+        "creativity": { "description": "Bringing fresh, innovative solutions tailored to each client’s needs.", "title": "Creativity" },
+        "quality": { "description": "Committed to the highest standards in every project.", "title": "Quality" },
+        "reliability": { "description": "Fostering trust and transparency with our clients.", "title": "Reliability" }
       },
-      {
-        "number": 10,
-        "title": "Years of Experience"
-      },
-      {
-        "number": 100,
-        "title": "Satisfied Clients"
-      }
-    ]
-    },
-
-    "services": {
-    "title": "Our Services",
-    "subtitle": "Bringing Your Vision to Life",
-    "description": "We offer a range of services to help you establish a strong online presence. From branding and website creation to SEO optimization, our team is dedicated to delivering solutions that drive success.",
-    "missionTitle": "Our Mission",
-    "missionDescription": "To empower businesses by providing top-notch digital services that enhance visibility and foster growth.",
-    "learnMore": "Learn More",
-    "servicesList": [
-      {
-        "title": "Branding",
-        "description": "We help you create a strong brand identity that resonates with your target audience.",
-        "link": "/services/branding",
-        "image": "/images/services/branding.jpg"
-      },
-      {
-        "title": "Website Creation",
-        "description": "Professional website development tailored to your business needs.",
-        "link": "/services/website-creation",
-        "image": "/images/services/website-creation.jpg"
-      },
-      {
-        "title": "SEO Optimization",
-        "description": "Improve your website's visibility on Google and attract more visitors.",
-        "link": "/services/seo-optimization",
-        "image": "/images/services/seo-optimization.jpg"
-      },
-      {
-        "title": "Digital Marketing",
-        "description": "Comprehensive digital marketing strategies to grow your online presence.",
-        "link": "/services/digital-marketing",
-        "image": "/images/services/digital-marketing.jpg"
-      }
-    ]
+      "valuesTitle": "Our Values",
+      "visionDescription": "Becoming a leading agency known for delivering impactful digital experiences.",
+      "visionTitle": "Our Vision"
+    }
   },
 
   "footer": {
-    "quickLinks": "Quick Links",
-    "home": "Home",
     "about": "About",
-    "services": "Services",
-    "contact": "Contact",
-    "contactUs": "Contact Us",
-    "email": "info@example.com",
-    "phone": "+1 (234) 567-890",
     "address": "123 Main St, City, Country",
     "connect": "Connect With Us",
+    "contact": "Contact",
+    "contactUs": "Contact Us",
+    "copyright": "© 2024 Skapadinsida. All rights reserved.",
+    "email": "info@example.com",
+    "home": "Home",
+    "legal": "Legal",
     "newsletter": "Newsletter",
     "newsletterPlaceholder": "Your email",
-    "subscribe": "Subscribe",
-    "legal": "Legal",
+    "phone": "+1 (234) 567-890",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "copyright": "&copy; 2024 Skapadinsida. All rights reserved.",
-    "scrollTop": "Scroll to top"
-  }
-  }
-  
+    "quickLinks": "Quick Links",
+    "scrollTop": "Scroll to top",
+    "services": "Services",
+    "subscribe": "Subscribe",
+    "termsOfService": "Terms of Service"
+  },
+
+  "heroItems": {
+    "buttonPrimaryText": "Start a Project",
+    "buttonSecondaryText": "Our Services",
+    "description": "We create high-quality, responsive websites that elevate your brand.",
+    "subtitle": "Innovative Web Solutions for Your Business",
+    "title": "Build Your Digital Presence"
+  },
+
+  "quality": [
+    { "title": "UI", "description": "Enhancing user interaction with premium UI design.", "link": "More" },
+    { "title": "Back-end/Front-end", "description": "Optimizing both front-end and back-end for peak performance.", "link": "More" },
+    { "title": "App Designer", "description": "Creating UI/UX designs tailored to your app’s needs.", "link": "More" }
+  ],
+
+  "services": {
+    "description": "Comprehensive services to establish a powerful online presence for your business.",
+    "learnMore": "Learn More",
+    "missionDescription": "Providing top-tier digital services to enhance visibility and growth.",
+    "missionTitle": "Our Mission",
+    "servicesList": [
+      { "title": "Branding", "description": "Helping you create a brand identity that resonates with your audience.", "link": "/services/branding", "image": "/images/services/branding.jpg" },
+      { "title": "Website Creation", "description": "Developing websites that reflect your brand’s values and goals.", "link": "/services/website-creation", "image": "/images/services/website-creation.jpg" },
+      { "title": "SEO Optimization", "description": "Boosting your website’s visibility on search engines.", "link": "/services/seo-optimization", "image": "/images/services/seo-optimization.jpg" },
+      { "title": "Digital Marketing", "description": "Implementing digital strategies to increase your online presence.", "link": "/services/digital-marketing", "image": "/images/services/digital-marketing.jpg" }
+    ],
+    "subtitle": "Bringing Your Vision to Life",
+    "title": "Our Services"
+  },
+
+  "steps": [
+    { "number": 1, "title": "Discovery", "description": "Understanding your business and objectives is our first priority. In this phase, we take the time to learn about your brand, target audience, and long-term goals. Through detailed discussions and research, we identify the challenges and opportunities that will shape the project moving forward." },
+    { "number": 2, "title": "Strategy", "description": "Developing a tailored plan to achieve your goals is the next step. We combine insights from our discovery phase with industry expertise to create a structured approach. This plan serves as a roadmap, defining each milestone and step to ensure that our efforts remain aligned with your vision and objectives." },
+    { "number": 3, "title": "Design", "description": "Creating an engaging user experience that aligns with your brand is key to our design process. We focus on blending aesthetics with functionality, crafting a visual identity that resonates with users. Every design choice is made with user needs in mind, ensuring a seamless, intuitive experience that strengthens your brand's connection with its audience." },
+    { "number": 4, "title": "Development", "description": "Building scalable, high-performance solutions is at the heart of our development phase. We leverage cutting-edge technologies to ensure that the final product is robust, reliable, and adaptable to your future needs. This meticulous process involves coding, integration, and extensive testing to deliver a solution that meets the highest standards of performance." },
+    { "number": 5, "title": "Testing", "description": "Ensuring quality and reliability across devices is essential before launch. We perform comprehensive testing to confirm that the product functions flawlessly on various platforms and environments. From compatibility to performance, our testing covers every aspect, ensuring that your project meets the highest quality standards and provides a consistent experience for all users." },
+    { "number": 6, "title": "Launch", "description": "Deploying and supporting your project for long-term success is our final goal. We oversee a smooth launch process and continue to provide support post-deployment. Our team is on hand to address any needs or adjustments, ensuring that the project not only meets but exceeds expectations for ongoing success and growth." }
+  ],
+
+
+  "teamDetails": [
+    { "name": "Leo Khani", "title": "React Developer", "contact": "Email: johndoe@example.com | Phone: (123) 456-7890" },
+    { "name": "Sadeq Familit", "title": "UI/UX Designer", "contact": "Email: johndoe@example.com | Phone: (123) 456-7890" }
+  ]
+}

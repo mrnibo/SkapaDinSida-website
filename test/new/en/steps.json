@@ -1,0 +1,32 @@
+[
+    {
+        "number": 1,
+        "title": "Discovery",
+        "description": "We learn about your business, goals, and challenges..."
+    },
+    {
+        "number": 2,
+        "title": "Strategy",
+        "description": "We develop a tailored plan to meet your objectives..."
+    },
+    {
+        "number": 3,
+        "title": "Design",
+        "description": "We create intuitive and engaging user experiences..."
+    },
+    {
+        "number": 4,
+        "title": "Development",
+        "description": "We build robust and scalable solutions..."
+    },
+    {
+        "number": 5,
+        "title": "Testing",
+        "description": "We ensure quality and performance across all devices..."
+    },
+    {
+        "number": 6,
+        "title": "Launch",
+        "description": "We deploy your project and provide ongoing support..."
+    }
+]

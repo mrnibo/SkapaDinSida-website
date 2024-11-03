@@ -18,7 +18,6 @@ export default function Home() {
             <ServiceShowcase />
           </div>
         </div>
-
         <ShowcaseClient />
         <div className="bg-gray-200 dark:bg-neutral-800 py-16">
           <div className="container mx-auto px-4">
