@@ -1,3 +1,4 @@
+import ContactUsBookCallClient from "@/components/ContactUs/ContactUsBookCallClient";
 import ServiceClient from "@/components/Service/ServiceClient";
 import ServiceHero from "@/components/Service/ServiceHero";
 import ServiceMain from "@/components/Service/ServiceMain";
@@ -13,6 +14,11 @@ export default function PageService() {
         <ServiceClient />
         <Spacer className="py-16" />
         <ServiceMain />
+
+        <Spacer className="py-16" />
+
+        <ContactUsBookCallClient />
+
         <div className="py-16"></div>
       </div>
     </div>

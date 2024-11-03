@@ -32,37 +32,39 @@
 
   "about": {
     "aboutItems": [
-      { "title": "Quality", "description": "We are committed to excellence in every project." },
-      { "title": "Reliability", "description": "Our team is dependable, delivering on time, every time." },
-      { "title": "Experience", "description": "Years of expertise in transforming ideas into digital solutions." }
+      { "title": "Quality", "description": "We are committed to delivering high quality in every project." },
+      { "title": "Reliability", "description": "Our team is dependable and always delivers on time." },
+      { "title": "Experience", "description": "Years of expertise in digital solutions." }
     ],
     "aboutUs": {
-      "description": "At Skapadinsida, we craft digital solutions that elevate your brand. Here’s what we do:",
+      "description": "At Skapadinsida, we create digital solutions that elevate your brand. Here’s what we do:",
       "bulletPoints": [
-        "Design and develop unique, user-focused websites",
-        "Create compelling brand identities tailored to your business",
-        "Optimize your site for search engines to increase visibility"
+        "Design and develop user-centered websites",
+        "Create brand identities tailored to your business",
+        "Optimize your website for better search visibility"
       ],
       "missionDescription": "Empowering businesses through high-quality, user-centered digital experiences.",
-      "missionTitle": "Our Mission"
-    },
-    "stats": {
-      "item1": { "number": "14", "title": "Years of Experience" },
-      "item2": { "number": "97", "title": "Projects Delivered" },
-      "item3": { "number": "83", "title": "Satisfied Clients" }
-    },
-    "statsTitle": "Our Achievements",
-    "subtitle": "Transforming Ideas into Digital Success",
-    "title": "About Us",
-    "values": {
-      "creativity": { "description": "Bringing fresh, innovative solutions tailored to each client’s needs.", "title": "Creativity" },
-      "quality": { "description": "Committed to the highest standards in every project.", "title": "Quality" },
-      "reliability": { "description": "Fostering trust and transparency with our clients.", "title": "Reliability" }
-    },
-    "valuesTitle": "Our Values",
-    "visionDescription": "Becoming a leading agency known for delivering impactful digital experiences.",
-    "visionTitle": "Our Vision"
+      "missionTitle": "Our Mission",
+      "stats": 
+      {
+        "item1": { "number": "14", "title": "Years of Experience" },
+        "item2": { "number": "97", "title": "Projects Delivered" },
+        "item3": { "number": "83", "title": "Satisfied Clients" }
+      },
+      "statsTitle": "Our Achievements",
+      "subtitle": "Transforming Ideas into Digital Success",
+      "title": "About Us",
+      "values": {
+        "creativity": { "description": "Bringing fresh, innovative solutions tailored to each client’s needs.", "title": "Creativity" },
+        "quality": { "description": "Committed to the highest standards in every project.", "title": "Quality" },
+        "reliability": { "description": "Building trust and transparency with our clients.", "title": "Reliability" }
+      },
+      "valuesTitle": "Our Values",
+      "visionDescription": "To become a leading agency known for delivering impactful digital experiences.",
+      "visionTitle": "Our Vision"
+    }
   },
+
 
   "footer": {
     "about": "About",
@@ -134,7 +136,9 @@
     "description": "We’re excited to explore opportunities with you. Reach out to Felix, and let’s arrange a meeting to discuss how we can collaborate.",
     "availableBadge": "Available for new project",
     "buttonText": "Book a call with us",
-    "buttonLink": "/book-a-call"
+    "buttonLink": "/book-a-call",
+    "buttonSecondaryText": "Contact Us",
+    "buttonSecondaryLink": "/contact"
   }
 
 }

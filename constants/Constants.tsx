@@ -29,7 +29,7 @@ export const heroItems = {
   buttonPrimaryLink: "/contact",
 
   buttonSecondaryText: "Our Services",
-  buttonSecondaryLink: "/services",
+  buttonSecondaryLink: "/service",
 
   image: "/images/hero/hero-img.png",
   imageMobile: "/images/hero/hero-screen-shot.png",
@@ -38,7 +38,7 @@ export const heroItems = {
     offerTitle: "What We Offer",
     offerDescription:
       "Our comprehensive services are designed to help your business succeed online.",
-    offerLink: "/services",
+    offerLink: "/service",
 
     offerItems: [
       {

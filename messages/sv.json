@@ -38,8 +38,7 @@
     ],
     "aboutUs": {
       "description": "På Skapadinsida skapar vi digitala lösningar som lyfter ditt varumärke. Här är vad vi gör:",
-      "bulletPoints": 
-      [
+      "bulletPoints": [
         "Designar och utvecklar användarcentrerade webbplatser",
         "Skapar varumärkesidentiteter anpassade för ditt företag",
         "Optimerar din webbplats för bättre sökbarhet"
@@ -136,6 +135,8 @@
     "description": "Vi ser fram emot att utforska möjligheter tillsammans med dig. Ta kontakt med Felix så bokar vi in ett möte för att diskutera hur vi kan samarbeta.",
     "availableBadge": "Tillgänglig för nya projekt",
     "buttonText": "Boka ett möte med oss",
-    "buttonLink": "/book-a-call"
+    "buttonLink": "/book-a-call",
+    "buttonSecondaryText": "Kontakta oss",
+    "buttonSecondaryLink": "/contact"
   }
 }

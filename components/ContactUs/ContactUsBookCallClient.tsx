@@ -26,16 +26,33 @@ const ContactUsBookCallClient = () => {
           <p className="text-lg md:max-w-2xl text-center">{t("description")}</p>
           <Spacer className="py-4" />
 
-          <div className="">
-            <Link href={t("buttonLink")} aria-label={t("buttonText")}>
-              <Button
-                variant="default"
-                size="xl"
-                className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-xl text-white text-lg flex justify-center items-center gap-2"
+          <div className=" flex flex-col gap-4 justify-center items-center max-w-4xl">
+            <div className="">
+              <Link href={t("buttonLink")} aria-label={t("buttonText")}>
+                <Button
+                  variant="default"
+                  size="xl"
+                  className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-xl text-white text-lg flex justify-center items-center gap-2"
+                >
+                  <IconPhoneIncoming /> {t("buttonText")}
+                </Button>
+              </Link>
+            </div>
+            <div className="text-sm uppercase font-bold text-gray-400">OR</div>
+            <div className="">
+              <Link
+                href={t("buttonSecondaryLink")}
+                aria-label={t("buttonSecondaryText")}
               >
-                <IconPhoneIncoming /> {t("buttonText")}
-              </Button>
-            </Link>
+                <Button
+                  variant="default"
+                  size="xl"
+                  className="bg-green-500/90 hover:bg-green-600 focus:bg-green-400 text-green-900 hover:text-white dark:bg-green-700 dark:hover:bg-green-600 dark:focus:bg-green-600  rounded-xl dark:text-white text-lg flex justify-center items-center gap-2 duration-300 shadow-lg"
+                >
+                  <IconPhoneIncoming /> {t("buttonSecondaryText")}
+                </Button>
+              </Link>
+            </div>
           </div>
           <TeamCards />
         </div>
