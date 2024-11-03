@@ -37,7 +37,6 @@ const SectionHero: React.FC<HeroProps> = ({
   buttonPrimaryLink,
   buttonSecondaryText,
   buttonSecondaryLink,
-  ...props
 }) => {
   const { theme } = useThemeSafe();
 

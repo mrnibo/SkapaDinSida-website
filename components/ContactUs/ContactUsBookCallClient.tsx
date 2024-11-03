@@ -16,7 +16,7 @@ const ContactUsBookCallClient = () => {
         <div className="flex flex-col justify-center items-center gap-5">
           <Badge
             variant="default"
-            className="flex bg-neutral-800 dark:bg-neutral-700 gap-1"
+            className="flex bg-neutral-800 text-white dark:bg-neutral-700 hover:bg-neutral-700 dark:hover:bg-neutral-600 gap-1"
           >
             <IconCircleDot className="text-green-400" size={20} />
             {t("availableBadge")}
