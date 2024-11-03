@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { TitleSection } from "../ui/titles";
 import { Badge } from "../ui/badge";
@@ -9,15 +11,15 @@ import { useTranslations } from "next-intl";
 import { Spacer } from "../ui/spacer";
 import Script from "next/script";
 
+// Function to handle Facebook Pixel tracking
+const trackContactEvent = () => {
+  if (typeof window !== "undefined" && window.fbq) {
+    window.fbq("track", "Contact");
+  }
+};
+
 const ContactUsBookCallClient = () => {
   const t = useTranslations("bookACall");
-
-  // Function to handle Facebook Pixel tracking
-  const trackContactEvent = () => {
-    if (typeof window !== "undefined" && typeof window.fbq === "function") {
-      window.fbq("track", "Contact");
-    }
-  };
 
   return (
     <div className="mx-4">
@@ -42,7 +44,7 @@ const ContactUsBookCallClient = () => {
                   variant="default"
                   size="xl"
                   className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-xl text-white text-lg flex justify-center items-center gap-2"
-                  onClick={trackContactEvent} // Trigger Pixel event on click
+                  onClick={trackContactEvent} // Now properly marked as Client Component
                 >
                   <IconPhoneIncoming /> {t("buttonText")}
                 </Button>
@@ -77,9 +79,9 @@ const ContactUsBookCallClient = () => {
           if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
           n.queue=[];t=b.createElement(e);t.async=!0;
           t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          s.parentNode.insertBefore(t,s)}(window,document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '3582989535324506'); 
+           fbq('init', '3582989535324506'); 
           fbq('track', 'PageView');
         `}
       </Script>
