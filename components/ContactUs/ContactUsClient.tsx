@@ -7,16 +7,24 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 import { Spacer } from "../ui/spacer";
+import Script from "next/script";
 
 function ContactUsClient() {
   const [state, handleSubmit] = useForm("xnnqpgje");
+
+  // Function to handle Facebook Pixel tracking
+  const trackContactEvent = () => {
+    if (typeof window !== "undefined" && typeof window.fbq === "function") {
+      window.fbq("track", "Contact");
+    }
+  };
 
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="flex md:justify-between justify-center items-center gap-8 max-w-5xl mx-auto">
           <div className="p-6 self-center md:self-start md:w-1/2 md:max-w-xl">
-            <h3 className="text-xl font-semibold mb-4">Send us a message: </h3>
+            <h3 className="text-xl font-semibold mb-4">Send us a message:</h3>
             <p className="text-gray-700 dark:text-gray-200">
               We'd love to hear from you. Please fill out the form below and
               we'll get back to you as soon as possible.
@@ -28,7 +36,10 @@ function ContactUsClient() {
               </p>
             ) : (
               <form
-                onSubmit={handleSubmit}
+                onSubmit={(e) => {
+                  handleSubmit(e);
+                  trackContactEvent(); // Trigger Pixel event on submit
+                }}
                 className="space-y-8 text-gray-700 dark:text-gray-200"
               >
                 {/* Name Field */}
@@ -125,7 +136,6 @@ function ContactUsClient() {
               </form>
             )}
           </div>
-          <div></div>
           <div className="p-6 rounded-lg justify-center items-center hidden md:flex">
             <Image
               src="/images/contact-us.svg"
@@ -136,6 +146,22 @@ function ContactUsClient() {
           </div>
         </div>
       </div>
+
+      {/* Facebook Pixel Script */}
+      <Script id="facebook-pixel" strategy="afterInteractive">
+        {`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '3582989535324506'); 
+          fbq('track', 'PageView');
+        `}
+      </Script>
     </section>
   );
 }
