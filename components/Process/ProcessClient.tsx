@@ -39,7 +39,7 @@ export default function ProcessClient() {
   return (
     <section ref={ref}>
       <div className="relative">
-        <BackgroundLines className=" w-full flex-col top-0 h-full hidden md:flex">
+        <BackgroundLines className=" w-full flex-col top-0 h-full">
           <div className="flex justify-start items-start py-8">
             <TitleSection text="Our Process" className="px-4" />
           </div>
