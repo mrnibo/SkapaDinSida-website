@@ -186,28 +186,6 @@ export const Card: React.FC<CardProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose, currentIndex } = useContext(CarouselContext);
 
-  // Handle click if onClick is passed
-  const handleOpen = () => {
-    if (onClick) onClick();
-    else setOpen(true);
-  };
-
-  // Effect for handling escape key to close modal
-  useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        handleClose();
-      }
-    }
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [open]);
-
   // Detects clicks outside the modal to close it
   useOutsideClick(containerRef, () => handleClose());
 
@@ -262,8 +240,7 @@ export const Card: React.FC<CardProps> = ({
       {/* Main card button for opening modal */}
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
-        onClick={handleOpen} // Use handleOpen, which calls onClick if provided
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-[25rem] w-[25rem] md:h-[25rem] md:w-[25rem] overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-[25rem] w-[25rem] md:h-[25rem] md:w-[35rem] overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8">

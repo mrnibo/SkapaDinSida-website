@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
-import { ShowcaseProjectModal } from "./ShowcaseProjectModal";
 
 interface Project {
   category: string;
@@ -15,20 +14,6 @@ type SelectedProject = Project | null;
 
 export function ShowcaseSlider() {
   // State for managing modal
-  const [selectedProject, setSelectedProject] = useState<SelectedProject>(null);
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-
-  // Handle opening modal with selected project
-  const openModal = (project: Project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
-
-  // Handle closing modal
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedProject(null);
-  };
 
   // Mapping cards to include click handler for opening modal
   const cards = data.map((card, index) => (
@@ -36,27 +21,14 @@ export function ShowcaseSlider() {
       key={card.src}
       card={card}
       index={index}
-      onClick={() => openModal(card)} // Add click handler to open modal with project data
+
+      // Add click handler to open modal with project data
     />
   ));
 
   return (
     <div className="w-full h-full py-0">
       <Carousel items={cards} />
-
-      {/* Modal for displaying selected project details */}
-      {selectedProject && (
-        <ShowcaseProjectModal
-          project={{
-            title: selectedProject.title,
-            image: selectedProject.src, // Use `src` as `image` in the modal
-            description: selectedProject.content, // Use `content` as `description`
-            category: selectedProject.category,
-          }}
-          isOpen={isModalOpen}
-          onClose={closeModal}
-        />
-      )}
     </div>
   );
 }
@@ -64,7 +36,7 @@ export function ShowcaseSlider() {
 const DummyContent = () => {
   return (
     <>
-      {[...new Array(3)].map((_, index) => (
+      {[...new Array(1)].map((_, index) => (
         <div
           key={"dummy-content" + index}
           className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
@@ -88,13 +60,13 @@ const data: Project[] = [
   {
     category: "Artificial Intelligence",
     title: "You can do more with AI.",
-    src: "/choose-us-1.webp",
+    src: "/images/projects/001-img-cover.png",
     content: <DummyContent />, // This will serve as `description` in the modal
   },
   {
     category: "Productivity",
     title: "Enhance your productivity.",
-    src: "/choose-us-1.webp",
+    src: "/images/projects/001-img-cover-2.png",
     content: <DummyContent />,
   },
   {
