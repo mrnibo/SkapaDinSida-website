@@ -9,9 +9,9 @@
     "buttonPrimaryLink": "/kontakt",
     "navbarLinks": {
       "home": { "link": "/", "title": "Hem" },
-      "about": { "link": "/om", "title": "Om" },
-      "services": { "link": "/tjänster", "title": "Tjänster" },
-      "contact": { "link": "/kontakt", "title": "Kontakt" }
+      "about": { "link": "/about", "title": "Om" },
+      "services": { "link": "/service", "title": "Tjänster" },
+      "contact": { "link": "/contact", "title": "Kontakt" }
     }
   },
 
@@ -37,13 +37,20 @@
       { "title": "Erfarenhet", "description": "Års av expertis inom digitala lösningar." }
     ],
     "aboutUs": {
-      "description": "På Skapadinsida specialiserar vi oss på att skapa och utveckla anpassade digitala lösningar som stärker ditt varumärke.",
+      "description": "På Skapadinsida skapar vi digitala lösningar som lyfter ditt varumärke. Här är vad vi gör:",
+      "bulletPoints": 
+      [
+        "Designar och utvecklar användarcentrerade webbplatser",
+        "Skapar varumärkesidentiteter anpassade för ditt företag",
+        "Optimerar din webbplats för bättre sökbarhet"
+      ],
       "missionDescription": "Att stärka företag genom högkvalitativa, användarcentrerade digitala upplevelser.",
       "missionTitle": "Vårt Uppdrag",
-      "stats": {
-        "item1": { "number": "100", "title": "Års Erfarenhet" },
-        "item2": { "number": "50", "title": "Levererade Projekt" },
-        "item3": { "number": "25", "title": "Nöjda Kunder" }
+      "stats": 
+      {
+        "item1": { "number": "14", "title": "Års Erfarenhet" },
+        "item2": { "number": "97", "title": "Levererade Projekt" },
+        "item3": { "number": "83", "title": "Nöjda Kunder" }
       },
       "statsTitle": "Våra Prestationer",
       "subtitle": "Förvandlar Idéer till Digital Framgång",
@@ -122,5 +129,13 @@
   "teamDetails": [
     { "name": "Leo Khani", "title": "React-utvecklare", "contact": "E-post: johndoe@example.com | Telefon: (123) 456-7890" },
     { "name": "Sadeq Familit", "title": "UI/UX Designer", "contact": "E-post: johndoe@example.com | Telefon: (123) 456-7890" }
-  ]
+  ],
+
+  "bookACall": {
+    "title": "Kontakta oss",
+    "description": "Vi ser fram emot att utforska möjligheter tillsammans med dig. Ta kontakt med Felix så bokar vi in ett möte för att diskutera hur vi kan samarbeta.",
+    "availableBadge": "Tillgänglig för nya projekt",
+    "buttonText": "Boka ett möte med oss",
+    "buttonLink": "/book-a-call"
+  }
 }

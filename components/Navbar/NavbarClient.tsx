@@ -52,7 +52,7 @@ const Navbar: React.FC = React.memo(() => {
         <ul className="flex gap-12">
           {navItems.map((item) => (
             <li key={item.title}>
-              <Suspense fallback={<span>Loading...</span>}>
+              <Suspense>
                 <NavbarItems name={item.title} href={item.href} />
               </Suspense>
             </li>
@@ -65,7 +65,7 @@ const Navbar: React.FC = React.memo(() => {
             icon={<IconLayoutFilled />}
           />
           <NavbarThemeButton />
-          <Suspense fallback={<span>Loading...</span>}>
+          <Suspense>
             <LanguageSwitcher />
           </Suspense>
         </div>
@@ -93,7 +93,7 @@ const NavbarMobile: React.FC = React.memo(() => {
           <span className="sr-only">Toggle navigation menu</span>
         </Button>
       </DrawerTrigger>
-      <DrawerContent>
+      <DrawerContent className="bg-background">
         <DrawerHeader>
           <DrawerTitle className="flex justify-center items-center">
             <Link
@@ -156,7 +156,7 @@ export default function NavbarClient() {
         </div>
         <div className="flex flex-1 items-center justify-end gap-2 md:justify-end md:hidden">
           <NavbarThemeButton />
-          <Suspense fallback={<span>Loading...</span>}>
+          <Suspense>
             <NavbarMobile />
           </Suspense>
         </div>

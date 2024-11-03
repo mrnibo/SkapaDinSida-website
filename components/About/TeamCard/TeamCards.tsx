@@ -20,7 +20,7 @@ const TeamCards = () => {
           ) => (
             <div
               key={index}
-              className="group flex flex-row justify-between items-center gap-4 w-96 p-4 transition-transform transform hover:scale-105 duration-300 bg-gray-100 dark:bg-neutral-800 rounded-2xl shadow-md"
+              className="group flex flex-row justify-between items-center gap-1 w-96 p-4 transition-transform transform hover:scale-105 duration-300 bg-gray-100 dark:bg-neutral-800 rounded-2xl shadow-md"
             >
               <div className="">
                 <Image

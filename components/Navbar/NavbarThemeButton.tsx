@@ -26,7 +26,7 @@ export function NavbarThemeButton() {
     <Button
       variant="ghost"
       size="icon"
-      className="bg-gray-100 focus:bg-gray-200"
+      className="bg-gray-100 focus:bg-gray-200 hover:bg-gray-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 shadow-lg"
       onClick={toggleTheme}
     >
       {theme === "light" ? (
@@ -34,7 +34,7 @@ export function NavbarThemeButton() {
       ) : (
         <IconMoon
           className="h-10 w-10"
-          color="black"
+          color="white"
           aria-label="Switch to light theme"
         />
       )}

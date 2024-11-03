@@ -19,7 +19,7 @@ const Image = React.lazy(() => delay(0).then(() => import("next/image")));
 
 interface HeroProps {
   title: string;
-  description: string;
+  description: React.ReactNode;
   image: string;
   imageMobile?: string;
   buttonPrimaryText?: string;
@@ -58,8 +58,8 @@ const SectionHero: React.FC<HeroProps> = ({
             <Image
               src={imageMobile || image}
               alt="hero"
-              width={600}
-              height={600}
+              width={550}
+              height={550}
               className="w-full h-full"
             />
           </Suspense>
@@ -103,10 +103,14 @@ const SectionHero: React.FC<HeroProps> = ({
 
         {/* Desktop Image */}
         <div className="w-full md:w-3/5 mt-8 md:mt-0 hidden justify-center md:justify-end relative md:flex">
-          <Suspense
-            fallback={<Skeleton className="h-[450px] w-[450px] rounded-xl" />}
-          >
-            <Image src={image} alt="hero" width={450} height={450} />
+          <Suspense>
+            <Image
+              src={image}
+              alt="hero"
+              width={450}
+              height={450}
+              className="mb-2"
+            />
           </Suspense>
         </div>
       </div>

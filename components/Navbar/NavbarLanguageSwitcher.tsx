@@ -25,7 +25,7 @@ export default function LanguageSwitcher() {
         value={locale}
         onChange={handleChange}
         aria-label="Select Language"
-        className="px-4 py-2 rounded-lg shadow-lg dark:bg-neutral-800"
+        className="px-4 py-2 rounded-lg shadow-lg bg-gray-100 dark:bg-neutral-800"
       >
         <option value="en">English</option>
         <option value="sv">Svenska</option>

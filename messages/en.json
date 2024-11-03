@@ -10,7 +10,7 @@
     "navbarLinks": {
       "home": { "link": "/", "title": "Home" },
       "about": { "link": "/about", "title": "About" },
-      "services": { "link": "/services", "title": "Services" },
+      "services": { "link": "/service", "title": "Services" },
       "contact": { "link": "/contact", "title": "Contact" }
     }
   },
@@ -37,26 +37,31 @@
       { "title": "Experience", "description": "Years of expertise in transforming ideas into digital solutions." }
     ],
     "aboutUs": {
-      "description": "At Skapadinsida, we specialize in designing and developing custom digital solutions that enhance your brand’s impact.",
+      "description": "At Skapadinsida, we craft digital solutions that elevate your brand. Here’s what we do:",
+      "bulletPoints": [
+        "Design and develop unique, user-focused websites",
+        "Create compelling brand identities tailored to your business",
+        "Optimize your site for search engines to increase visibility"
+      ],
       "missionDescription": "Empowering businesses through high-quality, user-centered digital experiences.",
-      "missionTitle": "Our Mission",
-      "stats": {
-        "item1": { "number": "100", "title": "Years of Experience" },
-        "item2": { "number": "50", "title": "Projects Delivered" },
-        "item3": { "number": "25", "title": "Satisfied Clients" }
-      },
-      "statsTitle": "Our Achievements",
-      "subtitle": "Transforming Ideas into Digital Success",
-      "title": "About Us",
-      "values": {
-        "creativity": { "description": "Bringing fresh, innovative solutions tailored to each client’s needs.", "title": "Creativity" },
-        "quality": { "description": "Committed to the highest standards in every project.", "title": "Quality" },
-        "reliability": { "description": "Fostering trust and transparency with our clients.", "title": "Reliability" }
-      },
-      "valuesTitle": "Our Values",
-      "visionDescription": "Becoming a leading agency known for delivering impactful digital experiences.",
-      "visionTitle": "Our Vision"
-    }
+      "missionTitle": "Our Mission"
+    },
+    "stats": {
+      "item1": { "number": "14", "title": "Years of Experience" },
+      "item2": { "number": "97", "title": "Projects Delivered" },
+      "item3": { "number": "83", "title": "Satisfied Clients" }
+    },
+    "statsTitle": "Our Achievements",
+    "subtitle": "Transforming Ideas into Digital Success",
+    "title": "About Us",
+    "values": {
+      "creativity": { "description": "Bringing fresh, innovative solutions tailored to each client’s needs.", "title": "Creativity" },
+      "quality": { "description": "Committed to the highest standards in every project.", "title": "Quality" },
+      "reliability": { "description": "Fostering trust and transparency with our clients.", "title": "Reliability" }
+    },
+    "valuesTitle": "Our Values",
+    "visionDescription": "Becoming a leading agency known for delivering impactful digital experiences.",
+    "visionTitle": "Our Vision"
   },
 
   "footer": {
@@ -122,5 +127,14 @@
   "teamDetails": [
     { "name": "Leo Khani", "title": "React Developer", "contact": "Email: johndoe@example.com | Phone: (123) 456-7890" },
     { "name": "Sadeq Familit", "title": "UI/UX Designer", "contact": "Email: johndoe@example.com | Phone: (123) 456-7890" }
-  ]
+  ],
+
+  "bookACall": {
+    "title": "Get in Touch",
+    "description": "We’re excited to explore opportunities with you. Reach out to Felix, and let’s arrange a meeting to discuss how we can collaborate.",
+    "availableBadge": "Available for new project",
+    "buttonText": "Book a call with us",
+    "buttonLink": "/book-a-call"
+  }
+
 }
