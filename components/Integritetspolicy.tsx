@@ -5,7 +5,7 @@ const Integritetspolicy: React.FC = () => {
   const t = useTranslations("integritetspolicy");
 
   return (
-    <section className="max-w-3xl mx-auto my-8 p-4 bg-white shadow-lg rounded-lg">
+    <section className="max-w-3xl mx-auto my-8 p-4 bg-white dark:bg-neutral-800 dark:text-white shadow-lg rounded-lg">
       <h1 className="text-3xl font-bold mb-4">{t("title")}</h1>
 
       <p className="mb-4">{t("intro")}</p>
