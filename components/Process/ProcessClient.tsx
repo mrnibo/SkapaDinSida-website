@@ -47,7 +47,7 @@ export default function ProcessClient() {
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="relative group flex flex-col justify-center items-center md:items-start bg-gray-100 dark:bg-neutral-900 rounded-xl p-6 w-full h-[22rem] shadow-lg"
+                className="relative group flex flex-col justify-center items-center md:items-start bg-gray-100 dark:bg-neutral-900 rounded-xl p-6 w-full h-full md:h-[22rem] shadow-lg"
               >
                 <div className="flex flex-col items-center md:items-start">
                   <div className="flex flex-col justify-start items-start mb-5">
