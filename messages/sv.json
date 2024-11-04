@@ -138,5 +138,21 @@
     "buttonLink": "/book-a-call",
     "buttonSecondaryText": "Kontakta oss",
     "buttonSecondaryLink": "/contact"
+  },
+
+  "integritetspolicy": {
+    "title": "Integritetspolicy",
+    "intro": "Vi värnar om säkerheten och sekretessen kring dina personuppgifter och hanterar dem med största respekt och omsorg. Denna sida beskriver hur vi samlar in, använder och skyddar din data på denna webbplats i enlighet med gällande lagar och förordningar, inklusive GDPR.",
+    "dataStorageTitle": "Vilka uppgifter vi lagrar och hur länge vi behåller dem",
+    "dataStorageDescription": "De uppgifter vi lagrar är de som du tillhandahåller via våra inskicksformulär. Vi behåller dessa uppgifter endast så länge det är nödvändigt för att uppfylla de ändamål för vilka de samlades in. Insamlingen av personuppgifter baseras på ditt samtycke.",
+    "purposeTitle": "Ändamål med insamlingen",
+    "purposeDescription": "Vi samlar in dina uppgifter för att kunna kontakta dig, etablera och/eller upprätthålla en affärsrelation samt för att tillhandahålla och förbättra våra tjänster.",
+    "rightsTitle": "Dina rättigheter",
+    "rightsDescription": "Du har rätt att en gång per år begära information om vilka personuppgifter vi har lagrade om dig. Du kan också när som helst begära att vi rättar eller raderar dina personuppgifter. För att göra detta, vänligen kontakta vår personuppgiftsansvarige.",
+    "consentTitle": "Samtycke",
+    "consentDescription": "Du har rätt att när som helst återkalla ditt samtycke till vår användning av dina personuppgifter. Om du anser att vi har hanterat dina personuppgifter på ett sätt som strider mot våra angivna direktiv eller gällande lagar, har du rätt att lämna in ett klagomål till en tillsynsmyndighet.",
+    "dataControllerTitle": "Personuppgiftsansvarig",
+    "dataControllerName": "Namn: Felix Hultberg",
+    "dataControllerEmail": "E-post: felix.hultberg@webverse.se"
   }
 }

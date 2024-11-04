@@ -20,7 +20,7 @@ export default function Footer() {
             ></p>
           </div>
           <Link
-            href="/privacy-policy"
+            href="/integritetspolicy"
             className="hover:text-white transition-colors"
           >
             {t("privacyPolicy")}
