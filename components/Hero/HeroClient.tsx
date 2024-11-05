@@ -1,14 +1,11 @@
 "use client";
 
-import React, { Suspense } from "react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import React from "react";
 import { heroItems } from "@/constants/Constants";
 import { useThemeSafe } from "@/hooks/useThemeSafe";
-import { IconInfoCircle, IconPresentation } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import { Skeleton } from "../ui/skeleton";
 import SectionHero from "../section/SectionHero";
+import StatsClient from "../About/Stats/StatsClient";
 
 // Delay function for testing loading states
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -41,6 +38,9 @@ const HeroClient = () => {
         buttonSecondaryText={t("buttonSecondaryText")}
         buttonSecondaryLink={heroItems.buttonSecondaryLink}
       />
+      <div className="max-w-6xl mx-auto mb-8">
+        <StatsClient />
+      </div>
     </>
   );
 };

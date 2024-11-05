@@ -7,6 +7,7 @@ import { useThemeSafe } from "@/hooks/useThemeSafe";
 import { IconInfoCircle, IconPresentation } from "@tabler/icons-react";
 import { Skeleton } from "../ui/skeleton";
 import { Spacer } from "../ui/spacer";
+import BlurFade from "@/components/ui/blur-fade";
 
 // Delay function for testing loading states
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -66,51 +67,66 @@ const SectionHero: React.FC<HeroProps> = ({
 
         {/* Left Side */}
         <div className="flex flex-col items-center md:items-start gap-2 w-full md:w-2/5">
-          <h1 className="w-full text-4xl md:text-6xl lg:text-7xl uppercase font-semibold text-center md:text-left leading-tight break-words">
-            {title}
-          </h1>
-          <Spacer className="py-4" />
-          <p className="text-center text-lg md:text-left">{description}</p>
+          <BlurFade delay={0.25} inView>
+            <h1 className="w-full text-4xl md:text-6xl lg:text-7xl uppercase font-semibold text-center md:text-left leading-tight break-words">
+              {title}
+            </h1>
+          </BlurFade>
+          <BlurFade delay={0.3} inView>
+            <Spacer className="py-4" />
+          </BlurFade>
+          <BlurFade delay={0.35} inView>
+            <p className="text-center text-lg md:text-left">{description}</p>
+          </BlurFade>
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-5">
             {/* Conditionally Render Primary Button */}
             {buttonPrimaryText && buttonPrimaryLink && (
-              <Link href={buttonPrimaryLink} aria-label={buttonPrimaryText}>
-                <Button
-                  size="lg"
-                  className="bg-blue-500 hover:bg-blue-600 text-md w-full sm:w-auto text-white py-6 flex gap-2 items-center"
-                >
-                  <IconPresentation size={20} />
-                  {buttonPrimaryText}
-                </Button>
-              </Link>
+              <BlurFade delay={0.4} inView>
+                <Link href={buttonPrimaryLink} aria-label={buttonPrimaryText}>
+                  <Button
+                    size="lg"
+                    className="bg-blue-500 hover:bg-blue-600 text-md w-full sm:w-auto text-white py-6 flex gap-2 items-center"
+                  >
+                    <IconPresentation size={20} />
+                    {buttonPrimaryText}
+                  </Button>
+                </Link>
+              </BlurFade>
             )}
 
             {/* Conditionally Render Secondary Button */}
             {buttonSecondaryText && buttonSecondaryLink && (
-              <Link href={buttonSecondaryLink} aria-label={buttonSecondaryText}>
-                <Button
-                  size="lg"
-                  className="bg-gray-200 hover:bg-gray-300 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-black dark:text-white text-md w-full sm:w-auto py-6 dark:border border-neutral-800 flex gap-2 items-center"
+              <BlurFade delay={0.45} inView>
+                <Link
+                  href={buttonSecondaryLink}
+                  aria-label={buttonSecondaryText}
                 >
-                  <IconInfoCircle size={20} />
-                  {buttonSecondaryText}
-                </Button>
-              </Link>
+                  <Button
+                    size="lg"
+                    className="bg-gray-200 hover:bg-gray-300 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-black dark:text-white text-md w-full sm:w-auto py-6 dark:border border-neutral-800 flex gap-2 items-center"
+                  >
+                    <IconInfoCircle size={20} />
+                    {buttonSecondaryText}
+                  </Button>
+                </Link>
+              </BlurFade>
             )}
           </div>
         </div>
 
         {/* Desktop Image */}
         <div className="w-full md:w-3/5 mt-8 md:mt-0 hidden justify-center md:justify-end relative md:flex">
-          <Suspense>
-            <Image
-              src={image}
-              alt="hero"
-              width={450}
-              height={450}
-              className="mb-2"
-            />
-          </Suspense>
+          <BlurFade delay={0.35} inView>
+            <Suspense>
+              <Image
+                src={image}
+                alt="hero"
+                width={450}
+                height={450}
+                className="mb-2"
+              />
+            </Suspense>
+          </BlurFade>
         </div>
       </div>
 

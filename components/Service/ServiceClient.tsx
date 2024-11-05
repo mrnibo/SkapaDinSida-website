@@ -3,6 +3,7 @@
 import { Laptop, Smartphone, PenTool } from "lucide-react";
 import ServiceCards from "./ServiceCards";
 import { useTranslations } from "next-intl";
+import BlurFade from "../ui/blur-fade";
 
 interface Service {
   icon: React.ReactNode;
@@ -36,21 +37,23 @@ export default function ServiceShowcase() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div key={index} className="group">
-              <ServiceCards>
-                <div className="flex flex-col items-center justify-center gap-4 ">
-                  <div className="flex justify-center mb-4 group-hover:scale-125 transition-transform duration-300">
-                    {service.icon}
-                  </div>
+              <BlurFade delay={0.35 * index} inView>
+                <ServiceCards>
+                  <div className="flex flex-col items-center justify-center gap-4 ">
+                    <div className="flex justify-center mb-4 group-hover:scale-125 transition-transform duration-300">
+                      {service.icon}
+                    </div>
 
-                  <div className="text-xl font-bold group-hover:translate-y-2 transition-transform duration-300">
-                    {service.title}
-                  </div>
+                    <div className="text-xl font-bold group-hover:translate-y-2 transition-transform duration-300">
+                      {service.title}
+                    </div>
 
-                  <p className="text-center text-gray-600 dark:text-gray-50 group-hover:translate-y-2 transition-transform duration-300">
-                    {service.description}
-                  </p>
-                </div>
-              </ServiceCards>
+                    <p className="text-center text-gray-600 dark:text-gray-50 group-hover:translate-y-2 transition-transform duration-300">
+                      {service.description}
+                    </p>
+                  </div>
+                </ServiceCards>
+              </BlurFade>
             </div>
           ))}
         </div>

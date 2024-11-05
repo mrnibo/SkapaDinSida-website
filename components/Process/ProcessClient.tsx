@@ -5,6 +5,7 @@ import { TitleSection } from "../ui/titles";
 import { BorderBeam } from "../ui/border-beam";
 import { BackgroundLines } from "../ui/background-lines";
 import { useTranslations } from "next-intl";
+import BlurFade from "../ui/blur-fade";
 
 export default function ProcessClient() {
   const ref = useRef<HTMLDivElement>(null);
@@ -44,33 +45,33 @@ export default function ProcessClient() {
             <TitleSection text="Our Process" className="px-4" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 mx-8">
-            {steps.map((step) => (
-              <div
-                key={step.number}
-                className="relative group flex flex-col justify-center items-center md:items-start bg-gray-100 dark:bg-neutral-900 rounded-xl p-6 w-full h-full md:h-[22rem] shadow-lg"
-              >
-                <div className="flex flex-col items-center md:items-start">
-                  <div className="flex flex-col justify-start items-start mb-5">
-                    <div className="text-blue-500 upercase text-sm font-bold mb-1 group-hover:translate-x-1 transition-transform duration-300">
-                      STEP {step.number}
+            {steps.map((step, index) => (
+              <BlurFade key={step.number} delay={0.25 * index} inView>
+                <div className="relative group flex flex-col justify-center items-center md:items-start bg-gray-100 dark:bg-neutral-900 rounded-xl p-6 w-full h-full md:h-[22rem] shadow-lg">
+                  <div className="flex flex-col items-center md:items-start">
+                    <div className="flex flex-col justify-start items-start mb-5">
+                      <div className="text-blue-500 upercase text-sm font-bold mb-1 group-hover:translate-x-1 transition-transform duration-300">
+                        STEP {step.number}
+                      </div>
+                      <div className="bg-blue-500 w-4 h-1 rounded-full group-hover:translate-x-1 transition-transform duration-500"></div>
                     </div>
-                    <div className="bg-blue-500 w-4 h-1 rounded-full group-hover:translate-x-1 transition-transform duration-500"></div>
+                    <h3 className="text-3xl font-semibold text-neutral-700 mb-4 dark:text-neutral-200 group-hover:translate-y-1 transition-transform duration-300">
+                      {step.title}
+                    </h3>
+                    <p className="text-center text-[1rem] md:text-left translate-x-0.5 text-gray-600 dark:text-gray-300 max-w-sm group-hover:translate-y-1 transition-transform duration-500">
+                      {step.description}
+                    </p>
                   </div>
-                  <h3 className="text-3xl font-semibold text-neutral-700 mb-4 dark:text-neutral-200 group-hover:translate-y-1 transition-transform duration-300">
-                    {step.title}
-                  </h3>
-                  <p className="text-center text-[1rem] md:text-left translate-x-0.5 text-gray-600 dark:text-gray-300 max-w-sm group-hover:translate-y-1 transition-transform duration-500">
-                    {step.description}
-                  </p>
+
+                  <BorderBeam
+                    size={20}
+                    duration={32}
+                    delay={9}
+                    colorFrom="#3b82f6"
+                    colorTo="#3730a3"
+                  />
                 </div>
-                <BorderBeam
-                  size={20}
-                  duration={32}
-                  delay={9}
-                  colorFrom="#3b82f6"
-                  colorTo="#3730a3"
-                />
-              </div>
+              </BlurFade>
             ))}
           </div>
         </BackgroundLines>
