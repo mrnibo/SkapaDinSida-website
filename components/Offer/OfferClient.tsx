@@ -17,7 +17,7 @@ import { Progress } from "../ui/progress";
 
 export const OfferBanner = ({ onClick }: { onClick: () => void }) => {
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-4 right-4 md:right-4 z-50">
       <BlurFade delay={3}>
         <Button
           onClick={onClick}
@@ -76,7 +76,7 @@ const OfferModal = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px] duration-700 transition-all mx-4 md:mx-0">
+      <DialogContent className="sm:max-w-[425px] duration-700 transition-all dark:bg-neutral-900 border-none self-center dark:text-white">
         <DialogHeader>
           <DialogTitle>Free Website Design Offer</DialogTitle>
           <DialogDescription>
@@ -98,7 +98,7 @@ const OfferModal = ({
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 dark:text-white"
                   >
                     Business Name
                   </label>
@@ -113,7 +113,7 @@ const OfferModal = ({
                 <div>
                   <label
                     htmlFor="current-website"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 dark:text-white"
                   >
                     Current Website
                   </label>
@@ -137,7 +137,7 @@ const OfferModal = ({
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 dark:text-white"
                   >
                     Phone Number
                   </label>
@@ -152,7 +152,7 @@ const OfferModal = ({
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 dark:text-white"
                   >
                     Email Address
                   </label>
@@ -167,7 +167,7 @@ const OfferModal = ({
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 dark:text-white"
                   >
                     Message (Optional)
                   </label>
