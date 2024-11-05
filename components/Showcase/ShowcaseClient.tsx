@@ -54,9 +54,15 @@ export default function ShowcaseClient() {
   return (
     <section className="px-4 py-24">
       <div className="container mx-auto z-10">
-        <div className="flex flex-col justify-center items-center py-8">
+        <div className="flex flex-col justify-center items-center gap-4 py-8">
           <TypewriterEffect words={words} />
-          <Spacer className="py-16" />
+          <p className="text-center text-gray-600 dark:text-neutral-400 max-w-2xl text-lg">
+            Discover some of our latest projects, crafted to bring each client's
+            unique vision to life. From sleek e-commerce platforms to dynamic
+            agency portfolios, each website is designed with attention to detail
+            and functionality.
+          </p>
+          <Spacer className="py-8" />
         </div>
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
