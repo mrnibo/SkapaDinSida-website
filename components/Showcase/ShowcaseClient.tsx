@@ -57,10 +57,10 @@ export default function ShowcaseClient() {
         <div className="flex flex-col justify-center items-center gap-4 py-8">
           <TypewriterEffect words={words} />
           <p className="text-center text-gray-600 dark:text-neutral-400 max-w-2xl text-lg">
-            Discover some of our latest projects, crafted to bring each client's
-            unique vision to life. From sleek e-commerce platforms to dynamic
-            agency portfolios, each website is designed with attention to detail
-            and functionality.
+            Discover some of our latest projects, crafted to bring each
+            client&apos;s unique vision to life. From sleek e-commerce platforms
+            to dynamic agency portfolios, each website is designed with
+            attention to detail and functionality.
           </p>
           <Spacer className="py-8" />
         </div>
