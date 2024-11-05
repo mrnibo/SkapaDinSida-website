@@ -39,29 +39,14 @@ const data = [
 
 const words = [
   {
-    text: "En",
+    text: "Selected",
   },
   {
-    text: "samling",
+    text: "customer",
   },
   {
-    text: "av",
-  },
-  {
-    text: "våra",
-  },
-  {
-    text: "senaste",
-  },
-  {
-    text: "webbplatser",
+    text: "cases",
     className: "text-blue-500 dark:text-blue-500",
-  },
-  {
-    text: "för",
-  },
-  {
-    text: "kunder",
   },
 ];
 
@@ -73,20 +58,21 @@ export default function ShowcaseClient() {
           <TypewriterEffect words={words} />
           <Spacer className="py-16" />
         </div>
-        <div className="grid grid-cols-5 grid-rows-5 gap-4 h-auto">
-          <div className="col-span-3 row-span-3">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="col-span-1 md:col-span-2 lg:col-span-3 row-span-1 lg:row-span-3">
             <ShowcaseCard {...data[0]} aspectRatio="4/3" />
           </div>
-          <div className="col-span-2 row-span-3 col-start-4">
+          <div className="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 lg:row-span-3">
             <ShowcaseCard {...data[1]} aspectRatio="4/5" />
           </div>
-          <div className="col-span-2 row-span-2 row-start-4">
+          <div className="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 md:row-span-2">
             <ShowcaseCard {...data[2]} aspectRatio="1/1" />
           </div>
-          <div className="col-span-2 row-span-2 col-start-3 row-start-4">
+          <div className="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 md:row-span-2">
             <ShowcaseCard {...data[3]} aspectRatio="1/1" />
           </div>
-          <div className="row-span-2 col-start-5 row-start-4">
+          <div className="col-span-1 row-span-1 md:row-span-2">
             <ShowcaseCard {...data[4]} aspectRatio="8/15" />
           </div>
         </div>
@@ -111,7 +97,7 @@ const ShowcaseCard = ({
   return (
     <motion.div
       whileHover="hover"
-      className="group bg-gray-200 rounded-xl border border-gray-200 flex justify-center items-center h-full relative overflow-hidden cursor-context-menu"
+      className="group bg-gray-200 rounded-xl border border-gray-200 flex justify-center items-center h-full relative overflow-hidden cursor-pointer"
     >
       {/* Black Overlay with opacity transition */}
       <motion.div
@@ -127,7 +113,7 @@ const ShowcaseCard = ({
           variants={{ hover: { opacity: 1, y: 0 } }}
           initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="absolute bottom-4 left-4 text-black z-10 bg-gray-100 rounded-xl p-4 max-w-xl"
+          className="absolute bottom-4 left-1 right-1 md:left-4 text-black z-10 bg-gray-100 rounded-xl p-4 max-w-xl"
         >
           <h3 className="text-lg font-semibold">{title}</h3>
           <p className="text-sm">{description}</p>
@@ -141,7 +127,7 @@ const ShowcaseCard = ({
         </motion.div>
       )}
 
-      {/* middle button */}
+      {/* Middle Button */}
       {!description && (
         <motion.div
           variants={{ hover: { opacity: 1, y: 0 } }}
@@ -153,8 +139,7 @@ const ShowcaseCard = ({
             href="/contact"
             className="bg-gradient-to-tr from-blue-500 to-blue-600 shadow-lg text-white rounded-xl p-4 hover:-translate-y-2 duration-500 transition-all"
           >
-            {" "}
-            Contact Us{" "}
+            Contact Us
           </Link>
         </motion.div>
       )}
