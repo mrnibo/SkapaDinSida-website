@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import SparklesText from "../ui/sparkles-text";
 import BlurFade from "../ui/blur-fade";
+import { Progress } from "../ui/progress";
 
 export const OfferBanner = ({ onClick }: { onClick: () => void }) => {
   return (
@@ -39,6 +40,7 @@ const OfferModal = ({
 }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [step, setStep] = useState(1);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -74,7 +76,7 @@ const OfferModal = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] duration-700 transition-all mx-4 md:mx-0">
         <DialogHeader>
           <DialogTitle>Free Website Design Offer</DialogTitle>
           <DialogDescription>
@@ -90,78 +92,107 @@ const OfferModal = ({
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Business Name
-              </label>
-              <Input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="mt-1"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="current-website"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Current Website
-              </label>
-              <Input
-                type="url"
-                id="current-website"
-                name="current-website"
-                className="mt-1"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="phone"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Phone Number
-              </label>
-              <Input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-                className="mt-1"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="phone"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email Address
-              </label>
-              <Input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="mt-1"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Message (Optional)
-              </label>
-              <Textarea id="message" name="message" rows={3} className="mt-1" />
-            </div>
-            <Button type="submit" disabled={isSubmitting} className="w-full">
-              {isSubmitting ? "Submitting..." : "Submit"}
-            </Button>
+            <Progress value={step === 1 ? 50 : 100} />
+            {step === 1 && (
+              <>
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Business Name
+                  </label>
+                  <Input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="mt-1"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="current-website"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Current Website
+                  </label>
+                  <Input
+                    type="url"
+                    id="current-website"
+                    name="current-website"
+                    className="mt-1"
+                  />
+                </div>
+                <Button
+                  onClick={() => setStep(2)}
+                  className="w-full bg-blue-500 hover:bg-blue-600 text-white"
+                >
+                  Next
+                </Button>
+              </>
+            )}
+            {step === 2 && (
+              <>
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Phone Number
+                  </label>
+                  <Input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    className="mt-1"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Email Address
+                  </label>
+                  <Input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="mt-1"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Message (Optional)
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    rows={3}
+                    className="mt-1"
+                  />
+                </div>
+                <div className="flex justify-between">
+                  <Button onClick={() => setStep(1)} className="w-1/2 mr-2">
+                    Back
+                  </Button>
+                  <Button
+                    type="submit"
+                    variant="default"
+                    disabled={isSubmitting}
+                    className="w-1/2 ml-2 bg-blue-500 hover:bg-blue-600 text-white"
+                  >
+                    {isSubmitting ? "Submitting..." : "Submit"}
+                  </Button>
+                </div>
+              </>
+            )}
           </form>
         )}
       </DialogContent>
