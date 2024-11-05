@@ -42,10 +42,10 @@ const words = [
     text: "Selected",
   },
   {
-    text: "customer",
+    text: "Customer",
   },
   {
-    text: "cases",
+    text: "Cases",
     className: "text-blue-500 dark:text-blue-500",
   },
 ];
