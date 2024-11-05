@@ -14,7 +14,7 @@ import Script from "next/script";
 // Function to handle Facebook Pixel tracking
 const trackContactEvent = () => {
   if (typeof window !== "undefined" && window.fbq) {
-    window.fbq("track", "Contact");
+    window.fbq("track", "Purchase");
   }
 };
 

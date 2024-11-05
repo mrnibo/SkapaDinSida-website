@@ -15,7 +15,7 @@ function ContactUsClient() {
   // Function to handle Facebook Pixel tracking
   const trackContactEvent = () => {
     if (typeof window !== "undefined" && typeof window.fbq === "function") {
-      window.fbq("track", "Contact");
+      window.fbq("track", "Purchase");
     }
   };
 
