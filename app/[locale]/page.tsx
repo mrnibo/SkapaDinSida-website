@@ -1,7 +1,7 @@
 import ContactUsBookCallClient from "@/components/ContactUs/ContactUsBookCallClient";
 import Header from "@/components/Header";
 import HeroClient from "@/components/Hero/HeroClient";
-import OfferClient, { OfferBanner } from "@/components/Offer/OfferClient";
+import OfferClient from "@/components/Offer/OfferClient";
 import ProcessClient from "@/components/Process/ProcessClient";
 import ServiceShowcase from "@/components/Service/ServiceClient";
 import ShowcaseClient from "@/components/Showcase/ShowcaseClient";

@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslations } from "next-intl";
-import SectionHero from "../section/SectionHero";
+import SectionHero from "@/components/section/SectionHero";
 
 const ServiceHero = () => {
   const t = useTranslations("services");

@@ -11,9 +11,9 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import SparklesText from "../ui/sparkles-text";
-import BlurFade from "../ui/blur-fade";
-import { Progress } from "../ui/progress";
+import SparklesText from "@/components/ui/sparkles-text";
+import BlurFade from "@/components/ui/blur-fade";
+import { Progress } from "@/components/ui/progress";
 
 export const OfferBanner = ({ onClick }: { onClick: () => void }) => {
   return (
@@ -88,7 +88,7 @@ const OfferModal = ({
             <h3 className="text-lg font-semibold text-green-600 mb-2">
               Thank you for your submission!
             </h3>
-            <p>We'll be in touch with you shortly.</p>
+            <p>We&apos;ll be in touch with you shortly.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">

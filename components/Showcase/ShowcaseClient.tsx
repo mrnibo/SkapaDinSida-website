@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { TitleSection } from "../ui/titles";
-import { Spacer } from "../ui/spacer";
-import { TypewriterEffect } from "../ui/typewriter-effect";
-import { BackgroundBeams } from "../ui/background-beams";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { Spacer } from "@/components/ui/spacer";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 const data = [
   {
@@ -132,6 +131,13 @@ const ShowcaseCard = ({
         >
           <h3 className="text-lg font-semibold">{title}</h3>
           <p className="text-sm">{description}</p>
+          <BorderBeam
+            size={120}
+            duration={30}
+            delay={5}
+            colorFrom="#3a2cd3"
+            colorTo="#FFFFFF"
+          />
         </motion.div>
       )}
 

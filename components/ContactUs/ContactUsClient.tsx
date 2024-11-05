@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import Image from "next/image";
+import Script from "next/script";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import Image from "next/image";
-import { Spacer } from "../ui/spacer";
-import Script from "next/script";
+import { Spacer } from "@/components/ui/spacer";
+import { useForm, ValidationError } from "@formspree/react";
 
 function ContactUsClient() {
   const [state, handleSubmit] = useForm("xnnqpgje");
@@ -26,8 +26,8 @@ function ContactUsClient() {
           <div className="p-6 self-center md:self-start md:w-1/2 md:max-w-xl">
             <h3 className="text-xl font-semibold mb-4">Send us a message:</h3>
             <p className="text-gray-700 dark:text-gray-200">
-              We'd love to hear from you. Please fill out the form below and
-              we'll get back to you as soon as possible.
+              We&apos;d love to hear from you. Please fill out the form below
+              and we&apos;ll get back to you as soon as possible.
             </p>
             <Spacer className="py-4" />
             {state.succeeded ? (

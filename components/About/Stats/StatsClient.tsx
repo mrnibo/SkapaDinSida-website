@@ -8,7 +8,7 @@ const StatsClient = () => {
   // Retrieve stats items dynamically and parse numbers
   const stats = Object.entries(
     t.raw("stats") as Record<string, { number: string; title: string }>
-  ).map(([_, stat]) => ({
+  ).map(([, stat]) => ({
     number: parseInt(stat.number, 10),
     title: stat.title,
   }));

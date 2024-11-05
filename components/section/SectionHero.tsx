@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useThemeSafe } from "@/hooks/useThemeSafe";
 import { IconInfoCircle, IconPresentation } from "@tabler/icons-react";
-import { Skeleton } from "../ui/skeleton";
-import { Spacer } from "../ui/spacer";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Spacer } from "@/components/ui/spacer";
 import BlurFade from "@/components/ui/blur-fade";
 
 // Delay function for testing loading states

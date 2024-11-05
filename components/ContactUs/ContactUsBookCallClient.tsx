@@ -1,20 +1,16 @@
 "use client";
 
 import React from "react";
-import { TitleSection } from "../ui/titles";
-import { Badge } from "../ui/badge";
-import { IconCircleDot, IconPhoneIncoming } from "@tabler/icons-react";
-import TeamCards from "../About/TeamCard/TeamCards";
-import { Button } from "../ui/button";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { Spacer } from "../ui/spacer";
 import Script from "next/script";
-import { TypewriterEffect } from "../ui/typewriter-effect";
-import GridPattern from "../ui/grid-pattern";
-import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Spacer } from "@/components/ui/spacer";
+import TeamCards from "@/components/About/TeamCard/TeamCards";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { IconCircleDot, IconPhoneIncoming } from "@tabler/icons-react";
 
-// Function to handle Facebook Pixel tracking
 const trackContactEvent = () => {
   if (typeof window !== "undefined" && window.fbq) {
     window.fbq("track", "Purchase");

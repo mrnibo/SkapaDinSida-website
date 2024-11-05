@@ -9,8 +9,8 @@ const SectionHeroMiddle = () => {
         </h1>
         <h3>
           We create a new design proposal for your website completely free of
-          charge. Fill in the company's domain address and we will create your
-          design.
+          charge. Fill in the company&apos;s domain address and we will create
+          your design.
         </h3>
 
         {/* Todo: url field */}

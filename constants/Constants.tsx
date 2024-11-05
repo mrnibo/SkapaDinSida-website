@@ -31,8 +31,8 @@ export const heroItems = {
   buttonSecondaryText: "Our Services",
   buttonSecondaryLink: "/service",
 
-  image: "/images/hero/hero-img.png",
-  imageMobile: "/images/hero/hero-screen-shot.png",
+  image: "/images/hero/hero-img-vector.svg",
+  imageMobile: "/images/hero/hero-img-vector.svg",
 
   offers: {
     offerTitle: "What We Offer",

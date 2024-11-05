@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon } from "../ui/evervault-card";
+import { Icon } from "@/components/ui/evervault-card";
 
 interface ServiceCardsProps {
   children: React.ReactNode;

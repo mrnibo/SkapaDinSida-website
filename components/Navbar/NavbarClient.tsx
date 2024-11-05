@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, Suspense } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,16 +16,13 @@ import { IconLayoutFilled, IconMenuDeep } from "@tabler/icons-react";
 import { NavbarButtonPrimary, NavbarButtonSecondary } from "./NavbarButton";
 import { useTranslations } from "next-intl";
 import { NavbarThemeButton } from "./NavbarThemeButton";
+import NavbarLogo from "./NavbarLogo";
+import NavbarItems from "./NavbarItems";
+import LanguageSwitcher from "./NavbarLanguageSwitcher";
 
-// Lazy import components
-const NavbarItems = React.lazy(() => import("./NavbarItems"));
-const LanguageSwitcher = React.lazy(() => import("./NavbarLanguageSwitcher"));
-const NavbarLogo = React.lazy(() => import("./NavbarLogo"));
-
-const Navbar: React.FC = React.memo(() => {
+const Navbar: React.FC = () => {
   const t = useTranslations("navbar");
 
-  // Define nav items based on translations
   const navItems = [
     { title: t("navbarLinks.home.title"), href: t("navbarLinks.home.link") },
     { title: t("navbarLinks.about.title"), href: t("navbarLinks.about.link") },
@@ -43,18 +40,14 @@ const Navbar: React.FC = React.memo(() => {
     <nav className="hidden md:flex justify-between items-center w-full px-4">
       <div>
         <Link href="/" className="text-2xl font-bold">
-          <Suspense fallback={<span>Loading...</span>}>
-            <NavbarLogo />
-          </Suspense>
+          <NavbarLogo />
         </Link>
       </div>
       <div className="flex gap-24 items-center">
         <ul className="flex gap-12">
           {navItems.map((item) => (
             <li key={item.title}>
-              <Suspense>
-                <NavbarItems name={item.title} href={item.href} />
-              </Suspense>
+              <NavbarItems name={item.title} href={item.href} />
             </li>
           ))}
         </ul>
@@ -65,16 +58,15 @@ const Navbar: React.FC = React.memo(() => {
             icon={<IconLayoutFilled />}
           />
           <NavbarThemeButton />
-          <Suspense>
-            <LanguageSwitcher />
-          </Suspense>
+
+          <LanguageSwitcher />
         </div>
       </div>
     </nav>
   );
-});
+};
 
-const NavbarMobile: React.FC = React.memo(() => {
+const NavbarMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations("navbar");
 
@@ -101,9 +93,7 @@ const NavbarMobile: React.FC = React.memo(() => {
               className="text-2xl font-bold"
               onClick={() => setIsOpen(false)}
             >
-              <Suspense fallback={<span>Loading...</span>}>
-                <NavbarLogo />
-              </Suspense>
+              <NavbarLogo />
             </Link>
           </DrawerTitle>
         </DrawerHeader>
@@ -140,7 +130,7 @@ const NavbarMobile: React.FC = React.memo(() => {
       </DrawerContent>
     </Drawer>
   );
-});
+};
 
 export default function NavbarClient() {
   return (
@@ -149,16 +139,13 @@ export default function NavbarClient() {
         <Navbar />
         <div className="md:hidden mr-2 flex items-center">
           <Link href="/" className="text-2xl font-bold mr-auto">
-            <Suspense fallback={<span>Loading...</span>}>
-              <NavbarLogo />
-            </Suspense>
+            <NavbarLogo />
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-end gap-2 md:justify-end md:hidden">
           <NavbarThemeButton />
-          <Suspense>
-            <NavbarMobile />
-          </Suspense>
+
+          <NavbarMobile />
         </div>
       </div>
     </div>

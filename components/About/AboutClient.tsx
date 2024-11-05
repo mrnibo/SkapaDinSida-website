@@ -1,9 +1,9 @@
 import React from "react";
 import AboutHero from "./hero/AboutHero";
 import StatsClient from "./Stats/StatsClient";
-import ContactUsBookCallClient from "../ContactUs/ContactUsBookCallClient";
-import { ValuesClient } from "../Values/ValuesClient";
-import { Spacer } from "../ui/spacer";
+import ContactUsBookCallClient from "@/components/ContactUs/ContactUsBookCallClient";
+import { ValuesClient } from "@/components/Values/ValuesClient";
+import { Spacer } from "@/components/ui/spacer";
 
 const AboutClient = () => {
   return (

@@ -1,7 +1,6 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import PulsatingButton from "@/components/ui/pulsating-button";
+import { Button } from "@/components/ui/button";
 
 interface NavbarButtonProps {
   text: string;
