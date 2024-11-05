@@ -132,7 +132,8 @@
   ],
 
   "bookACall": {
-    "title": "Get in Touch",
+    "title": "Grow your business with us",
+    "typewriterWords": ["Grow", "your", "business", "with", "Us"],
     "description": "We’re excited to explore opportunities with you. Reach out to Felix, and let’s arrange a meeting to discuss how we can collaborate.",
     "availableBadge": "Available for new project",
     "buttonText": "Book a call with us",

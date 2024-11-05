@@ -6,7 +6,9 @@ import ProcessClient from "@/components/Process/ProcessClient";
 import ServiceShowcase from "@/components/Service/ServiceClient";
 import ShowcaseClient from "@/components/Showcase/ShowcaseClient";
 import BlurFade from "@/components/ui/blur-fade";
+import GridPattern from "@/components/ui/grid-pattern";
 import { TitleSection } from "@/components/ui/titles";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -30,10 +32,19 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="py-24">
+        <div className="py-24 relative">
           <BlurFade delay={0.25} inView>
             <ContactUsBookCallClient />
           </BlurFade>
+          <GridPattern
+            width={20}
+            height={20}
+            x={-1}
+            y={-1}
+            className={cn(
+              "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
+            )}
+          />
         </div>
       </main>
 

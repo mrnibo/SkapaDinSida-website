@@ -132,6 +132,7 @@
 
   "bookACall": {
     "title": "Kontakta oss",
+    "typewriterWords": ["Väx", "ditt", "företag", "med", "oss"],
     "description": "Vi ser fram emot att utforska möjligheter tillsammans med dig. Ta kontakt med Felix så bokar vi in ett möte för att diskutera hur vi kan samarbeta.",
     "availableBadge": "Tillgänglig för nya projekt",
     "buttonText": "Boka ett möte med oss",

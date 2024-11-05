@@ -10,6 +10,9 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Spacer } from "../ui/spacer";
 import Script from "next/script";
+import { TypewriterEffect } from "../ui/typewriter-effect";
+import GridPattern from "../ui/grid-pattern";
+import { cn } from "@/lib/utils";
 
 // Function to handle Facebook Pixel tracking
 const trackContactEvent = () => {
@@ -21,9 +24,29 @@ const trackContactEvent = () => {
 const ContactUsBookCallClient = () => {
   const t = useTranslations("bookACall");
 
+  const words = [
+    {
+      text: "Grow",
+    },
+    {
+      text: "your",
+    },
+    {
+      text: "business",
+    },
+    {
+      text: "with",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+    {
+      text: "Us.",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
+
   return (
     <div className="mx-4">
-      <div className="container mx-auto">
+      <div className="container mx-auto overflow-hidden">
         <div className="flex flex-col justify-center items-center gap-5">
           <Badge
             variant="default"
@@ -32,7 +55,8 @@ const ContactUsBookCallClient = () => {
             <IconCircleDot className="text-green-400" size={20} />
             {t("availableBadge")}
           </Badge>
-          <TitleSection text={t("title")} />
+
+          <TypewriterEffect words={words} />
 
           <p className="text-lg md:max-w-2xl text-center">{t("description")}</p>
           <Spacer className="py-4" />
