@@ -72,6 +72,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <Head>
         {/* Analytics and Facebook Pixel */}
+
         <script
           async
           id="clarity-script"

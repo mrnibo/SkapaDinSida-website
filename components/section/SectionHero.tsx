@@ -8,6 +8,7 @@ import { IconInfoCircle, IconPresentation } from "@tabler/icons-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Spacer } from "@/components/ui/spacer";
 import BlurFade from "@/components/ui/blur-fade";
+import FadeIn from "@/components/Animation/fade-in";
 
 // Delay function for testing loading states
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -67,21 +68,21 @@ const SectionHero: React.FC<HeroProps> = ({
 
         {/* Left Side */}
         <div className="flex flex-col items-center md:items-start gap-2 w-full md:w-2/5">
-          <BlurFade delay={0.25} inView>
+          <FadeIn yOffset={20} delay={0.25}>
             <h1 className="w-full text-4xl md:text-6xl lg:text-7xl uppercase font-semibold text-center md:text-left leading-tight break-words">
               {title}
             </h1>
-          </BlurFade>
-          <BlurFade delay={0.3} inView>
+          </FadeIn>
+          <FadeIn yOffset={20} delay={0.25}>
             <Spacer className="py-4" />
-          </BlurFade>
-          <BlurFade delay={0.35} inView>
+          </FadeIn>
+          <FadeIn yOffset={20} delay={0.35}>
             <p className="text-center text-lg md:text-left">{description}</p>
-          </BlurFade>
+          </FadeIn>
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-5">
             {/* Conditionally Render Primary Button */}
             {buttonPrimaryText && buttonPrimaryLink && (
-              <BlurFade delay={0.4} inView>
+              <BlurFade delay={0.4}>
                 <Link href={buttonPrimaryLink} aria-label={buttonPrimaryText}>
                   <Button
                     size="lg"
@@ -96,7 +97,7 @@ const SectionHero: React.FC<HeroProps> = ({
 
             {/* Conditionally Render Secondary Button */}
             {buttonSecondaryText && buttonSecondaryLink && (
-              <BlurFade delay={0.45} inView>
+              <BlurFade delay={0.45}>
                 <Link
                   href={buttonSecondaryLink}
                   aria-label={buttonSecondaryText}
@@ -116,7 +117,7 @@ const SectionHero: React.FC<HeroProps> = ({
 
         {/* Desktop Image */}
         <div className="w-full md:w-3/5 mt-8 md:mt-0 hidden justify-center md:justify-end relative md:flex">
-          <BlurFade delay={0.35} inView>
+          <FadeIn xOffset={50} delay={0.35}>
             <Suspense>
               <Image
                 src={image}
@@ -126,7 +127,7 @@ const SectionHero: React.FC<HeroProps> = ({
                 className="mb-2"
               />
             </Suspense>
-          </BlurFade>
+          </FadeIn>
         </div>
       </div>
 

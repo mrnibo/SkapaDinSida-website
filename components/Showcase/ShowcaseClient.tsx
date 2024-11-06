@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Spacer } from "@/components/ui/spacer";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { BorderBeam } from "@/components/ui/border-beam";
+import FadeIn from "@/components/Animation/fade-in";
 
 const data = [
   {
@@ -66,21 +67,41 @@ export default function ShowcaseClient() {
         </div>
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          <div className="col-span-1 md:col-span-2 lg:col-span-3 row-span-1 lg:row-span-3">
+          <FadeIn
+            delay={0.5}
+            className="col-span-1 md:col-span-2 lg:col-span-3 row-span-1 lg:row-span-3"
+            inView
+          >
             <ShowcaseCard {...data[0]} aspectRatio="4/3" />
-          </div>
-          <div className="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 lg:row-span-3">
+          </FadeIn>
+          <FadeIn
+            delay={0.7}
+            className="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 lg:row-span-3"
+            inView
+          >
             <ShowcaseCard {...data[1]} aspectRatio="4/5" />
-          </div>
-          <div className="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 md:row-span-2">
+          </FadeIn>
+          <FadeIn
+            delay={0.9}
+            className="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 md:row-span-2"
+            inView
+          >
             <ShowcaseCard {...data[2]} aspectRatio="1/1" />
-          </div>
-          <div className="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 md:row-span-2">
+          </FadeIn>
+          <FadeIn
+            delay={1.1}
+            className="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 md:row-span-2 hidden md:block"
+            inView
+          >
             <ShowcaseCard {...data[3]} aspectRatio="1/1" />
-          </div>
-          <div className="col-span-1 row-span-1 md:row-span-2">
+          </FadeIn>
+          <FadeIn
+            delay={1.3}
+            className="col-span-1 row-span-1 md:row-span-2 hidden md:block"
+            inView
+          >
             <ShowcaseCard {...data[4]} aspectRatio="8/15" />
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

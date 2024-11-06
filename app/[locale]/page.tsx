@@ -1,19 +1,17 @@
-import ContactUsBookCallClient from "@/components/ContactUs/ContactUsBookCallClient";
-import Header from "@/components/Header";
+import { cn } from "@/lib/utils";
+import BlurFade from "@/components/ui/blur-fade";
+import { TitleSection } from "@/components/ui/titles";
 import HeroClient from "@/components/Hero/HeroClient";
+import GridPattern from "@/components/ui/grid-pattern";
 import OfferClient from "@/components/Offer/OfferClient";
 import ProcessClient from "@/components/Process/ProcessClient";
 import ServiceShowcase from "@/components/Service/ServiceClient";
 import ShowcaseClient from "@/components/Showcase/ShowcaseClient";
-import BlurFade from "@/components/ui/blur-fade";
-import GridPattern from "@/components/ui/grid-pattern";
-import { TitleSection } from "@/components/ui/titles";
-import { cn } from "@/lib/utils";
+import ContactUsBookCallClient from "@/components/ContactUs/ContactUsBookCallClient";
 
 export default function Home() {
   return (
     <>
-      <Header />
       <main>
         <HeroClient />
 
@@ -26,10 +24,19 @@ export default function Home() {
         <BlurFade delay={0.25} inView>
           <ShowcaseClient />
         </BlurFade>
-        <div className="bg-gray-200 dark:bg-neutral-800 py-16">
+        <div className="bg-gray-200 dark:bg-neutral-800 py-16 relative">
           <div className="container mx-auto px-4">
             <ProcessClient />
           </div>
+          <GridPattern
+            width={20}
+            height={20}
+            x={-1}
+            y={-1}
+            className={cn(
+              "[mask-image:linear-gradient(to_top_right,white,transparent,transparent)] "
+            )}
+          />
         </div>
 
         <div className="py-24 relative">

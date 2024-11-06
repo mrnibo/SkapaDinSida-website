@@ -1,6 +1,7 @@
 import React from "react";
 import NumberTicker from "@/components/ui/number-ticker";
 import { useTranslations } from "next-intl";
+import FadeIn from "@/components/Animation/fade-in";
 
 const StatsClient = () => {
   const t = useTranslations("about.aboutUs");
@@ -16,7 +17,12 @@ const StatsClient = () => {
   return (
     <div className="flex flex-col justify-center md:flex-row lg:py-2 md:justify-between gap-16">
       {stats.map((item, index) => (
-        <div key={index} className="flex items-center justify-center">
+        <FadeIn
+          key={index}
+          delay={index * 0.3}
+          className="flex items-center justify-center"
+          inView
+        >
           <div className="flex flex-row items-center">
             <h2 className="text-7xl font-semibold">
               <NumberTicker value={item.number} />
@@ -25,7 +31,7 @@ const StatsClient = () => {
               {item.title}
             </p>
           </div>
-        </div>
+        </FadeIn>
       ))}
     </div>
   );
