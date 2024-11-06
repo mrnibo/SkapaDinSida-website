@@ -1,3 +1,5 @@
+import Head from "next/head";
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import { routing } from "@/i18n/routing";
@@ -7,7 +9,7 @@ import { NextIntlClientProvider } from "next-intl";
 import Footer from "@/components/Footer";
 import NavbarClient from "@/components/Navbar/NavbarClient";
 import { ThemeProvider } from "@/components/theme-provider";
-import Head from "next/head";
+
 import "./globals.css";
 
 const sen = Sen({
@@ -69,6 +71,23 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <Head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16767027238"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16767027238');
+          `,
+          }}
+        />
         {/* Analytics and Facebook Pixel */}
         <script
           async
