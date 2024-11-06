@@ -7,7 +7,6 @@ import { useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Spacer } from "@/components/ui/spacer";
-import TeamCards from "@/components/About/TeamCard/TeamCards";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { IconCircleDot, IconPhoneIncoming } from "@tabler/icons-react";
 
@@ -86,7 +85,7 @@ const ContactUsBookCallClient = () => {
               </Link>
             </div>
           </div>
-          <TeamCards />
+          {/* <TeamCards /> */}
         </div>
       </div>
 
