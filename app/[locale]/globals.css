@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base styling for light theme (default) */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--background);
   color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Define light and dark themes using CSS variables */
 @layer base {
   :root {
+    /* Light theme colors */
     --background: hsl(210, 16%, 93%);
     --foreground: hsl(0, 0%, 9%);
     --card: hsl(0, 0%, 100%);
@@ -37,6 +41,7 @@ body {
     --radius: 0.5rem;
   }
 
+  /* Dark theme colors */
   .dark {
     --background: hsl(0, 0%, 9%);
     --foreground: hsl(210, 16%, 93%);
@@ -65,6 +70,7 @@ body {
   }
 }
 
+/* Apply border color to all elements */
 @layer base {
   * {
     @apply border-border;

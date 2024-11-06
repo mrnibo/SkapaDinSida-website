@@ -1,4 +1,3 @@
-// theme-provider.tsx
 "use client";
 
 import * as React from "react";
@@ -11,15 +10,19 @@ interface ThemeProviderProps
 }
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    // Return null or a loader/spinner during the initial server-side render
+    return <>{children}</>;
+  }
+
   return (
-    <NextThemesProvider
-      {...props}
-      attribute="class"
-      defaultTheme="light"
-      enableSystem={true}
-      storageKey="theme" // Persistent across sessions
-      enableColorScheme // Syncs with `prefers-color-scheme`
-    >
+    <NextThemesProvider {...props} attribute="class" defaultTheme="light">
       {children}
     </NextThemesProvider>
   );
