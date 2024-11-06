@@ -71,23 +71,6 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <Head>
-        {/* Google tag (gtag.js) */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16767027238"
-        />
-        <Script
-          id="gtag-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16767027238');
-          `,
-          }}
-        />
         {/* Analytics and Facebook Pixel */}
         <script
           async
@@ -98,6 +81,7 @@ export default async function LocaleLayout({
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "${process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID}");`,
           }}
         />
+
         <script
           async
           id="facebook-pixel"
@@ -114,6 +98,7 @@ export default async function LocaleLayout({
              fbq('track', 'PageView');`,
           }}
         />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -138,6 +123,25 @@ export default async function LocaleLayout({
           }}
         />
       </Head>
+
+      {/* Google tag (gtag.js) */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-16767027238"
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16767027238');
+          `,
+        }}
+      />
+
       <body className={`${sen.variable} font-sen`}>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
