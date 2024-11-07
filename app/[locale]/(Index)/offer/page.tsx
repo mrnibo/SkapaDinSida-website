@@ -27,9 +27,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["/opengraph.png"], // Shared Twitter image as well
   },
-  icons: {
-    shortcut: "/favicon.png",
-  },
 };
 
 export default function PageOffer() {
