@@ -72,13 +72,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <Head>
         {/* Analytics and Facebook Pixel */}
-        <script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="91bc635e-497f-4745-b8fd-2ef17a8f0db3"
-          data-blockingmode="auto"
-          type="text/javascript"
-        ></script>
+
         <script
           async
           id="clarity-script"
@@ -130,6 +124,14 @@ export default async function LocaleLayout({
           }}
         />
       </Head>
+
+      <Script
+        id="Cookiebot"
+        src="https://consent.cookiebot.com/uc.js"
+        data-cbid="91bc635e-497f-4745-b8fd-2ef17a8f0db3"
+        data-blockingmode="auto"
+        type="text/javascript"
+      ></Script>
 
       {/* Google tag (gtag.js) */}
       <Script
