@@ -103,6 +103,7 @@ export default async function LocaleLayout({
 
         <script
           type="application/ld+json"
+          data-cookieconsent="statistics"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -137,6 +138,7 @@ export default async function LocaleLayout({
       {/* Google tag (gtag.js) */}
       <Script
         strategy="afterInteractive"
+        data-cookieconsent="statistics"
         src="https://www.googletagmanager.com/gtag/js?id=AW-16767027238"
       />
       <Script
