@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { TitleSection } from "@/components/ui/titles";
 import { BorderBeam } from "@/components/ui/border-beam";
-import { BackgroundLines } from "@/components/ui/background-lines";
 import BlurFade from "@/components/ui/blur-fade";
 
 export default function ProcessClient() {
