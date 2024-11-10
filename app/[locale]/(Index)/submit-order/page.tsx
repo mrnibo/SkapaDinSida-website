@@ -1,7 +1,6 @@
 import GetStarted from "@/components/GetStarted";
 import SectionHero from "@/components/section/SectionHero";
 import { Spacer } from "@/components/ui/spacer";
-import { heroItems } from "@/constants/Constants";
 import React from "react";
 
 export default function PageSubmitOrder() {
@@ -17,11 +16,7 @@ export default function PageSubmitOrder() {
   };
 
   const heroItems = {
-    title: data.title,
-    description: data.description,
-    buttonPrimaryText: data.buttonPrimaryText,
     buttonPrimaryLink: data.buttonPrimaryLink,
-    buttonSecondaryText: data.buttonSecondaryText,
     buttonSecondaryLink: data.buttonSecondaryLink,
     image: data.image,
   };

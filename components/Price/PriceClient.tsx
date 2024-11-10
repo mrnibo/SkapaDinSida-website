@@ -16,9 +16,6 @@ export const PriceClient = () => {
     );
   };
 
-  // Helper to safely convert a string to a number, defaulting to 0 if NaN
-  const toNumber = (value: string | undefined): number => Number(value) || 0;
-
   const planData = {
     title: t("title") ?? "",
     subtitle: t("subtitle") ?? "",

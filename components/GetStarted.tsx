@@ -135,6 +135,7 @@ export default function GetStarted() {
         description: "There was a problem submitting your form.",
         variant: "destructive",
       });
+      console.error(error);
     } finally {
       setIsSubmitting(false);
     }
