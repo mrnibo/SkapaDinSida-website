@@ -16,10 +16,10 @@ const data = [
     imageSrc: "/images/projects/001-img-cover.png",
   },
   {
-    title: "Creative Agency",
+    title: "Özen Salong",
     description:
-      "A modern, dynamic website designed to showcase an agency’s expertise and portfolio.",
-    imageSrc: "/images/projects/002-img-cover.png",
+      "En modern och välkomnande frisörsalong, specialiserad på stil och skönhet med en personlig touch. Özen Salong erbjuder en avkopplande atmosfär där varje kunds unika stil och behov står i centrum.",
+    imageSrc: "/images/projects/006-img-cover-2.png",
   },
   {
     title: "Colorfolio",

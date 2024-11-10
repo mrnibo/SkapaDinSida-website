@@ -8,6 +8,7 @@ import ProcessClient from "@/components/Process/ProcessClient";
 import ServiceShowcase from "@/components/Service/ServiceClient";
 import ShowcaseClient from "@/components/Showcase/ShowcaseClient";
 import ContactUsBookCallClient from "@/components/ContactUs/ContactUsBookCallClient";
+import PriceClient from "@/components/Price/PriceClient";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
         <BlurFade delay={0.25} inView>
           <ShowcaseClient />
         </BlurFade>
+
+        <PriceClient />
         <div className="bg-gray-200 dark:bg-neutral-800 py-16 relative">
           <div className="container mx-auto px-4">
             <ProcessClient />

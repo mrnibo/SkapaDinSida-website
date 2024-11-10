@@ -155,5 +155,46 @@
     "dataControllerTitle": "Personuppgiftsansvarig",
     "dataControllerName": "Name: Leo Khani",
     "dataControllerEmail": "Email: leokhani99@outlook.com"
+  },
+
+  
+  "plan": {
+    "title": "Våra Planer",
+    "subtitle": "Välj en plan som passar dina behov",
+    "plans": {
+      "basic": {
+        "name": "Basic Plan",
+        "subtitle": "En grundläggande lösning",
+        "description": "För mindre företag som vill etablera sin närvaro online.",
+        "features": {
+          "0": "Enkel webbdesign",
+          "1": "SEO-optimering",
+          "2": "Grundläggande support",
+          "3": "Mobilanpassad",
+          "4": "Upp till 5 sidor",
+          "5": "SSL-certifikat",
+          "6": "Underhåll varje månad"
+        }
+      },
+      "advanced": {
+        "name": "Advanced Plan",
+        "subtitle": "För växande företag",
+        "description": "För företag som vill växa och nå en bredare publik.",
+        "features": {
+          "0": "Avancerad webbdesign",
+          "1": "Full SEO-strategi",
+          "2": "Prioriterad support",
+          "3": "Mobilanpassad",
+          "4": "Upp till 20 sidor",
+          "5": "SSL-certifikat och säkerhetspaket",
+          "6": "Underhåll och rapportering",
+          "7": "Anpassad innehållshantering",
+          "8": "Integrerad e-handelsplattform",
+          "9": "Månadsbaserad trafikanalys"
+        }
+      }
+    }
   }
+  
+  
 }

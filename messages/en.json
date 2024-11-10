@@ -156,6 +156,43 @@
     "dataControllerTitle": "Data Controller",
     "dataControllerName": "Name: Leo Khani",
     "dataControllerEmail": "Email: leokhani99@outlook.com"
-  }
+  },
 
+  "plan": {
+    "title": "Our Plans",
+    "subtitle": "Choose a plan that fits your needs",
+    "plans": {
+      "basic": {
+        "name": "Basic Plan",
+        "subtitle": "A foundational solution",
+        "description": "For smaller businesses looking to establish an online presence.",
+        "features": {
+          "0": "Simple web design",
+          "1": "SEO optimization",
+          "2": "Basic support",
+          "3": "Mobile-friendly",
+          "4": "Up to 5 pages",
+          "5": "SSL certificate",
+          "6": "Monthly maintenance"
+        }
+      },
+      "advanced": {
+        "name": "Advanced Plan",
+        "subtitle": "For growing businesses",
+        "description": "For businesses looking to grow and reach a wider audience.",
+        "features": {
+          "0": "Advanced web design",
+          "1": "Comprehensive SEO strategy",
+          "2": "Priority support",
+          "3": "Mobile-friendly",
+          "4": "Up to 20 pages",
+          "5": "SSL certificate and security package",
+          "6": "Maintenance and reporting",
+          "7": "Customized content management",
+          "8": "Integrated e-commerce platform",
+          "9": "Monthly traffic analysis"
+        }
+      }
+    }
+  }
 }
