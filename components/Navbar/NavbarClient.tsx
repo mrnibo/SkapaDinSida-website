@@ -85,7 +85,7 @@ const NavbarMobile: React.FC = () => {
           <span className="sr-only">Toggle navigation menu</span>
         </Button>
       </DrawerTrigger>
-      <DrawerContent className="bg-background">
+      <DrawerContent className="bg-white dark:bg-black dark:text-white">
         <DrawerHeader>
           <DrawerTitle className="flex justify-center items-center">
             <Link

@@ -51,7 +51,7 @@ export const PriceClient = () => {
         background:
           "bg-gradient-to-br dark:from-gray-50 dark:to-gray-200 from-neutral-800 to-black text-white dark:text-black",
         btnBackground:
-          "bg-blue-400 hover:bg-blue-500 duration-500 text-white text-center px-24 md:px-32 py-3 rounded-lg",
+          "bg-blue-400 hover:bg-blue-500 duration-500 text-white text-center px-16 md:px-32 py-3 rounded-lg",
         borderBeam: false,
       },
     ],
