@@ -25,8 +25,8 @@ export const heroItems = {
   subtitle: "Innovative Web Solutions for Your Business",
   description:
     "We create high-quality, responsive websites that elevate your brand and engage your audience. Let us handle the technical details while you focus on growing your business.",
-  buttonPrimaryText: "Start a Project",
-  buttonPrimaryLink: "/contact",
+  buttonPrimaryText: "",
+  buttonPrimaryLink: "/get-started",
 
   buttonSecondaryText: "Our Services",
   buttonSecondaryLink: "/service",

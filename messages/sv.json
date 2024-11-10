@@ -6,7 +6,7 @@
 
   "navbar": {
     "buttonPrimaryText": "Kom igång",
-    "buttonPrimaryLink": "/kontakt",
+    "buttonPrimaryLink": "/get-started",
     "navbarLinks": {
       "home": { "link": "/", "title": "Hem" },
       "about": { "link": "/about", "title": "Om" },
@@ -165,7 +165,12 @@
       "basic": {
         "name": "Basic Plan",
         "subtitle": "En grundläggande lösning",
-        "description": "För mindre företag som vill etablera sin närvaro online.",
+        "description": "Perfekt för mindre företag som vill etablera sin närvaro online.",
+        "price": "379",
+        "currency": "SEK",
+        "billingPeriod": "/månad",
+        "btnText": "Beställ",
+        "btnLink": "/submit-order",
         "features": {
           "0": "Enkel webbdesign",
           "1": "SEO-optimering",
@@ -180,6 +185,11 @@
         "name": "Advanced Plan",
         "subtitle": "För växande företag",
         "description": "För företag som vill växa och nå en bredare publik.",
+        "price": "579",
+        "currency": "SEK",
+        "billingPeriod": "/månad",
+        "btnText": "Kontakta oss",
+        "btnLink": "/contact",
         "features": {
           "0": "Avancerad webbdesign",
           "1": "Full SEO-strategi",
@@ -195,6 +205,7 @@
       }
     }
   }
+
   
   
 }

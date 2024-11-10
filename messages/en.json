@@ -6,7 +6,7 @@
 
   "navbar": {
     "buttonPrimaryText": "Get Started",
-    "buttonPrimaryLink": "/contact",
+    "buttonPrimaryLink": "/get-started",
     "navbarLinks": {
       "home": { "link": "/", "title": "Home" },
       "about": { "link": "/about", "title": "About" },
@@ -165,7 +165,12 @@
       "basic": {
         "name": "Basic Plan",
         "subtitle": "A foundational solution",
-        "description": "For smaller businesses looking to establish an online presence.",
+        "description": "Perfect for smaller businesses looking to establish an online presence.",
+        "price": "35",
+        "currency": "USD",
+        "billingPeriod": "/month",
+        "btnText": "Submit your order",
+        "btnLink": "/submit",
         "features": {
           "0": "Simple web design",
           "1": "SEO optimization",
@@ -179,7 +184,12 @@
       "advanced": {
         "name": "Advanced Plan",
         "subtitle": "For growing businesses",
-        "description": "For businesses looking to grow and reach a wider audience.",
+        "description": "Ideal for businesses looking to grow and reach a wider audience.",
+        "price": "54",
+        "currency": "USD",
+        "billingPeriod": "/month",
+        "btnText": "Contact us",
+        "btnLink": "/contact",
         "features": {
           "0": "Advanced web design",
           "1": "Comprehensive SEO strategy",
@@ -195,4 +205,5 @@
       }
     }
   }
+
 }

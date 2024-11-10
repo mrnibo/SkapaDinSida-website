@@ -49,7 +49,7 @@ const SectionHero: React.FC<HeroProps> = ({
   );
 
   return (
-    <div className="relative flex h-full md:h-screen max-w-7xl w-full mx-auto flex-col gap-10 md:gap-20 lg:gap-40 items-center justify-center overflow-hidden bg-background px-8">
+    <div className="relative flex h-full md:h-[70vh] max-w-7xl w-full mx-auto flex-col gap-10 md:gap-20 lg:gap-40 items-center justify-center overflow-hidden bg-background px-8">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 w-full py-20 md:py-0">
         {/* Mobile Image */}
         <div className="w-full md:w-3/5 mt-8 md:mt-0 flex justify-center md:justify-end relative md:hidden ">
