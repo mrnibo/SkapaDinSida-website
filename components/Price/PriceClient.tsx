@@ -93,7 +93,7 @@ export const PriceClient = () => {
 
               <div>
                 <Link
-                  href="/kontakt"
+                  href="/contact"
                   className={`w-full ${plan.btnBackground}`}
                 >
                   Kontakta oss

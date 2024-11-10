@@ -19,7 +19,7 @@ const data = [
     title: "Özen Salong",
     description:
       "En modern och välkomnande frisörsalong, specialiserad på stil och skönhet med en personlig touch. Özen Salong erbjuder en avkopplande atmosfär där varje kunds unika stil och behov står i centrum.",
-    imageSrc: "/images/projects/006-img-cover-2.png",
+    imageSrc: "/images/projects/006-img-cover-3.png",
   },
   {
     title: "Colorfolio",
