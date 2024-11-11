@@ -204,6 +204,16 @@
         }
       }
     }
+  },
+  
+  "GetStartedHero": {
+    "title": "Kom igång",
+    "description": "Kom igång med våra tjänster idag och ta ditt företag till nästa nivå.",
+    "buttonPrimaryText": "Kom igång",
+    "buttonPrimaryLink": "/submit",
+    "buttonSecondaryText": "Läs mer",
+    "buttonSecondaryLink": "/services",
+    "image": "/images/hero/hero-get-started.svg"
   }
 
   
