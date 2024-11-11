@@ -169,7 +169,7 @@
         "price": "35",
         "currency": "USD",
         "billingPeriod": "/month",
-        "btnText": "Submit your order",
+        "btnText": "Order",
         "btnLink": "/submit",
         "features": {
           "0": "Simple web design",
