@@ -1,8 +1,8 @@
+import React from "react";
+import { Spacer } from "@/components/ui/spacer";
 import GetStarted from "@/components/GetStarted";
 import PriceClient from "@/components/Price/PriceClient";
 import SectionHero from "@/components/section/SectionHero";
-import { Spacer } from "@/components/ui/spacer";
-import React from "react";
 
 const page = () => {
   const data = {
@@ -33,12 +33,12 @@ const page = () => {
   return (
     <>
       <SectionHero
-        title={t("title")}
-        description={t("description")}
+        title={data.title}
+        description={data.description}
         image={heroItems.image}
-        buttonPrimaryText={t("buttonPrimaryText")}
+        buttonPrimaryText={data.buttonPrimaryText}
         buttonPrimaryLink={heroItems.buttonPrimaryLink}
-        buttonSecondaryText={t("buttonSecondaryText")}
+        buttonSecondaryText={data.buttonSecondaryLink}
         buttonSecondaryLink={heroItems.buttonSecondaryLink}
       />
 
