@@ -1,33 +1,23 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 import { Spacer } from "@/components/ui/spacer";
 import GetStarted from "@/components/GetStarted";
 import PriceClient from "@/components/Price/PriceClient";
 import SectionHero from "@/components/section/SectionHero";
-import { useTranslations } from "next-intl";
 
 const PageGetStarted = () => {
-  const t = useTranslations("GetStartedHero");
-
-  const data = {
-    title: t("title"),
-    description: t("description"),
-    buttonPrimaryText: t("buttonPrimaryText"),
-    buttonPrimaryLink: t("buttonPrimaryLink"),
-    buttonSecondaryText: t("buttonSecondaryText"),
-    buttonSecondaryLink: t("buttonSecondaryLink"),
-    image: t("image"),
-  };
+  const t = useTranslations("getStartedHero");
 
   return (
     <>
       <SectionHero
-        title={data.title}
-        description={data.description}
-        image={data.image}
-        buttonPrimaryText={data.buttonPrimaryText}
-        buttonPrimaryLink={data.buttonPrimaryLink}
-        buttonSecondaryText={data.buttonSecondaryText}
-        buttonSecondaryLink={data.buttonSecondaryLink}
+        title={t("title")}
+        description={t("description")}
+        image={t("image")}
+        buttonPrimaryText={t("buttonPrimaryText")}
+        buttonPrimaryLink={t("buttonPrimaryLink")}
+        buttonSecondaryText={t("buttonSecondaryText")}
+        buttonSecondaryLink={t("buttonSecondaryLink")}
       />
 
       <PriceClient />

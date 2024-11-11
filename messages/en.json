@@ -205,8 +205,7 @@
       }
     }
   },
-
-  "GetStartedHero": {
+  "getStartedHero": {
     "title": "Get Started",
     "description": "Get started with our services today and take your business to the next level.",
     "buttonPrimaryText": "Get Started",
@@ -215,5 +214,4 @@
     "buttonSecondaryLink": "/services",
     "image": "/images/hero/hero-get-started.svg"
   }
-
 }
