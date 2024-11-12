@@ -1,14 +1,14 @@
 "use client";
 
-import React, { Suspense } from "react";
 import Link from "next/link";
+import React, { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { useThemeSafe } from "@/hooks/useThemeSafe";
-import { IconInfoCircle, IconPresentation } from "@tabler/icons-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Spacer } from "@/components/ui/spacer";
 import BlurFade from "@/components/ui/blur-fade";
 import FadeIn from "@/components/Animation/fade-in";
+import { IconInfoCircle, IconPresentation } from "@tabler/icons-react";
 
 // Delay function for testing loading states
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

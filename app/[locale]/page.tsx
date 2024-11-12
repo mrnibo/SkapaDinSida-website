@@ -3,12 +3,12 @@ import BlurFade from "@/components/ui/blur-fade";
 import { TitleSection } from "@/components/ui/titles";
 import HeroClient from "@/components/Hero/HeroClient";
 import GridPattern from "@/components/ui/grid-pattern";
+import PriceClient from "@/components/Price/PriceClient";
 import OfferClient from "@/components/Offer/OfferClient";
 import ProcessClient from "@/components/Process/ProcessClient";
 import ServiceShowcase from "@/components/Service/ServiceClient";
 import ShowcaseClient from "@/components/Showcase/ShowcaseClient";
 import ContactUsBookCallClient from "@/components/ContactUs/ContactUsBookCallClient";
-import PriceClient from "@/components/Price/PriceClient";
 
 export default function Home() {
   return (
