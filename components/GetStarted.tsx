@@ -26,6 +26,7 @@ import { TitleSection } from "./ui/titles";
 import BlurFade from "./ui/blur-fade";
 import SparklesText from "./ui/sparkles-text";
 import { IconCircleCheckFilled } from "@tabler/icons-react";
+import Head from "next/head";
 
 interface FormData {
   businessName: string;
@@ -187,320 +188,349 @@ export default function GetStarted() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 p-4 flex justify-center items-center">
-      <BlurFade delay={0.2}>
-        <Card className="w-full max-w-4xl border-none rounded-3xl bg-gray-100 dark:bg-neutral-900 p-12 shadow-2xl min-h-[82vh]">
-          {step === "success" ? (
-            <div className="flex flex-col justify-center items-center h-full text-center">
-              <IconCircleCheckFilled
-                size={100}
-                className="text-green-500 mb-8"
-              />
-              <SparklesText text="Success!" className="mb-8" />
-              <p className="text-2xl font-semibold">
-                Thank You! Your submission is received. <br />
-                <span className="font-normal">We will contact you soon!</span>
-              </p>
-            </div>
-          ) : (
-            <>
-              <CardHeader className="text-center">
-                <CardTitle className="flex justify-center">
-                  <TitleSection text="Get Started" />
-                </CardTitle>
-                <CardDescription>
-                  Please provide us with some information about your project
-                </CardDescription>
-              </CardHeader>
-            </>
-          )}
+    <>
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16767027238/GJ6ECNzEleYZEKaQkrs-',
+        'value': 1.0,  // Replace with the actual value of the transaction
+        'currency': 'SEK',  // Use the currency of your transaction
+        'transaction_id': ''  // Optionally, pass a unique transaction ID here
+      });
+    `,
+          }}
+        />
+      </Head>
 
-          {step === "success" ? null : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <CardContent>
-                <div className="mb-6 flex justify-center">
-                  <div className="flex justify-between gap-3 w-1/2">
-                    {[1, 2, 3].map((i) => (
-                      <div
-                        key={i}
-                        className={`flex-grow h-2 rounded-full ${
-                          i <= (step as number) ? "bg-blue-500" : "bg-gray-200"
-                        }`}
-                      />
-                    ))}
+      <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 p-4 flex justify-center items-center">
+        <BlurFade delay={0.2}>
+          <Card className="w-full max-w-4xl border-none rounded-3xl bg-gray-100 dark:bg-neutral-900 p-12 shadow-2xl min-h-[82vh]">
+            {step === "success" ? (
+              <div className="flex flex-col justify-center items-center h-full text-center">
+                <IconCircleCheckFilled
+                  size={100}
+                  className="text-green-500 mb-8"
+                />
+                <SparklesText text="Success!" className="mb-8" />
+                <p className="text-2xl font-semibold">
+                  Thank You! Your submission is received. <br />
+                  <span className="font-normal">We will contact you soon!</span>
+                </p>
+              </div>
+            ) : (
+              <>
+                <CardHeader className="text-center">
+                  <CardTitle className="flex justify-center">
+                    <TitleSection text="Get Started" />
+                  </CardTitle>
+                  <CardDescription>
+                    Please provide us with some information about your project
+                  </CardDescription>
+                </CardHeader>
+              </>
+            )}
+
+            {step === "success" ? null : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <CardContent>
+                  <div className="mb-6 flex justify-center">
+                    <div className="flex justify-between gap-3 w-1/2">
+                      {[1, 2, 3].map((i) => (
+                        <div
+                          key={i}
+                          className={`flex-grow h-2 rounded-full ${
+                            i <= (step as number)
+                              ? "bg-blue-500"
+                              : "bg-gray-200"
+                          }`}
+                        />
+                      ))}
+                    </div>
                   </div>
-                </div>
 
-                {/* Step 1 Fields */}
-                {step === 1 && (
-                  <div className="space-y-4">
-                    {[
-                      { id: "businessName", label: "Business Name" },
-                      { id: "industry", label: "Industry" },
-                      { id: "email", label: "Email" },
-                      { id: "phone", label: "Phone Number" },
-                    ].map(({ id, label }) => (
-                      <div key={id}>
+                  {/* Step 1 Fields */}
+                  {step === 1 && (
+                    <div className="space-y-4">
+                      {[
+                        { id: "businessName", label: "Business Name" },
+                        { id: "industry", label: "Industry" },
+                        { id: "email", label: "Email" },
+                        { id: "phone", label: "Phone Number" },
+                      ].map(({ id, label }) => (
+                        <div key={id}>
+                          <div className="flex justify-between py-2">
+                            <Label htmlFor={id}>{label}</Label>
+                            <span className="text-gray-400 text-sm">
+                              * Required
+                            </span>
+                          </div>
+                          <Input
+                            id={id}
+                            name={id}
+                            value={formData[id as keyof FormData]}
+                            onChange={handleChange}
+                            required
+                            className={errors[id] ? "border-red-500" : ""}
+                          />
+                          {errors[id] && (
+                            <p className="text-red-500 text-sm">{errors[id]}</p>
+                          )}
+                        </div>
+                      ))}
+
+                      <div>
                         <div className="flex justify-between py-2">
-                          <Label htmlFor={id}>{label}</Label>
+                          <Label>Preferred Contact Method</Label>
                           <span className="text-gray-400 text-sm">
                             * Required
                           </span>
                         </div>
-                        <Input
-                          id={id}
-                          name={id}
-                          value={formData[id as keyof FormData]}
-                          onChange={handleChange}
-                          required
-                          className={errors[id] ? "border-red-500" : ""}
-                        />
-                        {errors[id] && (
-                          <p className="text-red-500 text-sm">{errors[id]}</p>
+                        <div className="flex items-center space-x-2">
+                          <input
+                            type="radio"
+                            id="email-contact"
+                            name="contactMethod"
+                            value="email"
+                            checked={formData.contactMethod === "email"}
+                            onChange={handleChange}
+                          />
+                          <Label htmlFor="email-contact">Email</Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <input
+                            type="radio"
+                            id="phone-contact"
+                            name="contactMethod"
+                            value="phone"
+                            checked={formData.contactMethod === "phone"}
+                            onChange={handleChange}
+                          />
+                          <Label htmlFor="phone-contact">Phone</Label>
+                        </div>
+                        {errors.contactMethod && (
+                          <p className="text-red-500 text-sm">
+                            {errors.contactMethod}
+                          </p>
                         )}
                       </div>
-                    ))}
-
-                    <div>
-                      <div className="flex justify-between py-2">
-                        <Label>Preferred Contact Method</Label>
-                        <span className="text-gray-400 text-sm">
-                          * Required
-                        </span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          id="email-contact"
-                          name="contactMethod"
-                          value="email"
-                          checked={formData.contactMethod === "email"}
-                          onChange={handleChange}
-                        />
-                        <Label htmlFor="email-contact">Email</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          id="phone-contact"
-                          name="contactMethod"
-                          value="phone"
-                          checked={formData.contactMethod === "phone"}
-                          onChange={handleChange}
-                        />
-                        <Label htmlFor="phone-contact">Phone</Label>
-                      </div>
-                      {errors.contactMethod && (
-                        <p className="text-red-500 text-sm">
-                          {errors.contactMethod}
-                        </p>
-                      )}
                     </div>
-                  </div>
-                )}
+                  )}
 
-                {/* Step 2 Fields */}
-                {step === 2 && (
-                  <div className="space-y-4">
-                    <div>
-                      <div className="flex justify-between py-2">
-                        <Label htmlFor="serviceType">
-                          Type of Service Needed
-                        </Label>
-                        <span className="text-gray-400 text-sm">
-                          * Required
-                        </span>
-                      </div>
-                      <Select
-                        value={formData.serviceType}
-                        onValueChange={(value) =>
-                          handleChange({
-                            target: { name: "serviceType", value },
-                          })
-                        }
-                        required
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select a service" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="website-design">
-                            Website Design
-                          </SelectItem>
-                          <SelectItem value="seo">SEO</SelectItem>
-                          <SelectItem value="branding">Branding</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      {errors.serviceType && (
-                        <p className="text-red-500 text-sm">
-                          {errors.serviceType}
-                        </p>
-                      )}
-                    </div>
-
-                    <div>
-                      <div className="flex justify-between py-2">
-                        <Label htmlFor="targetAudience">Target Audience</Label>
-                        <span className="text-gray-400 text-sm">
-                          * Required
-                        </span>
-                      </div>
-                      <Textarea
-                        id="targetAudience"
-                        name="targetAudience"
-                        value={formData.targetAudience}
-                        onChange={handleChange}
-                        required
-                        className={
-                          errors.targetAudience ? "border-red-500" : ""
-                        }
-                      />
-                      {errors.targetAudience && (
-                        <p className="text-red-500 text-sm">
-                          {errors.targetAudience}
-                        </p>
-                      )}
-                    </div>
-                    <div>
-                      <div className="flex justify-between py-2">
-                        <Label htmlFor="projectGoals">
-                          Project Goals and Requirements
-                        </Label>
-                        <span className="text-gray-400 text-sm">
-                          * Required
-                        </span>
-                      </div>
-                      <Textarea
-                        id="projectGoals"
-                        name="projectGoals"
-                        value={formData.projectGoals}
-                        onChange={handleChange}
-                        required
-                        className={errors.projectGoals ? "border-red-500" : ""}
-                      />
-                      {errors.projectGoals && (
-                        <p className="text-red-500 text-sm">
-                          {errors.projectGoals}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                )}
-
-                {/* Step 3 Fields */}
-                {step === 3 && (
-                  <div className="space-y-4">
-                    <div>
-                      <div className="flex justify-between py-2">
-                        <Label htmlFor="budgetRange">Budget Range</Label>
-                        <span className="text-gray-400 text-sm">
-                          * Required
-                        </span>
-                      </div>
-                      <Select
-                        value={formData.budgetRange}
-                        onValueChange={(value) =>
-                          handleChange({
-                            target: { name: "budgetRange", value },
-                          })
-                        }
-                        required
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select a budget range" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {priceRanges.map((price) => (
-                            <SelectItem key={price.id} value={price.range}>
-                              {price.range}
+                  {/* Step 2 Fields */}
+                  {step === 2 && (
+                    <div className="space-y-4">
+                      <div>
+                        <div className="flex justify-between py-2">
+                          <Label htmlFor="serviceType">
+                            Type of Service Needed
+                          </Label>
+                          <span className="text-gray-400 text-sm">
+                            * Required
+                          </span>
+                        </div>
+                        <Select
+                          value={formData.serviceType}
+                          onValueChange={(value) =>
+                            handleChange({
+                              target: { name: "serviceType", value },
+                            })
+                          }
+                          required
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select a service" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="website-design">
+                              Website Design
                             </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      {errors.budgetRange && (
-                        <p className="text-red-500 text-sm">
-                          {errors.budgetRange}
-                        </p>
-                      )}
-                    </div>
-
-                    <div>
-                      <div className="flex justify-between py-2">
-                        <Label htmlFor="timeline">
-                          Preferred Project Completion Timeline
-                        </Label>
-                        <span className="text-gray-400 text-sm">
-                          * Required
-                        </span>
+                            <SelectItem value="seo">SEO</SelectItem>
+                            <SelectItem value="branding">Branding</SelectItem>
+                            <SelectItem value="other">Other</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        {errors.serviceType && (
+                          <p className="text-red-500 text-sm">
+                            {errors.serviceType}
+                          </p>
+                        )}
                       </div>
-                      <Select
-                        value={formData.timeline}
-                        onValueChange={(value) =>
-                          handleChange({
-                            target: { name: "timeline", value },
-                          })
-                        }
-                        required
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select a timeline" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="1-3 months">1-3 months</SelectItem>
-                          <SelectItem value="3-6 months">3-6 months</SelectItem>
-                          <SelectItem value="6-12 months">
-                            6-12 months
-                          </SelectItem>
-                          <SelectItem value="12+ months">12+ months</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      {errors.timeline && (
-                        <p className="text-red-500 text-sm">
-                          {errors.timeline}
-                        </p>
-                      )}
-                    </div>
 
-                    <div>
-                      <Label htmlFor="additionalInfo">
-                        Additional Information
-                      </Label>
-                      <Textarea
-                        id="additionalInfo"
-                        name="additionalInfo"
-                        value={formData.additionalInfo}
-                        onChange={handleChange}
-                      />
+                      <div>
+                        <div className="flex justify-between py-2">
+                          <Label htmlFor="targetAudience">
+                            Target Audience
+                          </Label>
+                          <span className="text-gray-400 text-sm">
+                            * Required
+                          </span>
+                        </div>
+                        <Textarea
+                          id="targetAudience"
+                          name="targetAudience"
+                          value={formData.targetAudience}
+                          onChange={handleChange}
+                          required
+                          className={
+                            errors.targetAudience ? "border-red-500" : ""
+                          }
+                        />
+                        {errors.targetAudience && (
+                          <p className="text-red-500 text-sm">
+                            {errors.targetAudience}
+                          </p>
+                        )}
+                      </div>
+                      <div>
+                        <div className="flex justify-between py-2">
+                          <Label htmlFor="projectGoals">
+                            Project Goals and Requirements
+                          </Label>
+                          <span className="text-gray-400 text-sm">
+                            * Required
+                          </span>
+                        </div>
+                        <Textarea
+                          id="projectGoals"
+                          name="projectGoals"
+                          value={formData.projectGoals}
+                          onChange={handleChange}
+                          required
+                          className={
+                            errors.projectGoals ? "border-red-500" : ""
+                          }
+                        />
+                        {errors.projectGoals && (
+                          <p className="text-red-500 text-sm">
+                            {errors.projectGoals}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </CardContent>
+                  )}
 
-              <CardFooter className="flex justify-between">
-                {step > 1 && (
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={handlePrevious}
-                  >
-                    Previous
-                  </Button>
-                )}
-                {step < 3 ? (
-                  <Button type="button" onClick={handleNext}>
-                    Next
-                  </Button>
-                ) : (
-                  <Button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? "Submitting..." : "Submit"}
-                  </Button>
-                )}
-              </CardFooter>
-            </form>
-          )}
-        </Card>
-      </BlurFade>
-    </div>
+                  {/* Step 3 Fields */}
+                  {step === 3 && (
+                    <div className="space-y-4">
+                      <div>
+                        <div className="flex justify-between py-2">
+                          <Label htmlFor="budgetRange">Budget Range</Label>
+                          <span className="text-gray-400 text-sm">
+                            * Required
+                          </span>
+                        </div>
+                        <Select
+                          value={formData.budgetRange}
+                          onValueChange={(value) =>
+                            handleChange({
+                              target: { name: "budgetRange", value },
+                            })
+                          }
+                          required
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select a budget range" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {priceRanges.map((price) => (
+                              <SelectItem key={price.id} value={price.range}>
+                                {price.range}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        {errors.budgetRange && (
+                          <p className="text-red-500 text-sm">
+                            {errors.budgetRange}
+                          </p>
+                        )}
+                      </div>
+
+                      <div>
+                        <div className="flex justify-between py-2">
+                          <Label htmlFor="timeline">
+                            Preferred Project Completion Timeline
+                          </Label>
+                          <span className="text-gray-400 text-sm">
+                            * Required
+                          </span>
+                        </div>
+                        <Select
+                          value={formData.timeline}
+                          onValueChange={(value) =>
+                            handleChange({
+                              target: { name: "timeline", value },
+                            })
+                          }
+                          required
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select a timeline" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="1-3 months">
+                              1-3 months
+                            </SelectItem>
+                            <SelectItem value="3-6 months">
+                              3-6 months
+                            </SelectItem>
+                            <SelectItem value="6-12 months">
+                              6-12 months
+                            </SelectItem>
+                            <SelectItem value="12+ months">
+                              12+ months
+                            </SelectItem>
+                          </SelectContent>
+                        </Select>
+                        {errors.timeline && (
+                          <p className="text-red-500 text-sm">
+                            {errors.timeline}
+                          </p>
+                        )}
+                      </div>
+
+                      <div>
+                        <Label htmlFor="additionalInfo">
+                          Additional Information
+                        </Label>
+                        <Textarea
+                          id="additionalInfo"
+                          name="additionalInfo"
+                          value={formData.additionalInfo}
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
+                  )}
+                </CardContent>
+
+                <CardFooter className="flex justify-between">
+                  {step > 1 && (
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={handlePrevious}
+                    >
+                      Previous
+                    </Button>
+                  )}
+                  {step < 3 ? (
+                    <Button type="button" onClick={handleNext}>
+                      Next
+                    </Button>
+                  ) : (
+                    <Button type="submit" disabled={isSubmitting}>
+                      {isSubmitting ? "Submitting..." : "Submit"}
+                    </Button>
+                  )}
+                </CardFooter>
+              </form>
+            )}
+          </Card>
+        </BlurFade>
+      </div>
+    </>
   );
 }
