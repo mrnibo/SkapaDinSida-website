@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
 import FAQAccordion from "@/components/FAQ/faq-accordion";
+import { TitleSection } from "../ui/titles";
+import { Spacer } from "../ui/spacer";
 
 export default function FAQ() {
   const t = useTranslations("FAQ");
@@ -13,9 +15,14 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-20 bg-gray-50 dark:bg-neutral-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">{t("title")}</h2>
+        <TitleSection
+          text={"FAQ"}
+          className="py-4 px-4 flex justify-center items-center"
+        />
+        <h2 className="text-lg text-center">{t("title")}</h2>
+        <Spacer className="py-8" />
         <FAQAccordion items={faqItems} />
       </div>
     </section>

@@ -28,6 +28,7 @@ export default function Home() {
         </BlurFade>
 
         <PriceClient />
+        <FAQ />
         <div className="bg-gray-200 dark:bg-neutral-800 py-16 relative">
           <div className="container mx-auto px-4">
             <ProcessClient />
@@ -58,8 +59,6 @@ export default function Home() {
           />
         </div>
       </main>
-
-      <FAQ />
 
       <OfferClient />
     </>
