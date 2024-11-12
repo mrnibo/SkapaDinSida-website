@@ -204,8 +204,8 @@ export default function GetStarted() {
         />
       </Head>
 
-      <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 p-4 flex justify-center items-center">
-        <BlurFade delay={0.2}>
+      <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 py-12 items-center">
+        <BlurFade delay={0.2} className="flex justify-center">
           <Card className="w-full max-w-4xl border-none rounded-3xl bg-gray-100 dark:bg-neutral-900 p-12 shadow-2xl min-h-[82vh]">
             {step === "success" ? (
               <div className="flex flex-col justify-center items-center h-full text-center">

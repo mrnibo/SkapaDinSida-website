@@ -47,7 +47,7 @@ export const PriceClient = () => {
         btnText: t("plans.advanced.btnText") ?? "",
         btnLink: t("plans.advanced.btnLink") ?? "",
         description: t("plans.advanced.description") ?? "",
-        features: getFeatures("advanced", 10),
+        features: getFeatures("advanced", 9),
         background:
           "bg-gradient-to-br dark:from-gray-50 dark:to-gray-200 from-neutral-800 to-black text-white dark:text-black",
         btnBackground:
