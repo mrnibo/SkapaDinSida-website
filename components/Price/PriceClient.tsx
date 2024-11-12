@@ -1,11 +1,11 @@
-import { IconSquareRoundedCheckFilled } from "@tabler/icons-react";
-import { Spacer } from "../ui/spacer";
-import { TitleSection } from "../ui/titles";
 import Link from "next/link";
-import Ripple from "../ui/ripple";
-import BlurFade from "../ui/blur-fade";
-import { BorderBeam } from "../ui/border-beam";
 import { useTranslations } from "next-intl";
+import Ripple from "@/components/ui/ripple";
+import { Spacer } from "@/components/ui/spacer";
+import BlurFade from "@/components/ui/blur-fade";
+import { TitleSection } from "@/components/ui/titles";
+import { BorderBeam } from "@/components/ui/border-beam";
+import { IconSquareRoundedCheckFilled } from "@tabler/icons-react";
 
 export const PriceClient = () => {
   const t = useTranslations("plan");
