@@ -199,14 +199,13 @@
           "5": "SSL-certifikat och säkerhetspaket",
           "6": "Underhåll och rapportering",
           "7": "Anpassad innehållshantering",
-          "8": "Integrerad e-handelsplattform",
-          "9": "Månadsbaserad trafikanalys"
+          "8": "Månadsbaserad trafikanalys"
         }
       }
     }
   },
   
-  "GetStartedHero": {
+  "getStartedHero": {
     "title": "Kom igång",
     "description": "Kom igång med våra tjänster idag och ta ditt företag till nästa nivå.",
     "buttonPrimaryText": "Kom igång",
@@ -215,7 +214,4 @@
     "buttonSecondaryLink": "/services",
     "image": "/images/hero/hero-get-started.svg"
   }
-
-  
-  
 }
