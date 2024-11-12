@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import { useState } from "react";
 import confetti from "canvas-confetti";
 import { Button } from "@/components/ui/button";
@@ -22,11 +23,10 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { TitleSection } from "./ui/titles";
-import BlurFade from "./ui/blur-fade";
-import SparklesText from "./ui/sparkles-text";
+import { TitleSection } from "@/components/ui/titles";
+import BlurFade from "@/components/ui/blur-fade";
+import SparklesText from "@/components/ui/sparkles-text";
 import { IconCircleCheckFilled } from "@tabler/icons-react";
-import Head from "next/head";
 
 interface FormData {
   businessName: string;
