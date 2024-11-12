@@ -9,6 +9,7 @@ import ProcessClient from "@/components/Process/ProcessClient";
 import ServiceShowcase from "@/components/Service/ServiceClient";
 import ShowcaseClient from "@/components/Showcase/ShowcaseClient";
 import ContactUsBookCallClient from "@/components/ContactUs/ContactUsBookCallClient";
+import FAQ from "@/components/FAQ/FaqClient";
 
 export default function Home() {
   return (
@@ -57,6 +58,8 @@ export default function Home() {
           />
         </div>
       </main>
+
+      <FAQ />
 
       <OfferClient />
     </>

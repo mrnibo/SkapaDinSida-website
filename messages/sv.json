@@ -213,5 +213,19 @@
     "buttonSecondaryText": "Läs mer",
     "buttonSecondaryLink": "/services",
     "image": "/images/hero/hero-get-started.svg"
+  }, 
+
+  "FAQ": {
+    "title": "Vanliga Frågor",
+    "question1": "Vilka tjänster erbjuder ert webbbyrå?",
+    "answer1": "Vårt webbbyrå erbjuder ett brett utbud av tjänster, inklusive webbdesign, webbutveckling, e-handelslösningar, SEO-optimering och digitala marknadsföringsstrategier.",
+    "question2": "Hur lång tid tar det vanligtvis att slutföra ett webbprojekt?",
+    "answer2": "Tidslinjen för ett webbprojekt kan variera beroende på dess komplexitet. En enkel webbplats kan ta 4-6 veckor, medan ett mer komplext projekt kan ta 8-12 veckor eller mer. Vi kommer att ge en mer exakt uppskattning efter att ha diskuterat dina specifika krav.",
+    "question3": "Erbjuder ni löpande support och underhåll för webbplatser?",
+    "answer3": "Ja, vi erbjuder löpande support- och underhållspaket för att säkerställa att din webbplats förblir uppdaterad, säker och fungerar optimalt. Vårt team är alltid tillgängligt för att åtgärda eventuella problem eller göra uppdateringar vid behov.",
+    "question4": "Kan ni hjälpa till med att förbättra vår webbplats sökmotorrankning?",
+    "answer4": "Vi erbjuder omfattande SEO-tjänster för att förbättra din webbplats synlighet i sökmotorernas resultat. Detta inkluderar on-page optimering, innehållsstrategi, länkbyggande och prestandaoptimering.",
+    "question5": "Vad är ert tillvägagångssätt för att säkerställa webbplatsens säkerhet?",
+    "answer5": "Vi tar webbplatsens säkerhet på största allvar. Vårt tillvägagångssätt inkluderar att använda säkra kodningsmetoder, implementera SSL-certifikat, regelbundna säkerhetsrevisioner och installera brandväggar och skydd mot skadlig programvara. Vi ger också vägledning om bästa praxis för att upprätthålla webbplatsens säkerhet."
   }
 }

@@ -212,5 +212,19 @@
     "buttonSecondaryText": "Learn More",
     "buttonSecondaryLink": "/services",
     "image": "/images/hero/hero-get-started.svg"
+  },
+
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "question1": "What services does your web agency offer?",
+    "answer1": "Our web agency offers a wide range of services including web design, web development, e-commerce solutions, SEO optimization, and digital marketing strategies.",
+    "question2": "How long does it typically take to complete a website project?",
+    "answer2": "The timeline for a website project can vary depending on its complexity. A simple website might take 4-6 weeks, while a more complex project could take 8-12 weeks or more. We'll provide a more accurate estimate after discussing your specific requirements.",
+    "question3": "Do you offer ongoing support and maintenance for websites?",
+    "answer3": "Yes, we offer ongoing support and maintenance packages to ensure your website remains up-to-date, secure, and performs optimally. Our team is always available to address any issues or make updates as needed.",
+    "question4": "Can you help with improving our website's search engine rankings?",
+    "answer4": "We offer comprehensive SEO services to improve your website's visibility in search engine results. This includes on-page optimization, content strategy, link building, and performance optimization.",
+    "question5": "What is your approach to ensuring website security?",
+    "answer5": "We take website security very seriously. Our approach includes using secure coding practices, implementing SSL certificates, regular security audits, and setting up firewalls and malware protection. We also provide guidance on best practices for maintaining your website's security."
   }
 }
