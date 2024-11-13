@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import FAQ from "@/components/FAQ/FaqClient";
 import BlurFade from "@/components/ui/blur-fade";
 import { TitleSection } from "@/components/ui/titles";
 import HeroClient from "@/components/Hero/HeroClient";
@@ -9,7 +10,6 @@ import ProcessClient from "@/components/Process/ProcessClient";
 import ServiceShowcase from "@/components/Service/ServiceClient";
 import ShowcaseClient from "@/components/Showcase/ShowcaseClient";
 import ContactUsBookCallClient from "@/components/ContactUs/ContactUsBookCallClient";
-import FAQ from "@/components/FAQ/FaqClient";
 
 export default function Home() {
   return (

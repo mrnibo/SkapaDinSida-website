@@ -7,7 +7,7 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["api.microlink.io"], // Allow Microlink Image Preview
+    domains: ["api.microlink.io", "cdn.sanity.io"], 
   },
 };
 

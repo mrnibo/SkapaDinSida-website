@@ -4,10 +4,13 @@ import { locales, localePrefix } from './i18n/navigation';
 export default createMiddleware({
   locales,
   localePrefix,
-  defaultLocale: 'en'
+  defaultLocale: 'sv'
 });
 
-// only applies this middleware to files in the app directory
+// Modify the matcher to exclude /studio
 export const config = {
-  matcher: ['/((?!api|_next|.*\\..*).*)']
+  matcher: [
+    // Match all pathnames except /studio, /api, /_next, and files with extensions
+    '/((?!api|_next|.*\\..*).*)'
+  ]
 };
