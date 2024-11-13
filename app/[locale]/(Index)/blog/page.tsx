@@ -17,22 +17,23 @@ const client = createClient({
 
 const builder = imageUrlBuilder(client);
 
-function urlFor(source) {
-  return builder.image(source);
+function urlFor(source: any) {
+  return source ? builder.image(source) : builder.image(""); // Ensure it always returns an ImageUrlBuilder
 }
 
 async function getFeaturedPosts() {
   try {
-    const posts =
-      await client.fetch(`*[_type == "post" && "Featured" in categories[]->title] | order(publishedAt desc) {
-      _id,
-      title,
-      slug,
-      mainImage,
-      publishedAt,
-      body,
-      categories[]->{ title }
-    }`);
+    const posts = await client.fetch(
+      `*[_type == "post" && "Featured" in categories[]->title] | order(publishedAt desc) {
+        _id,
+        title,
+        slug,
+        mainImage,
+        publishedAt,
+        body,
+        categories[]->{ title }
+      }`
+    );
     return posts;
   } catch (error) {
     console.error("Error fetching featured posts:", error);
@@ -42,11 +43,13 @@ async function getFeaturedPosts() {
 
 async function getPages() {
   try {
-    const pages = await client.fetch(`*[_type == "page"] {
-      _id,
-      title,
-      slug
-    }`);
+    const pages = await client.fetch(
+      `*[_type == "page"] {
+        _id,
+        title,
+        slug
+      }`
+    );
     return pages;
   } catch (error) {
     console.error("Error fetching pages:", error);
@@ -56,17 +59,18 @@ async function getPages() {
 
 async function getAllPosts() {
   try {
-    const posts =
-      await client.fetch(`*[_type == "post"] | order(publishedAt desc) {
-      _id,
-      title,
-      slug,
-      mainImage,
-      publishedAt,
-      excerpt,
-      body,
-      categories[]->{ title }
-    }`);
+    const posts = await client.fetch(
+      `*[_type == "post"] | order(publishedAt desc) {
+        _id,
+        title,
+        slug,
+        mainImage,
+        publishedAt,
+        excerpt,
+        body,
+        categories[]->{ title }
+      }`
+    );
     return posts;
   } catch (error) {
     console.error("Error fetching all posts:", error);
@@ -133,37 +137,35 @@ export default function BlogPage() {
         image="/images/hero/hero-blog.svg"
       />
       {/* Featured Posts */}
-      <section className="">
+      <section>
         <TitleSection text="Featured Posts" />
-        <div className="">
-          <div className="flex flex-col gap-4">
-            {featuredPosts.map((post) => (
-              <div
-                key={post._id}
-                className="flex flex-col md:flex-row justify-center items-center rounded-xl bg-gray-50 shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 mb-8 p-8"
-              >
-                <div className="p-4 flex-1">
-                  <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                  <div className="text-gray-600 mb-4">
-                    <PortableText value={post.excerpt} />
-                  </div>
-
-                  <Link href={`/blog/${post.slug.current}`}>
-                    <div className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">
-                      Read More
-                    </div>
-                  </Link>
+        <div className="flex flex-col gap-4">
+          {featuredPosts.map((post) => (
+            <div
+              key={post._id}
+              className="flex flex-col md:flex-row justify-center items-center rounded-xl bg-gray-50 shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 mb-8 p-8"
+            >
+              <div className="p-4 flex-1">
+                <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
+                <div className="text-gray-600 mb-4">
+                  <PortableText value={post.excerpt} />
                 </div>
-                {post.mainImage && (
-                  <img
-                    src={urlFor(post.mainImage).width(400).height(300).url()}
-                    alt={post.title}
-                    className="w-[400px] h-[300px] rounded-lg object-cover"
-                  />
-                )}
+
+                <Link href={`/blog/${post.slug.current}`}>
+                  <div className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">
+                    Read More
+                  </div>
+                </Link>
               </div>
-            ))}
-          </div>
+              {post.mainImage && (
+                <img
+                  src={urlFor(post.mainImage).width(400).height(300).url()}
+                  alt={post.title}
+                  className="w-[400px] h-[300px] rounded-lg object-cover"
+                />
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
