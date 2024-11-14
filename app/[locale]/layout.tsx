@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: "SkapaDinSida | Professionell Webbyrå",
   description:
     "SkapaDinSida är en professionell webbyrå som erbjuder webbdesign, SEO-tjänster och varumärkesstrategi för företag som vill stärka sin online-närvaro.",
+  keywords: ["webbyrå", "webbdesign", "SEO", "webbplatser", "SkapaDinSida"],
   openGraph: {
     title: "SkapaDinSida | Professionell Webbyrå",
     description:
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
     url: "https://skapadinsida.com",
     type: "website",
     siteName: "SkapaDinSida",
+
     images: [
       {
         url: "/opengraph.png",
