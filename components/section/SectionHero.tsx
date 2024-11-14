@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { Suspense } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { useThemeSafe } from "@/hooks/useThemeSafe";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -53,30 +53,26 @@ const SectionHero: React.FC<HeroProps> = ({
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 w-full py-20 md:py-0">
         {/* Mobile Image */}
         <div className="w-full md:w-3/5 mt-8 md:mt-0 flex justify-center md:justify-end relative md:hidden ">
-          <Suspense
-            fallback={<Skeleton className="h-[600px] w-[600px] rounded-xl" />}
-          >
-            <Image
-              src={imageMobile || image}
-              alt="hero"
-              width={550}
-              height={550}
-              className="w-full h-full"
-            />
-          </Suspense>
+          <Image
+            src={imageMobile || image}
+            alt="hero"
+            width={550}
+            height={550}
+            className="w-full h-full"
+          />
         </div>
 
         {/* Left Side */}
         <div className="flex flex-col items-center md:items-start gap-2 w-full md:w-2/5">
-          <FadeIn yOffset={20} delay={0.25}>
+          <FadeIn yOffset={20} delay={0.05}>
             <h1 className="w-full text-4xl md:text-6xl lg:text-7xl uppercase font-semibold text-center md:text-left leading-tight break-words">
               {title}
             </h1>
           </FadeIn>
-          <FadeIn yOffset={20} delay={0.25}>
+          <FadeIn yOffset={20} delay={0.1}>
             <Spacer className="py-4" />
           </FadeIn>
-          <FadeIn yOffset={20} delay={0.35}>
+          <FadeIn yOffset={20} delay={0.12}>
             <p className="text-center text-lg md:text-left">{description}</p>
           </FadeIn>
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-5">
@@ -97,7 +93,7 @@ const SectionHero: React.FC<HeroProps> = ({
 
             {/* Conditionally Render Secondary Button */}
             {buttonSecondaryText && buttonSecondaryLink && (
-              <BlurFade delay={0.45}>
+              <BlurFade delay={0.13}>
                 <Link
                   href={buttonSecondaryLink}
                   aria-label={buttonSecondaryText}
@@ -117,30 +113,27 @@ const SectionHero: React.FC<HeroProps> = ({
 
         {/* Desktop Image */}
         <div className="w-full md:w-3/5 mt-8 md:mt-0 hidden justify-center md:justify-end relative md:flex">
-          <FadeIn xOffset={50} delay={0.35}>
-            <Suspense>
-              <Image
-                src={image}
-                alt="hero"
-                width={450}
-                height={450}
-                className="mb-2"
-              />
-            </Suspense>
+          <FadeIn xOffset={50} delay={0.14}>
+            <Image
+              src={image}
+              alt="hero"
+              width={450}
+              height={450}
+              className="mb-2"
+            />
           </FadeIn>
         </div>
       </div>
 
       {/* Background Particles */}
-      <Suspense>
-        <Particles
-          className="absolute inset-0"
-          quantity={100}
-          ease={80}
-          color={color}
-          refresh
-        />
-      </Suspense>
+
+      <Particles
+        className="absolute inset-0"
+        quantity={100}
+        ease={80}
+        color={color}
+        refresh
+      />
     </div>
   );
 };
