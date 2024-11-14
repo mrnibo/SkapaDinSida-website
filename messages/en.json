@@ -170,7 +170,7 @@
         "currency": "USD",
         "billingPeriod": "/month",
         "btnText": "Order",
-        "btnLink": "/submit",
+        "btnLink": "/submit-order",
         "features": {
           "0": "Simple web design",
           "1": "SEO optimization",
