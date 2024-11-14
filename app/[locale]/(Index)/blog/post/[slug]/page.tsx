@@ -1,5 +1,5 @@
-import { createClient } from "@sanity/client";
 import Link from "next/link";
+import { createClient } from "@sanity/client";
 import { PortableText } from "@portabletext/react";
 import imageUrlBuilder from "@sanity/image-url";
 
@@ -10,7 +10,16 @@ const client = createClient({
   useCdn: false,
 });
 
-async function getBlogPost(slug: string) {
+type BlogPost = {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  mainImage: any;
+  publishedAt: string;
+  body: any;
+};
+
+async function getBlogPost(slug: string): Promise<BlogPost | null> {
   try {
     const post = await client.fetch(
       `*[_type == "post" && slug.current == $slug][0] {
@@ -30,11 +39,13 @@ async function getBlogPost(slug: string) {
   }
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function BlogPostPage({ params }: PageProps) {
   const post = await getBlogPost(params.slug);
 
   if (!post) {
