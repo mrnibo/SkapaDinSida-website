@@ -1,6 +1,6 @@
 import React from "react";
-import NumberTicker from "@/components/ui/number-ticker";
 import { useTranslations } from "next-intl";
+import NumberTicker from "@/components/ui/number-ticker";
 import FadeIn from "@/components/Animation/fade-in";
 
 const StatsClient = () => {
