@@ -13,7 +13,7 @@ const AboutClient: React.FC<AboutClientProps> = ({ className }) => {
       <SectionHero
         title={t("title")}
         description={<AboutHeroDescription />}
-        image="/images/Programming.svg"
+        image="/images/hero/hero-about.svg"
       />
     </>
   );
@@ -24,7 +24,7 @@ const AboutHeroDescription = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <p>{t("description")}</p>
+      <div>{t("description")}</div>
       <ul className="list-disc list-inside space-y-2 text-sm">
         <li>{t("bulletPoints.0")}</li>
         <li>{t("bulletPoints.1")}</li>

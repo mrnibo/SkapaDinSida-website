@@ -15,17 +15,17 @@ export const NavbarButtonPrimary: React.FC<NavbarButtonProps> = ({
   className,
 }) => {
   return (
-    <Button
-      size="lg"
-      className="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-md shadow-lg"
-    >
-      <Link href={link} aria-label={`${text} Button`}>
+    <Link href={link} aria-label={`${text} Button`}>
+      <Button
+        size="lg"
+        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-md shadow-lg"
+      >
         <div className={`flex gap-2 items-center ${className}`}>
           {icon}
           {text}
         </div>
-      </Link>
-    </Button>
+      </Button>{" "}
+    </Link>
   );
 };
 

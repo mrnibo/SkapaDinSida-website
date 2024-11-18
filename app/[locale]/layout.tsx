@@ -139,7 +139,7 @@ export default async function LocaleLayout({
         />
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
-            <NavbarClient />
+            <NavbarClient className="py-12 px-8" />
             <noscript>
               <img
                 height="1"

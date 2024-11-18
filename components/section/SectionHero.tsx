@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useMemo, lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { useThemeSafe } from "@/hooks/useThemeSafe";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -10,14 +10,9 @@ import BlurFade from "@/components/ui/blur-fade";
 import FadeIn from "@/components/Animation/fade-in";
 import { IconInfoCircle, IconPresentation } from "@tabler/icons-react";
 
-// Delay function for testing loading states
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
 // Lazy load components with delay
-const Particles = React.lazy(() =>
-  delay(0).then(() => import("@/components/ui/particles"))
-);
-const Image = React.lazy(() => delay(0).then(() => import("next/image")));
+const Particles = lazy(() => import("@/components/ui/particles"));
+const Image = lazy(() => import("next/image"));
 
 interface HeroProps {
   title: string;
@@ -43,7 +38,7 @@ const SectionHero: React.FC<HeroProps> = ({
   const { theme } = useThemeSafe();
 
   // Memoize color based on theme for performance
-  const color = React.useMemo(
+  const color = useMemo(
     () => (theme === "dark" ? "#ffffff" : "#000000"),
     [theme]
   );
@@ -52,14 +47,16 @@ const SectionHero: React.FC<HeroProps> = ({
     <div className="relative flex h-full md:h-[70vh] max-w-7xl w-full mx-auto flex-col gap-10 md:gap-20 lg:gap-40 items-center justify-center overflow-hidden bg-background px-8">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 w-full py-20 md:py-0">
         {/* Mobile Image */}
-        <div className="w-full md:w-3/5 mt-8 md:mt-0 flex justify-center md:justify-end relative md:hidden ">
-          <Image
-            src={imageMobile || image}
-            alt="hero"
-            width={550}
-            height={550}
-            className="w-full h-full"
-          />
+        <div className="w-full md:w-3/5 mt-8 md:mt-0 flex justify-center md:justify-end relative md:hidden">
+          <Suspense fallback={<Skeleton className="w-full h-full" />}>
+            <Image
+              src={imageMobile || image}
+              alt="Hero Image"
+              width={550}
+              height={550}
+              className="w-full h-full"
+            />
+          </Suspense>
         </div>
 
         {/* Left Side */}
@@ -114,28 +111,31 @@ const SectionHero: React.FC<HeroProps> = ({
         {/* Desktop Image */}
         <div className="w-full md:w-3/5 mt-8 md:mt-0 hidden justify-center md:justify-end relative md:flex">
           <FadeIn xOffset={50} delay={0.14}>
-            <Image
-              src={image}
-              alt="hero"
-              width={450}
-              height={450}
-              className="mb-2"
-            />
+            <Suspense fallback={<Skeleton className="w-full h-full" />}>
+              <Image
+                src={image}
+                alt="hero"
+                width={450}
+                height={450}
+                className="mb-2"
+              />
+            </Suspense>
           </FadeIn>
         </div>
       </div>
 
       {/* Background Particles */}
-
-      <Particles
-        className="absolute inset-0"
-        quantity={100}
-        ease={80}
-        color={color}
-        refresh
-      />
+      <Suspense fallback={null}>
+        <Particles
+          className="absolute inset-0"
+          quantity={100}
+          ease={80}
+          color={color}
+          refresh
+        />
+      </Suspense>
     </div>
   );
 };
 
-export default SectionHero;
+export default React.memo(SectionHero);

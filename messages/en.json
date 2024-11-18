@@ -101,19 +101,29 @@
     { "title": "App Designer", "description": "Creating UI/UX designs tailored to your app’s needs.", "link": "More" }
   ],
 
-  "services": {
-    "description": "Comprehensive services to establish a powerful online presence for your business.",
-    "learnMore": "Learn More",
-    "missionDescription": "Providing top-tier digital services to enhance visibility and growth.",
-    "missionTitle": "Our Mission",
+  "servicesSection": {
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "Bringing Your Vision to Life with Innovative Digital Solutions",
+      "description": "Comprehensive services to establish a powerful online presence for your business.",
+      "bulletPoints": [
+        "Tailored solutions",
+        "Proven strategies",
+        "Client-focused service"
+      ],
+      "imageUrl": "/images/hero/hero-service.svg",
+      "imageUrlMobile": "",
+      "btnPrimaryText": "",
+      "btnPrimaryLink": "",
+      "btnSecondaryText": "",
+      "btnSecondaryLink": ""
+    },
     "servicesList": [
       { "title": "Branding", "description": "Helping you create a brand identity that resonates with your audience.", "link": "/services/branding", "image": "/images/services/branding.jpg" },
       { "title": "Website Creation", "description": "Developing websites that reflect your brand’s values and goals.", "link": "/services/website-creation", "image": "/images/services/website-creation.jpg" },
       { "title": "SEO Optimization", "description": "Boosting your website’s visibility on search engines.", "link": "/services/seo-optimization", "image": "/images/services/seo-optimization.jpg" },
       { "title": "Digital Marketing", "description": "Implementing digital strategies to increase your online presence.", "link": "/services/digital-marketing", "image": "/images/services/digital-marketing.jpg" }
-    ],
-    "subtitle": "Bringing Your Vision to Life",
-    "title": "Our Services"
+    ]
   },
 
   "steps": [

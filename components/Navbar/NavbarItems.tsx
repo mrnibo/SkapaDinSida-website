@@ -23,6 +23,7 @@ const NavbarItems: React.FC<NavbarItemsProps> = ({ name, href, className }) => {
       <Link
         href={href}
         className={`text-foreground text-lg font-medium block py-2 hover:text-blue-500 ${className} duration-500`}
+        aria-label={`Navigate to page ${name}`}
       >
         {name}
       </Link>

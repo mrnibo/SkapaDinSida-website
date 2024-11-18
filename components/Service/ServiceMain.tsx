@@ -1,5 +1,3 @@
-// app/services/page.tsx
-
 import { IconBrandDrops } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 
@@ -11,7 +9,7 @@ interface ServiceItem {
 }
 
 export default function ServiceMain() {
-  const t = useTranslations("services");
+  const t = useTranslations("servicesSection");
 
   const services = t.raw("servicesList") as ServiceItem[];
 
