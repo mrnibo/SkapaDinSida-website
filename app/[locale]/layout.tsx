@@ -139,6 +139,7 @@ export default async function RootLayout({
         />
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
+            <NavbarClient className="py-12 px-8" />
             <noscript>
               <img
                 height="1"
