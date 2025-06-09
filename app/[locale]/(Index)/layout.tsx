@@ -9,7 +9,6 @@ export default async function DemoLayout({
   return (
     <>
       <NavbarClient className="py-12 px-8" />
-
       <main>{children}</main>
       <Footer />
     </>
